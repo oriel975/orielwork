@@ -17,19 +17,8 @@ def myfactorial(x):
 def mypow(x,y):
     ans = 1
     for n in range(y):
-        ans=ans*x
-  #  print ("mypow",ans)    
+        ans=ans*x 
     return ans
-
-#def exponent(x):
-#    exp = x
-#    result = 1 + x
-#    i = 2
-#    while i < 100:
-#        x *= exp
-#        result += (x/myfactorial(i))
-#        i += 1
-#    return result
 
 def exponent(x):
     ans = 1 + x
@@ -38,23 +27,6 @@ def exponent(x):
         ans += (x_pow/myfactorial(n))
     return ans
 
-
-#def Ln(x):
-#    if x <= 0:
-#        return 0.0
-#    Epsilon = 0.001
-#    y = x - 1.0
-#    result = y
-#    while True:
-#        new_y = y + 2 * ((x - exponent1(y)) / (x + exponent1(y)))
-#        result = new_y
-#        dif = new_y - y
-#        if dif < 0:
-#            dif = dif * (-1)
-#        if dif <= Epsilon:
-#            return result
-#        y = new_y   
-        
 def calcAbs(x,y):
     remainder = x - y
     if remainder < 0:
@@ -81,11 +53,3 @@ def calculate(x):
     if x <= 0:
         return 0.0
     return float('%0.6f' % (exponent(x) * XtimesY(7,x) * XtimesY(x,-1) * sqrt(x,x)))
- 
-#print (mypow(2,2))        
-#print(myfactorial(4))        
-#print (XtimesY(-2.2,2))
-#print(exponent(2))
-#print(exponent(2.0))
-print (calculate(2))
-#print (sqrt(2.5,4))
