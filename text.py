@@ -22,7 +22,7 @@ def countword():
      #word = split_line[0].lower()
      #print(word)
      outpot_line=list(map(revword,split_line))
-     print("outputline", outpot_line)
+    # print("outputline", outpot_line)
 
      for itrated_word in outpot_line:
       #   word = "first"
