@@ -1,0 +1,16 @@
+{
+  "name": "sportedge",
+  "version": "1.0.0",
+  "description": "חיזוי ספורט לייב – הסתברויות 1X2, הימורי ערך ומעקב ביצועים",
+  "type": "module",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "node --watch server/index.js",
+    "test": "node --test test/*.test.js"
+  },
+  "engines": {
+    "node": ">=18.17"
+  },
+  "license": "MIT"
+}

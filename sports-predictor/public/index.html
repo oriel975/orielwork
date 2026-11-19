@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>SportEdge – חיזוי ספורט לייב</title>
+  <meta name="description" content="הסתברויות 1X2 לייב, הימורי ערך, השוואת יחסים ומעקב ביצועים לכל ענפי הספורט">
+  <meta name="theme-color" content="#0a1020">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#/live"><span class="logo">◆</span>SportEdge <small>חיזוי ספורט לייב</small></a>
+    <nav class="tabs" id="tabs">
+      <a href="#/live" data-view="live">🔴 לייב<span class="count hidden" id="liveCount"></span></a>
+      <a href="#/matches" data-view="matches">📅 משחקים</a>
+      <a href="#/value" data-view="value">💎 הימורי ערך</a>
+      <a href="#/bets" data-view="bets">📒 מעקב הימורים</a>
+      <a href="#/models" data-view="models">🧪 ביצועי המודל</a>
+      <a href="#/ratings" data-view="ratings">🏆 דירוג קבוצות</a>
+      <a href="#/settings" data-view="settings">⚙️ הגדרות</a>
+    </nav>
+    <div class="top-actions">
+      <button class="btn" id="slipBtn" data-act="slip-open">🧾 טופס <span class="badge" id="slipCount">0</span></button>
+      <button class="btn ghost" id="themeBtn" data-act="theme" title="מצב תצוגה" aria-label="החלפת מצב תצוגה">🌓</button>
+    </div>
+  </header>
+
+  <div class="toolbar" id="toolbar"></div>
+  <main id="view"><div class="loading"><span class="spinner"></span>טוען…</div></main>
+
+  <aside class="drawer" id="drawer" aria-label="טופס הימורים"></aside>
+  <div class="scrim hidden" id="scrim" data-act="slip-close"></div>
+
+  <nav class="bottomnav" id="bottomnav">
+    <a href="#/live" data-view="live"><span class="i">🔴</span>לייב</a>
+    <a href="#/matches" data-view="matches"><span class="i">📅</span>משחקים</a>
+    <a href="#/value" data-view="value"><span class="i">💎</span>ערך</a>
+    <a href="#/bets" data-view="bets"><span class="i">📒</span>מעקב</a>
+    <a href="#/more" data-view="more"><span class="i">☰</span>עוד</a>
+  </nav>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
