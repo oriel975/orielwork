@@ -1,5 +1,5 @@
 node_modules/
 .env
 data/cache/
-data/*.json
+data/bets.json
 data/*.tmp
