@@ -3,6 +3,7 @@ import http from 'node:http';
 import fs from 'node:fs';
 import path from 'node:path';
 import { config, ROOT } from './lib/config.js';
+import { checkBasicAuth } from './lib/auth.js';
 import { createCache } from './lib/cache.js';
 import { jsonStore } from './lib/store.js';
 import { createEspn } from './providers/espn.js';
@@ -136,6 +137,13 @@ function serveStatic(req, res, pathname) {
 
 const server = http.createServer(async (req, res) => {
   const url = new URL(req.url, 'http://localhost');
+  if (url.pathname === '/healthz') return send(res, 200, { ok: true });
+  // Icons and the manifest carry no data; phones fetch them without credentials.
+  const publicAsset = /^\/(manifest\.webmanifest|icon(-\d+)?\.(png|svg))$/.test(url.pathname);
+  if (!publicAsset && !checkBasicAuth(req.headers.authorization, config.password)) {
+    res.writeHead(401, { 'www-authenticate': 'Basic realm="SportEdge", charset="UTF-8"', 'content-type': 'text/plain; charset=utf-8' });
+    return res.end('נדרשת סיסמה');
+  }
   if (!url.pathname.startsWith('/api/')) return serveStatic(req, res, decodeURIComponent(url.pathname));
   for (const r of routes) {
     if (r.method !== req.method) continue;
@@ -159,6 +167,9 @@ const server = http.createServer(async (req, res) => {
 server.listen(config.port, config.host, () => {
   console.log(`\n  SportEdge פועל בכתובת: http://${config.host === '0.0.0.0' ? 'localhost' : config.host}:${config.port}\n`);
   console.log(`  ספקי נתונים: ESPN ✓  TheSportsDB ✓${config.keys.tsdb !== '123' ? ' (פרימיום)' : ''}  The Odds API ${oddsApi.enabled ? '✓' : '✗ (אין מפתח)'}  API-Football/Bet365 ${apiFootball.enabled ? '✓' : '✗ (אין מפתח)'}\n`);
+  if (config.host !== '127.0.0.1' && config.host !== 'localhost' && !config.password) {
+    console.warn('  ⚠ השרת פתוח לרשת בלי סיסמה. הגדירו APP_PASSWORD כדי להגן על האפליקציה ועל מעקב ההימורים.\n');
+  }
   // Warm the most used rating pools in the background.
   for (const k of ['soccer', 'nba', 'eurobasket', 'nhl', 'nfl']) engine.getPool(k, { waitMs: 1 }).catch(() => {});
 });

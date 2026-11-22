@@ -53,3 +53,13 @@ test('model weight scales with sample size', async () => {
   assert.equal(modelWeight(0.3, { home: 5, away: 5 }, true, false), 1, 'no market → model only');
   assert.equal(modelWeight(0.3, null, false, true), 0, 'no model → market only');
 });
+
+test('basic auth', async () => {
+  const { checkBasicAuth } = await import('../server/lib/auth.js');
+  const hdr = (u, p) => 'Basic ' + Buffer.from(`${u}:${p}`).toString('base64');
+  assert.equal(checkBasicAuth(undefined, ''), true, 'no password configured → open');
+  assert.equal(checkBasicAuth(undefined, 'secret'), false);
+  assert.equal(checkBasicAuth(hdr('any', 'secret'), 'secret'), true);
+  assert.equal(checkBasicAuth(hdr('any', 'wrong'), 'secret'), false);
+  assert.equal(checkBasicAuth(hdr('x', 'pa:ss'), 'pa:ss'), true, 'colon inside password');
+});
