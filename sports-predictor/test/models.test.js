@@ -127,3 +127,12 @@ test('tennis model', () => {
   const live = matchWin(0.8, 0.8, { bestOf: 3, setsA: 1, setsB: 0, gamesA: 5, gamesB: 2, inSet: true });
   assert.ok(live > 0.9);
 });
+
+test('market-implied sigma reproduces spread + moneyline', async () => {
+  const { sigmaFromMarket, marginPmf, pmfMarkets } = await import('../server/models/points.js');
+  const s = sigmaFromMarket(6.5, 0.72);
+  assert.ok(s > 8 && s < 20, `sigma ${s}`);
+  const ph = pmfMarkets(marginPmf({ mu: 6.5, sigma: s, otMu: 0.65 }).pmf).home;
+  close(ph, 0.72, 0.005);
+  assert.equal(sigmaFromMarket(6.5, 0.4), null, 'contradictory markets');
+});

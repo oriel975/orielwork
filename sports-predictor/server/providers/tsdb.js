@@ -40,25 +40,36 @@ export function createTsdb(cache, key = '123') {
   // All events of the current season (finished + upcoming), discovered round by round.
   async function seasonEvents(league) {
     return cache.wrap(`tsdb:seasonEvents:${league.tsdbId}`, 90000, async () => {
-      const s = await season(league);
-      const all = [];
-      let empty = 0, future = 0, failed = 0;
-      for (let r = 1; r <= 60; r++) {
-        let evs;
-        try { evs = await round(league, s, r); } catch (e) {
-          console.warn(`[tsdb] ${league.key} round ${r}: ${e.message}`);
-          if (++failed >= 3) break;
-          r--; // retry the same round
-          continue;
-        }
-        if (!evs.length) { if (++empty >= 2) break; continue; }
-        empty = 0;
-        all.push(...evs);
-        if (evs.every((e) => NOT_STARTED.test(e.status || '') && Date.parse(e.start) > Date.now())) { if (++future >= 2) break; } else future = 0;
+      const reported = await season(league);
+      let failedAll = true;
+      // TheSportsDB sometimes reports "2026" while the games are filed under "2026-2027" (EuroCup).
+      for (const s of seasonCandidates(reported)) {
+        const { all, failed } = await walkRounds(league, s);
+        if (!failed) failedAll = false;
+        if (all.length) return all;
       }
-      if (failed >= 3 && !all.length) throw new Error(`TheSportsDB unavailable for ${league.key}`);
-      return all;
-    }, { ttlFn: () => 90000 });
+      if (failedAll) throw new Error(`TheSportsDB unavailable for ${league.key}`);
+      return [];
+    }, { ttlFn: () => 90000, swr: true, persist: true });
+  }
+
+  async function walkRounds(league, s) {
+    const all = [];
+    let empty = 0, future = 0, failed = 0;
+    for (let r = 1; r <= 60; r++) {
+      let evs;
+      try { evs = await round(league, s, r); } catch (e) {
+        console.warn(`[tsdb] ${league.key} ${s} round ${r}: ${e.message}`);
+        if (++failed >= 3) break;
+        r--; // retry the same round
+        continue;
+      }
+      if (!evs.length) { if (++empty >= 2) break; continue; }
+      empty = 0;
+      all.push(...evs);
+      if (evs.every((e) => NOT_STARTED.test(e.status || '') && Date.parse(e.start) > Date.now())) { if (++future >= 2) break; } else future = 0;
+    }
+    return { all, failed: failed >= 3 };
   }
 
   async function livescores(sport) {
@@ -100,6 +111,14 @@ const STATUS_HE = {
   Q1: 'רבע 1', Q2: 'רבע 2', Q3: 'רבע 3', Q4: 'רבע 4', OT: 'הארכה', FT: 'הסתיים', AET: 'הסתיים (הארכה)', AOT: 'הסתיים (הארכה)',
   NS: '', PST: 'נדחה', POSTPONED: 'נדחה', CANC: 'בוטל', LIVE: 'לייב', INT: 'הופסק', SUSP: 'הופסק',
 };
+
+// "2026" → ["2026", "2026-2027"]; "2026-2027" → ["2026-2027", "2026"].
+export function seasonCandidates(s) {
+  const str = String(s || guessSeason());
+  const m = str.match(/^(\d{4})(?:-(\d{4}))?$/);
+  if (!m) return [str];
+  return m[2] ? [str, m[1]] : [str, `${m[1]}-${Number(m[1]) + 1}`];
+}
 
 function guessSeason() {
   const d = new Date();

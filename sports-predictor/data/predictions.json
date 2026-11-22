@@ -28,7 +28,12 @@
     "book": "DraftKings"
    }
   ],
-  "snapAt": "2026-11-19T18:32:37.841Z"
+  "snapAt": "2026-11-19T18:32:37.841Z",
+  "result": {
+   "hs": 126,
+   "as": 98,
+   "winner": null
+  }
  },
  "espn~nba~401910020": {
   "id": "espn~nba~401910020",
@@ -59,7 +64,12 @@
     "book": "DraftKings"
    }
   ],
-  "snapAt": "2026-11-19T18:32:37.843Z"
+  "snapAt": "2026-11-19T18:32:37.843Z",
+  "result": {
+   "hs": 114,
+   "as": 124,
+   "winner": null
+  }
  },
  "espn~nba~401910021": {
   "id": "espn~nba~401910021",
@@ -83,7 +93,12 @@
   },
   "confidence": "high",
   "value": [],
-  "snapAt": "2026-11-19T18:32:37.845Z"
+  "snapAt": "2026-11-19T18:32:37.845Z",
+  "result": {
+   "hs": 99,
+   "as": 102,
+   "winner": null
+  }
  },
  "espn~nba~401910022": {
   "id": "espn~nba~401910022",
@@ -114,7 +129,12 @@
     "book": "DraftKings"
    }
   ],
-  "snapAt": "2026-11-19T18:32:37.847Z"
+  "snapAt": "2026-11-19T18:32:37.847Z",
+  "result": {
+   "hs": 124,
+   "as": 112,
+   "winner": null
+  }
  },
  "espn~nhl~401892742": {
   "id": "espn~nhl~401892742",
@@ -139,7 +159,12 @@
   },
   "confidence": "high",
   "value": [],
-  "snapAt": "2026-11-19T18:32:37.943Z"
+  "snapAt": "2026-11-19T18:32:37.943Z",
+  "result": {
+   "hs": 3,
+   "as": 4,
+   "winner": null
+  }
  },
  "espn~nhl~401892743": {
   "id": "espn~nhl~401892743",
@@ -164,7 +189,12 @@
   },
   "confidence": "high",
   "value": [],
-  "snapAt": "2026-11-19T18:32:37.950Z"
+  "snapAt": "2026-11-19T18:32:37.950Z",
+  "result": {
+   "hs": 5,
+   "as": 6,
+   "winner": null
+  }
  },
  "espn~nhl~401892745": {
   "id": "espn~nhl~401892745",
@@ -189,7 +219,12 @@
   },
   "confidence": "high",
   "value": [],
-  "snapAt": "2026-11-19T18:32:37.957Z"
+  "snapAt": "2026-11-19T18:32:37.957Z",
+  "result": {
+   "hs": 2,
+   "as": 5,
+   "winner": null
+  }
  },
  "espn~nhl~401892746": {
   "id": "espn~nhl~401892746",
@@ -214,7 +249,12 @@
   },
   "confidence": "high",
   "value": [],
-  "snapAt": "2026-11-19T18:32:37.965Z"
+  "snapAt": "2026-11-19T18:32:37.965Z",
+  "result": {
+   "hs": 3,
+   "as": 6,
+   "winner": null
+  }
  },
  "espn~nhl~401892747": {
   "id": "espn~nhl~401892747",
@@ -239,7 +279,12 @@
   },
   "confidence": "high",
   "value": [],
-  "snapAt": "2026-11-19T18:32:37.971Z"
+  "snapAt": "2026-11-19T18:32:37.971Z",
+  "result": {
+   "hs": 1,
+   "as": 2,
+   "winner": null
+  }
  },
  "espn~nhl~401892749": {
   "id": "espn~nhl~401892749",
@@ -264,7 +309,12 @@
   },
   "confidence": "high",
   "value": [],
-  "snapAt": "2026-11-19T18:32:37.977Z"
+  "snapAt": "2026-11-19T18:32:37.977Z",
+  "result": {
+   "hs": 4,
+   "as": 3,
+   "winner": null
+  }
  },
  "espn~nhl~401892744": {
   "id": "espn~nhl~401892744",
@@ -289,7 +339,12 @@
   },
   "confidence": "high",
   "value": [],
-  "snapAt": "2026-11-19T18:32:37.983Z"
+  "snapAt": "2026-11-19T18:32:37.983Z",
+  "result": {
+   "hs": 3,
+   "as": 1,
+   "winner": null
+  }
  },
  "espn~nhl~401892748": {
   "id": "espn~nhl~401892748",
@@ -314,7 +369,12 @@
   },
   "confidence": "high",
   "value": [],
-  "snapAt": "2026-11-19T18:32:37.989Z"
+  "snapAt": "2026-11-19T18:32:37.989Z",
+  "result": {
+   "hs": 2,
+   "as": 4,
+   "winner": null
+  }
  },
  "espn~nhl~401892750": {
   "id": "espn~nhl~401892750",
@@ -339,7 +399,12 @@
   },
   "confidence": "high",
   "value": [],
-  "snapAt": "2026-11-19T18:32:37.995Z"
+  "snapAt": "2026-11-19T18:32:37.995Z",
+  "result": {
+   "hs": 1,
+   "as": 4,
+   "winner": null
+  }
  },
  "espn~nhl~401892751": {
   "id": "espn~nhl~401892751",
@@ -364,7 +429,12 @@
   },
   "confidence": "high",
   "value": [],
-  "snapAt": "2026-11-19T18:32:38.002Z"
+  "snapAt": "2026-11-19T18:32:38.002Z",
+  "result": {
+   "hs": 4,
+   "as": 0,
+   "winner": null
+  }
  },
  "espn~nhl~401892752": {
   "id": "espn~nhl~401892752",
@@ -389,7 +459,12 @@
   },
   "confidence": "high",
   "value": [],
-  "snapAt": "2026-11-19T18:32:38.009Z"
+  "snapAt": "2026-11-19T18:32:38.009Z",
+  "result": {
+   "hs": 5,
+   "as": 1,
+   "winner": null
+  }
  },
  "espn~nhl~401892753": {
   "id": "espn~nhl~401892753",
@@ -414,7 +489,12 @@
   },
   "confidence": "high",
   "value": [],
-  "snapAt": "2026-11-19T18:32:38.015Z"
+  "snapAt": "2026-11-19T18:32:38.015Z",
+  "result": {
+   "hs": 3,
+   "as": 4,
+   "winner": null
+  }
  },
  "espn~bra.1~401841308": {
   "id": "espn~bra.1~401841308",
@@ -454,7 +534,12 @@
     "book": "DraftKings"
    }
   ],
-  "snapAt": "2026-11-19T18:55:18.216Z"
+  "snapAt": "2026-11-19T18:55:18.216Z",
+  "result": {
+   "hs": 2,
+   "as": 1,
+   "winner": null
+  }
  },
  "espn~bra.1~401841317": {
   "id": "espn~bra.1~401841317",
@@ -481,7 +566,12 @@
   },
   "confidence": "high",
   "value": [],
-  "snapAt": "2026-11-19T18:55:18.216Z"
+  "snapAt": "2026-11-19T18:55:18.216Z",
+  "result": {
+   "hs": 2,
+   "as": 1,
+   "winner": null
+  }
  },
  "espn~ncaab~401920517": {
   "id": "espn~ncaab~401920517",
@@ -543,7 +633,12 @@
     "book": "DraftKings"
    }
   ],
-  "snapAt": "2026-11-19T18:55:17.960Z"
+  "snapAt": "2026-11-19T18:55:17.960Z",
+  "result": {
+   "hs": 73,
+   "as": 78,
+   "winner": null
+  }
  },
  "espn~ncaab~401918959": {
   "id": "espn~ncaab~401918959",
@@ -574,7 +669,12 @@
     "book": "DraftKings"
    }
   ],
-  "snapAt": "2026-11-19T18:55:17.961Z"
+  "snapAt": "2026-11-19T18:55:17.961Z",
+  "result": {
+   "hs": 93,
+   "as": 83,
+   "winner": null
+  }
  },
  "espn~atp~187504": {
   "id": "espn~atp~187504",
@@ -616,7 +716,12 @@
   },
   "confidence": "low",
   "value": [],
-  "snapAt": "2026-11-19T18:55:17.970Z"
+  "snapAt": "2026-11-19T18:55:17.970Z",
+  "result": {
+   "hs": 2,
+   "as": 1,
+   "winner": "home"
+  }
  },
  "tsdb~euroleague~2565568": {
   "id": "tsdb~euroleague~2565568",
@@ -734,7 +839,12 @@
     "book": "DraftKings"
    }
   ],
-  "snapAt": "2026-11-19T18:55:18.290Z"
+  "snapAt": "2026-11-19T18:55:18.290Z",
+  "result": {
+   "hs": 0,
+   "as": 1,
+   "winner": null
+  }
  },
  "espn~ger.1~401884736": {
   "id": "espn~ger.1~401884736",
@@ -761,7 +871,12 @@
   },
   "confidence": "high",
   "value": [],
-  "snapAt": "2026-11-19T18:55:18.290Z"
+  "snapAt": "2026-11-19T18:55:18.290Z",
+  "result": {
+   "hs": 1,
+   "as": 1,
+   "winner": null
+  }
  },
  "espn~fra.1~401876395": {
   "id": "espn~fra.1~401876395",
@@ -788,7 +903,12 @@
   },
   "confidence": "high",
   "value": [],
-  "snapAt": "2026-11-19T18:55:18.290Z"
+  "snapAt": "2026-11-19T18:55:18.290Z",
+  "result": {
+   "hs": 3,
+   "as": 1,
+   "winner": null
+  }
  },
  "espn~bel.1~401878937": {
   "id": "espn~bel.1~401878937",
@@ -815,7 +935,12 @@
   },
   "confidence": "high",
   "value": [],
-  "snapAt": "2026-11-19T18:55:18.290Z"
+  "snapAt": "2026-11-19T18:55:18.290Z",
+  "result": {
+   "hs": 1,
+   "as": 0,
+   "winner": null
+  }
  },
  "espn~den.1~401874492": {
   "id": "espn~den.1~401874492",
@@ -842,7 +967,12 @@
   },
   "confidence": "high",
   "value": [],
-  "snapAt": "2026-11-19T18:55:18.290Z"
+  "snapAt": "2026-11-19T18:55:18.290Z",
+  "result": {
+   "hs": 2,
+   "as": 1,
+   "winner": null
+  }
  },
  "espn~ksa.1~401900905": {
   "id": "espn~ksa.1~401900905",
@@ -869,7 +999,12 @@
   },
   "confidence": "high",
   "value": [],
-  "snapAt": "2026-11-19T18:55:18.291Z"
+  "snapAt": "2026-11-19T18:55:18.291Z",
+  "result": {
+   "hs": 3,
+   "as": 1,
+   "winner": null
+  }
  },
  "espn~usa.1~401933535": {
   "id": "espn~usa.1~401933535",
@@ -896,7 +1031,12 @@
   },
   "confidence": "high",
   "value": [],
-  "snapAt": "2026-11-19T18:55:18.291Z"
+  "snapAt": "2026-11-19T18:55:18.291Z",
+  "result": {
+   "hs": 1,
+   "as": 3,
+   "winner": null
+  }
  },
  "espn~usa.1~401933555": {
   "id": "espn~usa.1~401933555",
@@ -923,7 +1063,12 @@
   },
   "confidence": "high",
   "value": [],
-  "snapAt": "2026-11-19T18:55:18.291Z"
+  "snapAt": "2026-11-19T18:55:18.291Z",
+  "result": {
+   "hs": 1,
+   "as": 1,
+   "winner": null
+  }
  },
  "espn~bra.1~401841309": {
   "id": "espn~bra.1~401841309",
@@ -950,7 +1095,12 @@
   },
   "confidence": "high",
   "value": [],
-  "snapAt": "2026-11-19T18:55:18.291Z"
+  "snapAt": "2026-11-19T18:55:18.291Z",
+  "result": {
+   "hs": 0,
+   "as": 1,
+   "winner": null
+  }
  },
  "espn~arg.1~401933760": {
   "id": "espn~arg.1~401933760",
@@ -977,7 +1127,12 @@
   },
   "confidence": "high",
   "value": [],
-  "snapAt": "2026-11-19T18:55:18.291Z"
+  "snapAt": "2026-11-19T18:55:18.291Z",
+  "result": {
+   "hs": 2,
+   "as": 2,
+   "winner": null
+  }
  },
  "espn~mex.1~401877054": {
   "id": "espn~mex.1~401877054",
@@ -1004,7 +1159,12 @@
   },
   "confidence": "high",
   "value": [],
-  "snapAt": "2026-11-19T18:55:18.616Z"
+  "snapAt": "2026-11-19T18:55:18.616Z",
+  "result": {
+   "hs": 1,
+   "as": 1,
+   "winner": null
+  }
  },
  "espn~mex.1~401877053": {
   "id": "espn~mex.1~401877053",
@@ -1031,7 +1191,12 @@
   },
   "confidence": "high",
   "value": [],
-  "snapAt": "2026-11-19T18:55:18.617Z"
+  "snapAt": "2026-11-19T18:55:18.617Z",
+  "result": {
+   "hs": 3,
+   "as": 3,
+   "winner": null
+  }
  },
  "espn~mex.1~401877052": {
   "id": "espn~mex.1~401877052",
@@ -1058,6 +1223,3482 @@
   },
   "confidence": "high",
   "value": [],
-  "snapAt": "2026-11-19T18:55:18.617Z"
+  "snapAt": "2026-11-19T18:55:18.617Z",
+  "result": {
+   "hs": 1,
+   "as": 0,
+   "winner": null
+  }
+ },
+ "espn~eng.1~401879234": {
+  "id": "espn~eng.1~401879234",
+  "league": "eng.1",
+  "sport": "soccer",
+  "start": "2026-11-22T14:00Z",
+  "home": "Hull City",
+  "away": "Brighton & Hove Albion",
+  "threeWay": true,
+  "model": {
+   "home": 0.18148033643134248,
+   "draw": 0.2780926834949079,
+   "away": 0.5404269800737498
+  },
+  "market": {
+   "home": 0.12921541482696022,
+   "draw": 0.19644335428301093,
+   "away": 0.6743412308900287
+  },
+  "fair": {
+   "home": 0.14237505729980307,
+   "draw": 0.2246072760958464,
+   "away": 0.6330176666043503
+  },
+  "confidence": "high",
+  "value": [
+   {
+    "sel": "draw",
+    "odds": 4.7,
+    "ev": 0.05565419765047808,
+    "book": "DraftKings"
+   }
+  ],
+  "snapAt": "2026-11-22T05:53:54.026Z"
+ },
+ "espn~eng.1~401878755": {
+  "id": "espn~eng.1~401878755",
+  "league": "eng.1",
+  "sport": "soccer",
+  "start": "2026-11-22T16:30Z",
+  "home": "Liverpool",
+  "away": "Manchester United",
+  "threeWay": true,
+  "model": {
+   "home": 0.5587638165287772,
+   "draw": 0.20865202290343843,
+   "away": 0.2325841605677836
+  },
+  "market": {
+   "home": 0.5694356583721811,
+   "draw": 0.21786736967653816,
+   "away": 0.21269697195128076
+  },
+  "fair": {
+   "home": 0.5666620184725658,
+   "draw": 0.21558499740197265,
+   "away": 0.2177529841254615
+  },
+  "confidence": "high",
+  "value": [],
+  "snapAt": "2026-11-22T05:53:54.028Z"
+ },
+ "espn~esp.1~401882804": {
+  "id": "espn~esp.1~401882804",
+  "league": "esp.1",
+  "sport": "soccer",
+  "start": "2026-11-22T13:00Z",
+  "home": "Barcelona",
+  "away": "Villarreal",
+  "threeWay": true,
+  "model": {
+   "home": 0.8326753761460919,
+   "draw": 0.09932675061894793,
+   "away": 0.06799787323496109
+  },
+  "market": {
+   "home": 0.8276816646063156,
+   "draw": 0.10480682935166602,
+   "away": 0.0675115060420182
+  },
+  "fair": {
+   "home": 0.8299442835815104,
+   "draw": 0.10282084059372336,
+   "away": 0.06723487582476657
+  },
+  "confidence": "high",
+  "value": [],
+  "snapAt": "2026-11-22T05:53:54.028Z"
+ },
+ "espn~esp.1~401882800": {
+  "id": "espn~esp.1~401882800",
+  "league": "esp.1",
+  "sport": "soccer",
+  "start": "2026-11-22T15:15Z",
+  "home": "Racing Santander",
+  "away": "Real Sociedad",
+  "threeWay": true,
+  "model": {
+   "home": 0.23669490284381306,
+   "draw": 0.1843396128874322,
+   "away": 0.5789654842687549
+  },
+  "market": {
+   "home": 0.29309250678171966,
+   "draw": 0.22565125376418022,
+   "away": 0.4812562394541001
+  },
+  "fair": {
+   "home": 0.2776358380213342,
+   "draw": 0.21192199490208585,
+   "away": 0.5104421670765803
+  },
+  "confidence": "high",
+  "value": [],
+  "snapAt": "2026-11-22T05:53:54.029Z"
+ },
+ "espn~esp.1~401882801": {
+  "id": "espn~esp.1~401882801",
+  "league": "esp.1",
+  "sport": "soccer",
+  "start": "2026-11-22T17:30Z",
+  "home": "Osasuna",
+  "away": "Málaga",
+  "threeWay": true,
+  "model": {
+   "home": 0.5148440197169802,
+   "draw": 0.2604541464277067,
+   "away": 0.22470183385531248
+  },
+  "market": {
+   "home": 0.5289190811759816,
+   "draw": 0.26028214605439987,
+   "away": 0.21079877276961864
+  },
+  "fair": {
+   "home": 0.5243420261987234,
+   "draw": 0.2599962239284143,
+   "away": 0.2156617498728624
+  },
+  "confidence": "high",
+  "value": [],
+  "snapAt": "2026-11-22T05:53:54.029Z"
+ },
+ "espn~esp.1~401882803": {
+  "id": "espn~esp.1~401882803",
+  "league": "esp.1",
+  "sport": "soccer",
+  "start": "2026-11-22T20:00Z",
+  "home": "Getafe",
+  "away": "Atlético Madrid",
+  "threeWay": true,
+  "model": {
+   "home": 0.1941681127597613,
+   "draw": 0.29644189394009185,
+   "away": 0.5093899933001471
+  },
+  "market": {
+   "home": 0.12830245989176023,
+   "draw": 0.2256200742532733,
+   "away": 0.6460774658549663
+  },
+  "fair": {
+   "home": 0.14288359455463606,
+   "draw": 0.2522174514967949,
+   "away": 0.6048989539485693
+  },
+  "confidence": "high",
+  "value": [
+   {
+    "sel": "draw",
+    "odds": 4.1,
+    "ev": 0.03409155113685913,
+    "book": "DraftKings"
+   }
+  ],
+  "snapAt": "2026-11-22T05:53:54.029Z"
+ },
+ "espn~ita.1~401875008": {
+  "id": "espn~ita.1~401875008",
+  "league": "ita.1",
+  "sport": "soccer",
+  "start": "2026-11-22T11:30Z",
+  "home": "Juventus",
+  "away": "Venezia",
+  "threeWay": true,
+  "model": {
+   "home": 0.7114857629552336,
+   "draw": 0.19211805202216953,
+   "away": 0.09639618502259704
+  },
+  "market": {
+   "home": 0.7049748017058296,
+   "draw": 0.179590927690039,
+   "away": 0.1154342706041315
+  },
+  "fair": {
+   "home": 0.7050495946226821,
+   "draw": 0.1891429065733253,
+   "away": 0.10580749880399339
+  },
+  "confidence": "high",
+  "value": [],
+  "snapAt": "2026-11-22T05:53:54.029Z"
+ },
+ "espn~ita.1~401875047": {
+  "id": "espn~ita.1~401875047",
+  "league": "ita.1",
+  "sport": "soccer",
+  "start": "2026-11-22T14:00Z",
+  "home": "Bologna",
+  "away": "Udinese",
+  "threeWay": true,
+  "model": {
+   "home": 0.5268790614302754,
+   "draw": 0.24978905745859636,
+   "away": 0.22333188111112773
+  },
+  "market": {
+   "home": 0.5471749351633186,
+   "draw": 0.24822562431480852,
+   "away": 0.2045994405218729
+  },
+  "fair": {
+   "home": 0.5422691724227893,
+   "draw": 0.2472915587385588,
+   "away": 0.2104392688386525
+  },
+  "confidence": "high",
+  "value": [],
+  "snapAt": "2026-11-22T05:53:54.030Z"
+ },
+ "espn~ita.1~401874960": {
+  "id": "espn~ita.1~401874960",
+  "league": "ita.1",
+  "sport": "soccer",
+  "start": "2026-11-22T14:00Z",
+  "home": "Sassuolo",
+  "away": "Genoa",
+  "threeWay": true,
+  "model": {
+   "home": 0.37434082278015146,
+   "draw": 0.27332352710390456,
+   "away": 0.35233565011594387
+  },
+  "market": {
+   "home": 0.35720049603081705,
+   "draw": 0.285599007938366,
+   "away": 0.35720049603081705
+  },
+  "fair": {
+   "home": 0.3652261980221344,
+   "draw": 0.2760886587965415,
+   "away": 0.3586851431813243
+  },
+  "confidence": "high",
+  "value": [],
+  "snapAt": "2026-11-22T05:53:54.030Z"
+ },
+ "espn~ita.1~401874989": {
+  "id": "espn~ita.1~401874989",
+  "league": "ita.1",
+  "sport": "soccer",
+  "start": "2026-11-22T17:00Z",
+  "home": "AC Milan",
+  "away": "Frosinone",
+  "threeWay": true,
+  "model": {
+   "home": 0.4427006321153084,
+   "draw": 0.2362088053270811,
+   "away": 0.3210905625576106
+  },
+  "market": {
+   "home": 0.6047924443747195,
+   "draw": 0.20484354487491624,
+   "away": 0.19036401075036438
+  },
+  "fair": {
+   "home": 0.5614388038707919,
+   "draw": 0.21310038853758595,
+   "away": 0.22546080759162176
+  },
+  "confidence": "high",
+  "value": [
+   {
+    "sel": "away",
+    "odds": 4.6,
+    "ev": 0.037119714921459934,
+    "book": "DraftKings"
+   }
+  ],
+  "snapAt": "2026-11-22T05:53:54.030Z"
+ },
+ "espn~ita.1~401875001": {
+  "id": "espn~ita.1~401875001",
+  "league": "ita.1",
+  "sport": "soccer",
+  "start": "2026-11-22T19:45Z",
+  "home": "Atalanta",
+  "away": "Internazionale",
+  "threeWay": true,
+  "model": {
+   "home": 0.23621372436288562,
+   "draw": 0.2216889101199141,
+   "away": 0.5420973655172006
+  },
+  "market": {
+   "home": 0.17170945890510653,
+   "draw": 0.1927026913792177,
+   "away": 0.6355878497156756
+  },
+  "fair": {
+   "home": 0.1888721732516816,
+   "draw": 0.20297685017425687,
+   "away": 0.6081509765740617
+  },
+  "confidence": "high",
+  "value": [],
+  "snapAt": "2026-11-22T05:53:54.030Z"
+ },
+ "espn~ger.1~401884733": {
+  "id": "espn~ger.1~401884733",
+  "league": "ger.1",
+  "sport": "soccer",
+  "start": "2026-11-22T14:30Z",
+  "home": "FC Augsburg",
+  "away": "Mainz",
+  "threeWay": true,
+  "model": {
+   "home": 0.46076936118449047,
+   "draw": 0.21493540326489602,
+   "away": 0.32429523555061296
+  },
+  "market": {
+   "home": 0.3634561468196849,
+   "draw": 0.2395311491957057,
+   "away": 0.39701270398460936
+  },
+  "fair": {
+   "home": 0.3934854498629264,
+   "draw": 0.22793169634200972,
+   "away": 0.3785828537950643
+  },
+  "confidence": "high",
+  "value": [],
+  "snapAt": "2026-11-22T05:53:54.030Z"
+ },
+ "espn~ger.1~401884730": {
+  "id": "espn~ger.1~401884730",
+  "league": "ger.1",
+  "sport": "soccer",
+  "start": "2026-11-22T16:30Z",
+  "home": "Werder Bremen",
+  "away": "Hamburg SV",
+  "threeWay": true,
+  "model": {
+   "home": 0.515909210025317,
+   "draw": 0.24558136497699817,
+   "away": 0.23850942499768565
+  },
+  "market": null,
+  "fair": {
+   "home": 0.515909210025317,
+   "draw": 0.24558136497699817,
+   "away": 0.23850942499768565
+  },
+  "confidence": "medium",
+  "value": [],
+  "snapAt": "2026-11-22T05:53:54.030Z"
+ },
+ "espn~fra.1~401876397": {
+  "id": "espn~fra.1~401876397",
+  "league": "fra.1",
+  "sport": "soccer",
+  "start": "2026-11-22T14:00Z",
+  "home": "Paris FC",
+  "away": "Angers",
+  "threeWay": true,
+  "model": {
+   "home": 0.7326007105137857,
+   "draw": 0.18230391624503206,
+   "away": 0.08509537324118174
+  },
+  "market": {
+   "home": 0.7485258188417667,
+   "draw": 0.15518206064220508,
+   "away": 0.0962921205160283
+  },
+  "fair": {
+   "home": 0.744413533952133,
+   "draw": 0.16574762837413737,
+   "away": 0.08983883767372962
+  },
+  "confidence": "high",
+  "value": [],
+  "snapAt": "2026-11-22T05:53:54.031Z"
+ },
+ "espn~fra.1~401876401": {
+  "id": "espn~fra.1~401876401",
+  "league": "fra.1",
+  "sport": "soccer",
+  "start": "2026-11-22T16:15Z",
+  "home": "Lorient",
+  "away": "Stade Rennais",
+  "threeWay": true,
+  "model": {
+   "home": 0.4167086566184816,
+   "draw": 0.26243269271209835,
+   "away": 0.3208586506694198
+  },
+  "market": {
+   "home": 0.31843624359786515,
+   "draw": 0.28834151533169905,
+   "away": 0.3932222410704359
+  },
+  "fair": {
+   "home": 0.3486705586434508,
+   "draw": 0.2763267260420464,
+   "away": 0.3750027153145022
+  },
+  "confidence": "high",
+  "value": [
+   {
+    "sel": "home",
+    "odds": 3,
+    "ev": 0.04601167593035238,
+    "book": "DraftKings"
+   }
+  ],
+  "snapAt": "2026-11-22T05:53:54.031Z"
+ },
+ "espn~fra.1~401876400": {
+  "id": "espn~fra.1~401876400",
+  "league": "fra.1",
+  "sport": "soccer",
+  "start": "2026-11-22T19:45Z",
+  "home": "Marseille",
+  "away": "Le Mans",
+  "threeWay": true,
+  "model": {
+   "home": 0.5861698909356755,
+   "draw": 0.2192093738777231,
+   "away": 0.19462073518660164
+  },
+  "market": {
+   "home": 0.6749337368129276,
+   "draw": 0.18476408351873966,
+   "away": 0.14030217966833283
+  },
+  "fair": {
+   "home": 0.6533203304469566,
+   "draw": 0.19858261323350454,
+   "away": 0.14809705631953862
+  },
+  "confidence": "high",
+  "value": [],
+  "snapAt": "2026-11-22T05:53:54.031Z"
+ },
+ "espn~eng.2~401880159": {
+  "id": "espn~eng.2~401880159",
+  "league": "eng.2",
+  "sport": "soccer",
+  "start": "2026-11-22T12:00Z",
+  "home": "Burnley",
+  "away": "Blackburn Rovers",
+  "threeWay": true,
+  "model": {
+   "home": 0.4065676592465115,
+   "draw": 0.2526605183037235,
+   "away": 0.3407718224497651
+  },
+  "market": {
+   "home": 0.5072887826064703,
+   "draw": 0.2497577639161615,
+   "away": 0.24295345347736827
+  },
+  "fair": {
+   "home": 0.47701188331409156,
+   "draw": 0.2537626404691087,
+   "away": 0.26922547621679943
+  },
+  "confidence": "high",
+  "value": [
+   {
+    "sel": "away",
+    "odds": 3.85,
+    "ev": 0.036518083434677884,
+    "book": "DraftKings"
+   }
+  ],
+  "snapAt": "2026-11-22T05:53:54.031Z"
+ },
+ "espn~ned.1~401875545": {
+  "id": "espn~ned.1~401875545",
+  "league": "ned.1",
+  "sport": "soccer",
+  "start": "2026-11-22T11:15Z",
+  "home": "FC Twente",
+  "away": "Willem II",
+  "threeWay": true,
+  "model": {
+   "home": 0.9342161590981768,
+   "draw": 0.04849848767237706,
+   "away": 0.01728535322944593
+  },
+  "market": {
+   "home": 0.9117384881443201,
+   "draw": 0.05677834606280553,
+   "away": 0.03148316579287447
+  },
+  "fair": {
+   "home": 0.919547413755799,
+   "draw": 0.0598872703039873,
+   "away": 0.020565315940213495
+  },
+  "confidence": "high",
+  "value": [],
+  "snapAt": "2026-11-22T05:53:54.031Z"
+ },
+ "espn~ned.1~401875547": {
+  "id": "espn~ned.1~401875547",
+  "league": "ned.1",
+  "sport": "soccer",
+  "start": "2026-11-22T13:30Z",
+  "home": "Ajax Amsterdam",
+  "away": "ADO Den Haag",
+  "threeWay": true,
+  "model": {
+   "home": 0.740503782449543,
+   "draw": 0.15880194297598893,
+   "away": 0.10069427457446875
+  },
+  "market": {
+   "home": 0.8370116777218191,
+   "draw": 0.09952345039693704,
+   "away": 0.06346487188124374
+  },
+  "fair": {
+   "home": 0.8101592804076952,
+   "draw": 0.12372356149588713,
+   "away": 0.06611715809641673
+  },
+  "confidence": "high",
+  "value": [],
+  "snapAt": "2026-11-22T05:53:54.032Z"
+ },
+ "espn~ned.1~401875540": {
+  "id": "espn~ned.1~401875540",
+  "league": "ned.1",
+  "sport": "soccer",
+  "start": "2026-11-22T13:30Z",
+  "home": "Sparta Rotterdam",
+  "away": "AZ Alkmaar",
+  "threeWay": true,
+  "model": {
+   "home": 0.2586493945028012,
+   "draw": 0.232087683693633,
+   "away": 0.509262921803565
+  },
+  "market": {
+   "home": 0.23530959330337897,
+   "draw": 0.22625129672999683,
+   "away": 0.5384391099666241
+  },
+  "fair": {
+   "home": 0.24578012762451387,
+   "draw": 0.22321445666012876,
+   "away": 0.5310054157153569
+  },
+  "confidence": "high",
+  "value": [],
+  "snapAt": "2026-11-22T05:53:54.032Z"
+ },
+ "espn~ned.1~401875542": {
+  "id": "espn~ned.1~401875542",
+  "league": "ned.1",
+  "sport": "soccer",
+  "start": "2026-11-22T15:45Z",
+  "home": "Go Ahead Eagles",
+  "away": "Fortuna Sittard",
+  "threeWay": true,
+  "model": {
+   "home": 0.44048349984286256,
+   "draw": 0.23673799430137746,
+   "away": 0.32277850585575996
+  },
+  "market": {
+   "home": 0.5560723576195843,
+   "draw": 0.23045721732238122,
+   "away": 0.2134704250580344
+  },
+  "fair": {
+   "home": 0.522261444418631,
+   "draw": 0.23182256345881358,
+   "away": 0.24591599212255505
+  },
+  "confidence": "high",
+  "value": [
+   {
+    "sel": "away",
+    "odds": 4.3,
+    "ev": 0.05743876612698662,
+    "book": "DraftKings"
+   }
+  ],
+  "snapAt": "2026-11-22T05:53:54.032Z"
+ },
+ "espn~tur.1~401888243": {
+  "id": "espn~tur.1~401888243",
+  "league": "tur.1",
+  "sport": "soccer",
+  "start": "2026-11-22T10:30Z",
+  "home": "Erzurum BB",
+  "away": "Goztepe",
+  "threeWay": true,
+  "model": {
+   "home": 0.29785849810777687,
+   "draw": 0.2683610802079918,
+   "away": 0.4337804216842313
+  },
+  "market": null,
+  "fair": {
+   "home": 0.29785849810777687,
+   "draw": 0.2683610802079918,
+   "away": 0.4337804216842313
+  },
+  "confidence": "medium",
+  "value": [],
+  "snapAt": "2026-11-22T05:53:54.032Z"
+ },
+ "espn~tur.1~401888248": {
+  "id": "espn~tur.1~401888248",
+  "league": "tur.1",
+  "sport": "soccer",
+  "start": "2026-11-22T13:00Z",
+  "home": "Kasimpasa",
+  "away": "Alanyaspor",
+  "threeWay": true,
+  "model": {
+   "home": 0.5629453118669338,
+   "draw": 0.25049558245002573,
+   "away": 0.18655910568304052
+  },
+  "market": {
+   "home": 0.5163371175082605,
+   "draw": 0.258417736132757,
+   "away": 0.22524514635898255
+  },
+  "fair": {
+   "home": 0.5310858520760382,
+   "draw": 0.25519332891475177,
+   "away": 0.21372081900921044
+  },
+  "confidence": "high",
+  "value": [],
+  "snapAt": "2026-11-22T05:53:54.032Z"
+ },
+ "espn~tur.1~401888246": {
+  "id": "espn~tur.1~401888246",
+  "league": "tur.1",
+  "sport": "soccer",
+  "start": "2026-11-22T13:00Z",
+  "home": "Konyaspor",
+  "away": "Besiktas",
+  "threeWay": true,
+  "model": {
+   "home": 0.22596116287138715,
+   "draw": 0.26891191396588876,
+   "away": 0.505126923162724
+  },
+  "market": {
+   "home": 0.16912079296419386,
+   "draw": 0.21481103115178857,
+   "away": 0.6160681758840176
+  },
+  "fair": {
+   "home": 0.18283339941720222,
+   "draw": 0.23574856281114362,
+   "away": 0.5814180377716538
+  },
+  "confidence": "high",
+  "value": [],
+  "snapAt": "2026-11-22T05:53:54.032Z"
+ },
+ "espn~tur.1~401888249": {
+  "id": "espn~tur.1~401888249",
+  "league": "tur.1",
+  "sport": "soccer",
+  "start": "2026-11-22T16:00Z",
+  "home": "Trabzonspor",
+  "away": "Eyupspor",
+  "threeWay": true,
+  "model": {
+   "home": 0.8553927869323366,
+   "draw": 0.10510178334425868,
+   "away": 0.03950542972340459
+  },
+  "market": {
+   "home": 0.8760159871756494,
+   "draw": 0.07964919605289404,
+   "away": 0.044334816771456516
+  },
+  "fair": {
+   "home": 0.8716060778189502,
+   "draw": 0.09552415988246256,
+   "away": 0.03286976229858731
+  },
+  "confidence": "high",
+  "value": [],
+  "snapAt": "2026-11-22T05:53:54.032Z"
+ },
+ "espn~bel.1~401878942": {
+  "id": "espn~bel.1~401878942",
+  "league": "bel.1",
+  "sport": "soccer",
+  "start": "2026-11-22T12:30Z",
+  "home": "Waasland-Beveren",
+  "away": "KAA Gent",
+  "threeWay": true,
+  "model": {
+   "home": 0.21642804176105873,
+   "draw": 0.2574533620574208,
+   "away": 0.5261185961815205
+  },
+  "market": {
+   "home": 0.2617599934344584,
+   "draw": 0.2579154259632824,
+   "away": 0.4803245806022592
+  },
+  "fair": {
+   "home": 0.2482902089731961,
+   "draw": 0.2597069941683935,
+   "away": 0.4920027968584101
+  },
+  "confidence": "high",
+  "value": [],
+  "snapAt": "2026-11-22T05:53:54.033Z"
+ },
+ "espn~bel.1~401878936": {
+  "id": "espn~bel.1~401878936",
+  "league": "bel.1",
+  "sport": "soccer",
+  "start": "2026-11-22T15:00Z",
+  "home": "KV Kortrijk",
+  "away": "Union St.-Gilloise",
+  "threeWay": true,
+  "model": {
+   "home": 0.04128189260114794,
+   "draw": 0.14590868220796077,
+   "away": 0.8128094251908909
+  },
+  "market": {
+   "home": 0.10674236733212189,
+   "draw": 0.17699296142430862,
+   "away": 0.7162646712435695
+  },
+  "fair": {
+   "home": 0.08069377758328987,
+   "draw": 0.1700939267828944,
+   "away": 0.7492122956338153
+  },
+  "confidence": "high",
+  "value": [],
+  "snapAt": "2026-11-22T05:53:54.033Z"
+ },
+ "espn~bel.1~401878941": {
+  "id": "espn~bel.1~401878941",
+  "league": "bel.1",
+  "sport": "soccer",
+  "start": "2026-11-22T17:30Z",
+  "home": "Anderlecht",
+  "away": "OH Leuven",
+  "threeWay": true,
+  "model": {
+   "home": 0.5092724348813731,
+   "draw": 0.26514996781320094,
+   "away": 0.225577597305426
+  },
+  "market": {
+   "home": 0.6549322391719935,
+   "draw": 0.19678906191431605,
+   "away": 0.14827869891369042
+  },
+  "fair": {
+   "home": 0.6100089717369179,
+   "draw": 0.22081380801792908,
+   "away": 0.16917722024515294
+  },
+  "confidence": "high",
+  "value": [],
+  "snapAt": "2026-11-22T05:53:54.033Z"
+ },
+ "espn~bel.1~401878934": {
+  "id": "espn~bel.1~401878934",
+  "league": "bel.1",
+  "sport": "soccer",
+  "start": "2026-11-22T18:15Z",
+  "home": "Lommel SK",
+  "away": "Standard Liege",
+  "threeWay": true,
+  "model": {
+   "home": 0.4517595528731529,
+   "draw": 0.28127205368522246,
+   "away": 0.26696839344162476
+  },
+  "market": {
+   "home": 0.2865960024168198,
+   "draw": 0.2462505095496819,
+   "away": 0.4671534880334984
+  },
+  "fair": {
+   "home": 0.33653809127085466,
+   "draw": 0.25780953088576314,
+   "away": 0.40565237784338243
+  },
+  "confidence": "high",
+  "value": [
+   {
+    "sel": "home",
+    "odds": 3.25,
+    "ev": 0.09374879663027769,
+    "book": "DraftKings"
+   }
+  ],
+  "snapAt": "2026-11-22T05:53:54.033Z"
+ },
+ "espn~gre.1~401896727": {
+  "id": "espn~gre.1~401896727",
+  "league": "gre.1",
+  "sport": "soccer",
+  "start": "2026-11-22T14:00Z",
+  "home": "Levadiakos",
+  "away": "Atromitos",
+  "threeWay": true,
+  "model": {
+   "home": 0.314429449245524,
+   "draw": 0.28491596077699727,
+   "away": 0.4006545899774782
+  },
+  "market": {
+   "home": 0.373910516251974,
+   "draw": 0.32663807187637783,
+   "away": 0.2994514118716481
+  },
+  "fair": {
+   "home": 0.36287626697919845,
+   "draw": 0.3001820398425061,
+   "away": 0.33694169317829514
+  },
+  "confidence": "high",
+  "value": [
+   {
+    "sel": "away",
+    "odds": 3.15,
+    "ev": 0.06136633351162968,
+    "book": "DraftKings"
+   }
+  ],
+  "snapAt": "2026-11-22T05:53:54.033Z"
+ },
+ "espn~gre.1~401896725": {
+  "id": "espn~gre.1~401896725",
+  "league": "gre.1",
+  "sport": "soccer",
+  "start": "2026-11-22T15:00Z",
+  "home": "Panetolikos",
+  "away": "Volos NFC",
+  "threeWay": true,
+  "model": {
+   "home": 0.4817098693477519,
+   "draw": 0.2702490841586364,
+   "away": 0.248041046493612
+  },
+  "market": {
+   "home": 0.42444664100183643,
+   "draw": 0.2877766794990818,
+   "away": 0.2877766794990818
+  },
+  "fair": {
+   "home": 0.44227813696640117,
+   "draw": 0.2800463874015625,
+   "away": 0.27767547563203604
+  },
+  "confidence": "high",
+  "value": [],
+  "snapAt": "2026-11-22T05:53:54.033Z"
+ },
+ "espn~gre.1~401896726": {
+  "id": "espn~gre.1~401896726",
+  "league": "gre.1",
+  "sport": "soccer",
+  "start": "2026-11-22T15:30Z",
+  "home": "Panathinaikos",
+  "away": "OFI Crete",
+  "threeWay": true,
+  "model": {
+   "home": 0.6521119202305384,
+   "draw": 0.21257680488250782,
+   "away": 0.1353112748869535
+  },
+  "market": {
+   "home": 0.8016343570755595,
+   "draw": 0.12715018822695262,
+   "away": 0.07121545469748794
+  },
+  "fair": {
+   "home": 0.75888284623087,
+   "draw": 0.1581181368700381,
+   "away": 0.08299901689909185
+  },
+  "confidence": "high",
+  "value": [],
+  "snapAt": "2026-11-22T05:53:54.033Z"
+ },
+ "espn~gre.1~401896809": {
+  "id": "espn~gre.1~401896809",
+  "league": "gre.1",
+  "sport": "soccer",
+  "start": "2026-11-22T17:00Z",
+  "home": "Olympiacos",
+  "away": "Iraklis",
+  "threeWay": true,
+  "model": {
+   "home": 0.6119284668528987,
+   "draw": 0.2758799397955248,
+   "away": 0.11219159335157676
+  },
+  "market": {
+   "home": 0.8364723975216763,
+   "draw": 0.11451879864313681,
+   "away": 0.04900880383518668
+  },
+  "fair": {
+   "home": 0.7851033072373917,
+   "draw": 0.15795555611621284,
+   "away": 0.05694113664639567
+  },
+  "confidence": "high",
+  "value": [
+   {
+    "sel": "draw",
+    "odds": 7,
+    "ev": 0.10568889281348981,
+    "book": "DraftKings"
+   }
+  ],
+  "snapAt": "2026-11-22T05:53:54.034Z"
+ },
+ "espn~gre.1~401896724": {
+  "id": "espn~gre.1~401896724",
+  "league": "gre.1",
+  "sport": "soccer",
+  "start": "2026-11-22T17:30Z",
+  "home": "PAOK",
+  "away": "Kifisia",
+  "threeWay": true,
+  "model": {
+   "home": 0.6434201948231169,
+   "draw": 0.20586959927519066,
+   "away": 0.1507102059016925
+  },
+  "market": {
+   "home": 0.7162646712435696,
+   "draw": 0.17699296142430854,
+   "away": 0.10674236733212183
+  },
+  "fair": {
+   "home": 0.6944458471894542,
+   "draw": 0.19196158607308342,
+   "away": 0.11359256673746164
+  },
+  "confidence": "high",
+  "value": [],
+  "snapAt": "2026-11-22T05:53:54.034Z"
+ },
+ "espn~aut.1~401881745": {
+  "id": "espn~aut.1~401881745",
+  "league": "aut.1",
+  "sport": "soccer",
+  "start": "2026-11-22T13:30Z",
+  "home": "SC Rheindorf Altach",
+  "away": "SK Sturm Graz",
+  "threeWay": true,
+  "model": {
+   "home": 0.22797555203188744,
+   "draw": 0.2709869479376447,
+   "away": 0.5010375000304677
+  },
+  "market": {
+   "home": 0.25870039237261994,
+   "draw": 0.24778987540790323,
+   "away": 0.49350973221947686
+  },
+  "fair": {
+   "home": 0.2463137210120187,
+   "draw": 0.2596192200162867,
+   "away": 0.494067058971695
+  },
+  "confidence": "high",
+  "value": [],
+  "snapAt": "2026-11-22T05:53:54.034Z"
+ },
+ "espn~aut.1~401881748": {
+  "id": "espn~aut.1~401881748",
+  "league": "aut.1",
+  "sport": "soccer",
+  "start": "2026-11-22T13:30Z",
+  "home": "Wolfsberger",
+  "away": "SV Josko Ried",
+  "threeWay": true,
+  "model": {
+   "home": 0.26457760494938676,
+   "draw": 0.26605771910261283,
+   "away": 0.4693646759480004
+  },
+  "market": {
+   "home": 0.3297860751527856,
+   "draw": 0.24659888950166095,
+   "away": 0.4236150353455534
+  },
+  "fair": {
+   "home": 0.30706236960695366,
+   "draw": 0.25612096769772086,
+   "away": 0.43681666269532504
+  },
+  "confidence": "high",
+  "value": [],
+  "snapAt": "2026-11-22T05:53:54.034Z"
+ },
+ "espn~aut.1~401881747": {
+  "id": "espn~aut.1~401881747",
+  "league": "aut.1",
+  "sport": "soccer",
+  "start": "2026-11-22T16:00Z",
+  "home": "Austria Vienna",
+  "away": "RB Salzburg",
+  "threeWay": true,
+  "model": {
+   "home": 0.1932214868385202,
+   "draw": 0.22773532124880833,
+   "away": 0.5790431919126714
+  },
+  "market": {
+   "home": 0.21319121381811545,
+   "draw": 0.21319121381811545,
+   "away": 0.5736175723637691
+  },
+  "fair": {
+   "home": 0.20335492161578708,
+   "draw": 0.22363525324915573,
+   "away": 0.5730098251350579
+  },
+  "confidence": "high",
+  "value": [],
+  "snapAt": "2026-11-22T05:53:54.034Z"
+ },
+ "espn~den.1~401874575": {
+  "id": "espn~den.1~401874575",
+  "league": "den.1",
+  "sport": "soccer",
+  "start": "2026-11-22T13:00Z",
+  "home": "AC Horsens",
+  "away": "Silkeborg IF",
+  "threeWay": true,
+  "model": {
+   "home": 0.5773702967621981,
+   "draw": 0.20977635187331645,
+   "away": 0.21285335136448555
+  },
+  "market": {
+   "home": 0.4239298801252579,
+   "draw": 0.2577976437467521,
+   "away": 0.3182724761279901
+  },
+  "fair": {
+   "home": 0.46664713043804323,
+   "draw": 0.24709177183206216,
+   "away": 0.28626109772989444
+  },
+  "confidence": "high",
+  "value": [
+   {
+    "sel": "home",
+    "odds": 2.25,
+    "ev": 0.049956043485597235,
+    "book": "DraftKings"
+   }
+  ],
+  "snapAt": "2026-11-22T05:53:54.034Z"
+ },
+ "espn~den.1~401874558": {
+  "id": "espn~den.1~401874558",
+  "league": "den.1",
+  "sport": "soccer",
+  "start": "2026-11-22T13:00Z",
+  "home": "Viborg FF",
+  "away": "Randers FC",
+  "threeWay": true,
+  "model": {
+   "home": 0.6484139226430272,
+   "draw": 0.21370465859301074,
+   "away": 0.13788141876396154
+  },
+  "market": {
+   "home": 0.6180681392843689,
+   "draw": 0.2016641402127286,
+   "away": 0.18026772050290263
+  },
+  "fair": {
+   "home": 0.6271638310366897,
+   "draw": 0.20875856869501686,
+   "away": 0.16407760026829288
+  },
+  "confidence": "high",
+  "value": [],
+  "snapAt": "2026-11-22T05:53:54.034Z"
+ },
+ "espn~den.1~401874541": {
+  "id": "espn~den.1~401874541",
+  "league": "den.1",
+  "sport": "soccer",
+  "start": "2026-11-22T15:00Z",
+  "home": "Sønderjyske Fodbold",
+  "away": "Odense Boldklub",
+  "threeWay": true,
+  "model": {
+   "home": 0.34799294713098755,
+   "draw": 0.25830396993697835,
+   "away": 0.39370308293203427
+  },
+  "market": {
+   "home": 0.3269844987237555,
+   "draw": 0.24619754936314628,
+   "away": 0.4268179519130982
+  },
+  "fair": {
+   "home": 0.3331953433958975,
+   "draw": 0.25179673950345305,
+   "away": 0.4150079171006487
+  },
+  "confidence": "high",
+  "value": [],
+  "snapAt": "2026-11-22T05:53:54.034Z"
+ },
+ "espn~den.1~401874493": {
+  "id": "espn~den.1~401874493",
+  "league": "den.1",
+  "sport": "soccer",
+  "start": "2026-11-22T17:00Z",
+  "home": "FC Nordsjælland",
+  "away": "F.C. København",
+  "threeWay": true,
+  "model": {
+   "home": 0.3186738469932438,
+   "draw": 0.25365389411153644,
+   "away": 0.4276722588952203
+  },
+  "market": {
+   "home": 0.38881094221209833,
+   "draw": 0.2669560597566473,
+   "away": 0.3442329980312543
+  },
+  "fair": {
+   "home": 0.36879441624687415,
+   "draw": 0.25961907417201313,
+   "away": 0.3715865095811126
+  },
+  "confidence": "high",
+  "value": [],
+  "snapAt": "2026-11-22T05:53:54.035Z"
+ },
+ "espn~usa.1~401933731": {
+  "id": "espn~usa.1~401933731",
+  "league": "usa.1",
+  "sport": "soccer",
+  "start": "2026-11-22T21:00Z",
+  "home": "Nashville SC",
+  "away": "FC Cincinnati",
+  "threeWay": true,
+  "model": {
+   "home": 0.7379146036456414,
+   "draw": 0.16095226998103296,
+   "away": 0.10113312637332565
+  },
+  "market": {
+   "home": 0.6579347427974226,
+   "draw": 0.18772929589371393,
+   "away": 0.15433596130886348
+  },
+  "fair": {
+   "home": 0.6837761117725879,
+   "draw": 0.18164652826531533,
+   "away": 0.1345773599620963
+  },
+  "confidence": "high",
+  "value": [],
+  "snapAt": "2026-11-22T05:53:54.035Z"
+ },
+ "espn~bra.1~401841318": {
+  "id": "espn~bra.1~401841318",
+  "league": "bra.1",
+  "sport": "soccer",
+  "start": "2026-11-22T19:00Z",
+  "home": "Athletico-PR",
+  "away": "Remo",
+  "threeWay": true,
+  "model": {
+   "home": 0.5793426693645147,
+   "draw": 0.22600536544715533,
+   "away": 0.1946519651883303
+  },
+  "market": {
+   "home": 0.6241881065140708,
+   "draw": 0.22791972758737344,
+   "away": 0.14789216589855583
+  },
+  "fair": {
+   "home": 0.613783870481101,
+   "draw": 0.21947875367538003,
+   "away": 0.16673737584351947
+  },
+  "confidence": "high",
+  "value": [],
+  "snapAt": "2026-11-22T05:53:54.035Z"
+ },
+ "espn~bra.1~401841324": {
+  "id": "espn~bra.1~401841324",
+  "league": "bra.1",
+  "sport": "soccer",
+  "start": "2026-11-22T21:30Z",
+  "home": "Fluminense",
+  "away": "Mirassol",
+  "threeWay": true,
+  "model": {
+   "home": 0.5601958682493189,
+   "draw": 0.24577449359585365,
+   "away": 0.19402963815482774
+  },
+  "market": {
+   "home": 0.5966140084886801,
+   "draw": 0.22290426186976703,
+   "away": 0.18048172964155296
+  },
+  "fair": {
+   "home": 0.5844625985089571,
+   "draw": 0.23518208714585928,
+   "away": 0.18035531434518406
+  },
+  "confidence": "high",
+  "value": [],
+  "snapAt": "2026-11-22T05:53:54.035Z"
+ },
+ "espn~arg.1~401933759": {
+  "id": "espn~arg.1~401933759",
+  "league": "arg.1",
+  "sport": "soccer",
+  "start": "2026-11-22T19:00Z",
+  "home": "Rosario Central",
+  "away": "Gimnasia (Mendoza)",
+  "threeWay": true,
+  "model": {
+   "home": 0.5815094188037014,
+   "draw": 0.2516342708097121,
+   "away": 0.16685631038658713
+  },
+  "market": {
+   "home": 0.6973201160497144,
+   "draw": 0.19493643014944598,
+   "away": 0.10774345380083959
+  },
+  "fair": {
+   "home": 0.6627644513710349,
+   "draw": 0.21499279182928113,
+   "away": 0.12224275679968356
+  },
+  "confidence": "high",
+  "value": [],
+  "snapAt": "2026-11-22T05:53:54.035Z"
+ },
+ "tsdb~isr.basket~2597436": {
+  "id": "tsdb~isr.basket~2597436",
+  "league": "isr.basket",
+  "sport": "basketball",
+  "start": "2026-11-22T17:55:00.000Z",
+  "home": "Hapoel Eilat BC",
+  "away": "Maccabi Ironi Ramat Gan",
+  "threeWay": false,
+  "model": {
+   "home": 0.7976891645365223,
+   "away": 0.20231083546069936
+  },
+  "market": null,
+  "fair": {
+   "home": 0.7976891645365223,
+   "away": 0.20231083546069936
+  },
+  "confidence": "low",
+  "value": [],
+  "snapAt": "2026-11-22T05:53:54.036Z"
+ },
+ "tsdb~isr.basket~2597438": {
+  "id": "tsdb~isr.basket~2597438",
+  "league": "isr.basket",
+  "sport": "basketball",
+  "start": "2026-11-22T18:15:00.000Z",
+  "home": "Maccabi Rishon LeZion",
+  "away": "Hapoel Galil Elyon",
+  "threeWay": false,
+  "model": {
+   "home": 0.8137097114272525,
+   "away": 0.18629028856895108
+  },
+  "market": null,
+  "fair": {
+   "home": 0.8137097114272525,
+   "away": 0.18629028856895108
+  },
+  "confidence": "low",
+  "value": [],
+  "snapAt": "2026-11-22T05:53:54.036Z"
+ },
+ "tsdb~isr.basket~2597441": {
+  "id": "tsdb~isr.basket~2597441",
+  "league": "isr.basket",
+  "sport": "basketball",
+  "start": "2026-11-22T18:05:00.000Z",
+  "home": "Hapoel HaEmek",
+  "away": "Bnei Herzliya",
+  "threeWay": false,
+  "model": {
+   "home": 0.49738847260005586,
+   "away": 0.5026115273961531
+  },
+  "market": null,
+  "fair": {
+   "home": 0.49738847260005586,
+   "away": 0.5026115273961531
+  },
+  "confidence": "low",
+  "value": [],
+  "snapAt": "2026-11-22T05:53:54.036Z"
+ },
+ "espn~nba~401910029": {
+  "id": "espn~nba~401910029",
+  "league": "nba",
+  "sport": "basketball",
+  "start": "2026-11-22T20:30Z",
+  "home": "Atlanta Hawks",
+  "away": "Detroit Pistons",
+  "threeWay": false,
+  "model": {
+   "home": 0.46531138814610645,
+   "away": 0.5346886095035669
+  },
+  "market": {
+   "home": 0.44532952091072137,
+   "away": 0.5546704790892786
+  },
+  "fair": {
+   "home": 0.45148485951670264,
+   "away": 0.5485149639047625
+  },
+  "confidence": "high",
+  "value": [],
+  "snapAt": "2026-11-22T05:53:54.039Z"
+ },
+ "espn~ncaab~401902281": {
+  "id": "espn~ncaab~401902281",
+  "league": "ncaab",
+  "sport": "basketball",
+  "start": "2026-11-22T17:00Z",
+  "home": "Butler Bulldogs",
+  "away": "Nebraska Cornhuskers",
+  "threeWay": false,
+  "model": {
+   "home": 0.2582277850296749,
+   "away": 0.7417722114511873
+  },
+  "market": {
+   "home": 0.12337266505672517,
+   "away": 0.8766273349432748
+  },
+  "fair": {
+   "home": 0.13584370189343037,
+   "away": 0.8641562981033379
+  },
+  "confidence": "medium",
+  "value": [],
+  "snapAt": "2026-11-22T05:53:54.045Z"
+ },
+ "espn~ncaab~401911024": {
+  "id": "espn~ncaab~401911024",
+  "league": "ncaab",
+  "sport": "basketball",
+  "start": "2026-11-22T17:00Z",
+  "home": "UIC Flames",
+  "away": "Miami (OH) RedHawks",
+  "threeWay": false,
+  "model": {
+   "home": 0.3668732670423536,
+   "away": 0.633126729458311
+  },
+  "market": {
+   "home": 0.4767709538481188,
+   "away": 0.5232290461518811
+  },
+  "fair": {
+   "home": 0.46567850471901406,
+   "away": 0.5340148950858762
+  },
+  "confidence": "medium",
+  "value": [],
+  "snapAt": "2026-11-22T05:53:54.047Z"
+ },
+ "espn~ncaab~401929023": {
+  "id": "espn~ncaab~401929023",
+  "league": "ncaab",
+  "sport": "basketball",
+  "start": "2026-11-22T18:00Z",
+  "home": "Canisius Golden Griffins",
+  "away": "Western Illinois Leathernecks",
+  "threeWay": false,
+  "model": {
+   "home": 0.8331176295332322,
+   "away": 0.1668823669672872
+  },
+  "market": {
+   "home": 0.6239778220823534,
+   "away": 0.3760221779176466
+  },
+  "fair": {
+   "home": 0.6677404059660342,
+   "away": 0.33225959362830326
+  },
+  "confidence": "medium",
+  "value": [
+   {
+    "sel": "home",
+    "odds": 1.5555555555555556,
+    "ev": 0.03870729816938656,
+    "book": "DraftKings"
+   }
+  ],
+  "snapAt": "2026-11-22T05:53:54.050Z"
+ },
+ "espn~ncaab~401921088": {
+  "id": "espn~ncaab~401921088",
+  "league": "ncaab",
+  "sport": "basketball",
+  "start": "2026-11-22T18:00Z",
+  "home": "UMBC Retrievers",
+  "away": "Lancaster Bible Chargers",
+  "threeWay": false,
+  "model": {
+   "home": 0.8325977273800934,
+   "away": 0.16740226912397854
+  },
+  "market": null,
+  "fair": {
+   "home": 0.8325977273800934,
+   "away": 0.16740226912397854
+  },
+  "confidence": "low",
+  "value": [],
+  "snapAt": "2026-11-22T05:53:54.050Z"
+ },
+ "espn~ncaab~401920736": {
+  "id": "espn~ncaab~401920736",
+  "league": "ncaab",
+  "sport": "basketball",
+  "start": "2026-11-22T18:00Z",
+  "home": "Northwestern Wildcats",
+  "away": "Dayton Flyers",
+  "threeWay": false,
+  "model": {
+   "home": 0.4665469433960464,
+   "away": 0.5334530531128537
+  },
+  "market": {
+   "home": 0.4007136002903736,
+   "away": 0.5992863997096264
+  },
+  "fair": {
+   "home": 0.4105599488937364,
+   "away": 0.5894400509354545
+  },
+  "confidence": "medium",
+  "value": [],
+  "snapAt": "2026-11-22T05:53:54.052Z"
+ },
+ "espn~ncaab~401919809": {
+  "id": "espn~ncaab~401919809",
+  "league": "ncaab",
+  "sport": "basketball",
+  "start": "2026-11-22T18:00Z",
+  "home": "Long Island University Sharks",
+  "away": "Fairfield Stags",
+  "threeWay": false,
+  "model": {
+   "home": 0.9183731300359003,
+   "away": 0.08162686648236027
+  },
+  "market": {
+   "home": 0.5546704790892786,
+   "away": 0.44532952091072137
+  },
+  "fair": {
+   "home": 0.6205958765971594,
+   "away": 0.37921962401022125
+  },
+  "confidence": "medium",
+  "value": [
+   {
+    "sel": "home",
+    "odds": 1.7407407407407407,
+    "ev": 0.08029652592838854,
+    "book": "DraftKings"
+   }
+  ],
+  "snapAt": "2026-11-22T05:53:54.054Z"
+ },
+ "espn~ncaab~401912212": {
+  "id": "espn~ncaab~401912212",
+  "league": "ncaab",
+  "sport": "basketball",
+  "start": "2026-11-22T18:00Z",
+  "home": "American University Eagles",
+  "away": "Towson Tigers",
+  "threeWay": false,
+  "model": {
+   "home": 0.9227343817552697,
+   "away": 0.0772656147449069
+  },
+  "market": {
+   "home": 0.4953593421115595,
+   "away": 0.5046406578884406
+  },
+  "fair": {
+   "home": 0.5727595444128014,
+   "away": 0.4272404520838559
+  },
+  "confidence": "medium",
+  "value": [
+   {
+    "sel": "home",
+    "odds": 1.925925925925926,
+    "ev": 0.10309245590613614,
+    "book": "DraftKings"
+   }
+  ],
+  "snapAt": "2026-11-22T05:53:54.055Z"
+ },
+ "espn~ncaab~401909527": {
+  "id": "espn~ncaab~401909527",
+  "league": "ncaab",
+  "sport": "basketball",
+  "start": "2026-11-22T18:00Z",
+  "home": "Marquette Golden Eagles",
+  "away": "Chicago State Cougars",
+  "threeWay": false,
+  "model": {
+   "home": 0.9610945122728412,
+   "away": 0.038905484186559106
+  },
+  "market": null,
+  "fair": {
+   "home": 0.9858469896393026,
+   "away": 0.01415300688095485
+  },
+  "confidence": "medium",
+  "value": [],
+  "snapAt": "2026-11-22T05:53:54.056Z"
+ },
+ "espn~ncaab~401928802": {
+  "id": "espn~ncaab~401928802",
+  "league": "ncaab",
+  "sport": "basketball",
+  "start": "2026-11-22T19:00Z",
+  "home": "Western Kentucky Hilltoppers",
+  "away": "George Washington Revolutionaries",
+  "threeWay": false,
+  "model": {
+   "home": 0.5949154757940058,
+   "away": 0.40508452071964174
+  },
+  "market": {
+   "home": 0.33232993844947056,
+   "away": 0.6676700615505295
+  },
+  "fair": {
+   "home": 0.3693768168451017,
+   "away": 0.6306231831496052
+  },
+  "confidence": "medium",
+  "value": [
+   {
+    "sel": "home",
+    "odds": 2.8,
+    "ev": 0.03425508716628478,
+    "book": "DraftKings"
+   }
+  ],
+  "snapAt": "2026-11-22T05:53:54.058Z"
+ },
+ "espn~ncaab~401925942": {
+  "id": "espn~ncaab~401925942",
+  "league": "ncaab",
+  "sport": "basketball",
+  "start": "2026-11-22T19:00Z",
+  "home": "Utah Tech Trailblazers",
+  "away": "South Dakota Coyotes",
+  "threeWay": false,
+  "model": {
+   "home": 0.6256731003039667,
+   "away": 0.37432689617481
+  },
+  "market": {
+   "home": 0.5,
+   "away": 0.5
+  },
+  "fair": {
+   "home": 0.5160121414932478,
+   "away": 0.4839878550245501
+  },
+  "confidence": "medium",
+  "value": [],
+  "snapAt": "2026-11-22T05:53:54.059Z"
+ },
+ "espn~ncaab~401921748": {
+  "id": "espn~ncaab~401921748",
+  "league": "ncaab",
+  "sport": "basketball",
+  "start": "2026-11-22T19:00Z",
+  "home": "Cincinnati Bearcats",
+  "away": "UMass Lowell River Hawks",
+  "threeWay": false,
+  "model": {
+   "home": 0.9033869913413674,
+   "away": 0.09661300513638973
+  },
+  "market": null,
+  "fair": {
+   "home": 0.9717178355446427,
+   "away": 0.028282160948942998
+  },
+  "confidence": "medium",
+  "value": [],
+  "snapAt": "2026-11-22T05:53:54.059Z"
+ },
+ "espn~ncaab~401921706": {
+  "id": "espn~ncaab~401921706",
+  "league": "ncaab",
+  "sport": "basketball",
+  "start": "2026-11-22T19:00Z",
+  "home": "Duquesne Dukes",
+  "away": "Wyoming Cowboys",
+  "threeWay": false,
+  "model": {
+   "home": 0.2178521239651679,
+   "away": 0.7821478725135572
+  },
+  "market": {
+   "home": 0.3834067557103052,
+   "away": 0.6165932442896948
+  },
+  "fair": {
+   "home": 0.3600010546829219,
+   "away": 0.6399989453138213
+  },
+  "confidence": "medium",
+  "value": [],
+  "snapAt": "2026-11-22T05:53:54.061Z"
+ },
+ "espn~ncaab~401918988": {
+  "id": "espn~ncaab~401918988",
+  "league": "ncaab",
+  "sport": "basketball",
+  "start": "2026-11-22T19:00Z",
+  "home": "Memphis Tigers",
+  "away": "Evansville Purple Aces",
+  "threeWay": false,
+  "model": {
+   "home": 0.9106913352057502,
+   "away": 0.0893086613152158
+  },
+  "market": {
+   "home": 0.9729278250483399,
+   "away": 0.02707217495166019
+  },
+  "fair": {
+   "home": 0.9694427961544957,
+   "away": 0.030557203842517817
+  },
+  "confidence": "medium",
+  "value": [],
+  "snapAt": "2026-11-22T05:53:54.063Z"
+ },
+ "espn~ncaab~401918455": {
+  "id": "espn~ncaab~401918455",
+  "league": "ncaab",
+  "sport": "basketball",
+  "start": "2026-11-22T19:00Z",
+  "home": "Youngstown State Penguins",
+  "away": "William & Mary Tribe",
+  "threeWay": false,
+  "model": {
+   "home": 0.883666784198937,
+   "away": 0.11633321230437939
+  },
+  "market": {
+   "home": 0.4232491793282343,
+   "away": 0.5767508206717658
+  },
+  "fair": {
+   "home": 0.4956754935235018,
+   "away": 0.5043245064677347
+  },
+  "confidence": "medium",
+  "value": [
+   {
+    "sel": "home",
+    "odds": 2.24,
+    "ev": 0.11031310549264428,
+    "book": "DraftKings"
+   }
+  ],
+  "snapAt": "2026-11-22T05:53:54.065Z"
+ },
+ "espn~ncaab~401911200": {
+  "id": "espn~ncaab~401911200",
+  "league": "ncaab",
+  "sport": "basketball",
+  "start": "2026-11-22T19:00Z",
+  "home": "Fordham Rams",
+  "away": "San Diego Toreros",
+  "threeWay": false,
+  "model": {
+   "home": 0.611339110553242,
+   "away": 0.38866088595912
+  },
+  "market": {
+   "home": 0.5883234780340314,
+   "away": 0.4116765219659686
+  },
+  "fair": {
+   "home": 0.5918135674926542,
+   "away": 0.4081864325040685
+  },
+  "confidence": "medium",
+  "value": [],
+  "snapAt": "2026-11-22T05:53:54.067Z"
+ },
+ "espn~ncaab~401928790": {
+  "id": "espn~ncaab~401928790",
+  "league": "ncaab",
+  "sport": "basketball",
+  "start": "2026-11-22T19:30Z",
+  "home": "New Mexico State Aggies",
+  "away": "Robert Morris Colonials",
+  "threeWay": false,
+  "model": {
+   "home": 0.2813624355298041,
+   "away": 0.7186375609547785
+  },
+  "market": {
+   "home": 0.5278394447975963,
+   "away": 0.47216055520240385
+  },
+  "fair": {
+   "home": 0.49510260122943595,
+   "away": 0.5048841849023986
+  },
+  "confidence": "medium",
+  "value": [],
+  "snapAt": "2026-11-22T05:53:54.069Z"
+ },
+ "espn~ncaab~401906868": {
+  "id": "espn~ncaab~401906868",
+  "league": "ncaab",
+  "sport": "basketball",
+  "start": "2026-11-22T20:00Z",
+  "home": "Texas Longhorns",
+  "away": "Southern Indiana Screaming Eagles",
+  "threeWay": false,
+  "model": {
+   "home": 0.9408961087054354,
+   "away": 0.05910388777266763
+  },
+  "market": null,
+  "fair": {
+   "home": 0.9929269315967314,
+   "away": 0.007073064923817015
+  },
+  "confidence": "medium",
+  "value": [],
+  "snapAt": "2026-11-22T05:53:54.070Z"
+ },
+ "espn~ncaab~401925066": {
+  "id": "espn~ncaab~401925066",
+  "league": "ncaab",
+  "sport": "basketball",
+  "start": "2026-11-22T20:00Z",
+  "home": "Nicholls Colonels",
+  "away": "Troy Trojans",
+  "threeWay": false,
+  "model": {
+   "home": 0.6363616809566703,
+   "away": 0.36363831555663073
+  },
+  "market": {
+   "home": 0.3256172852448952,
+   "away": 0.6743827147551049
+  },
+  "fair": {
+   "home": 0.36943953234551646,
+   "away": 0.6305604676506419
+  },
+  "confidence": "medium",
+  "value": [
+   {
+    "sel": "home",
+    "odds": 2.85,
+    "ev": 0.05290266718472192,
+    "book": "DraftKings"
+   }
+  ],
+  "snapAt": "2026-11-22T05:53:54.072Z"
+ },
+ "espn~ncaab~401922252": {
+  "id": "espn~ncaab~401922252",
+  "league": "ncaab",
+  "sport": "basketball",
+  "start": "2026-11-22T20:00Z",
+  "home": "South Alabama Jaguars",
+  "away": "West Florida Argonauts",
+  "threeWay": false,
+  "model": {
+   "home": 0.6143453047467263,
+   "away": 0.38565469177339873
+  },
+  "market": {
+   "home": 0.7234217715810927,
+   "away": 0.2765782284189072
+  },
+  "fair": {
+   "home": 0.7083500342889335,
+   "away": 0.2916499657075977
+  },
+  "confidence": "medium",
+  "value": [],
+  "snapAt": "2026-11-22T05:53:54.073Z"
+ },
+ "espn~ncaab~401929202": {
+  "id": "espn~ncaab~401929202",
+  "league": "ncaab",
+  "sport": "basketball",
+  "start": "2026-11-22T20:30Z",
+  "home": "Texas State Bobcats",
+  "away": "McNeese Cowboys",
+  "threeWay": false,
+  "model": {
+   "home": 0.9358712278027355,
+   "away": 0.0641287687041485
+  },
+  "market": {
+   "home": 0.5674365390167734,
+   "away": 0.4325634609832266
+  },
+  "fair": {
+   "home": 0.6109266575543766,
+   "away": 0.3890733414351724
+  },
+  "confidence": "medium",
+  "value": [
+   {
+    "sel": "home",
+    "odds": 1.704225352112676,
+    "ev": 0.04115669808562772,
+    "book": "DraftKings"
+   }
+  ],
+  "snapAt": "2026-11-22T05:53:54.075Z"
+ },
+ "espn~ncaab~401923323": {
+  "id": "espn~ncaab~401923323",
+  "league": "ncaab",
+  "sport": "basketball",
+  "start": "2026-11-22T20:30Z",
+  "home": "UAlbany Great Danes",
+  "away": "Mercyhurst Lakers",
+  "threeWay": false,
+  "model": {
+   "home": 0.3314191396319493,
+   "away": 0.6685808568798383
+  },
+  "market": {
+   "home": 0.5232290461518811,
+   "away": 0.4767709538481188
+  },
+  "fair": {
+   "home": 0.4885361470198607,
+   "away": 0.511318859867812
+  },
+  "confidence": "medium",
+  "value": [],
+  "snapAt": "2026-11-22T05:53:54.077Z"
+ },
+ "espn~ncaab~401920381": {
+  "id": "espn~ncaab~401920381",
+  "league": "ncaab",
+  "sport": "basketball",
+  "start": "2026-11-22T20:30Z",
+  "home": "Oklahoma State Cowboys",
+  "away": "Virginia Tech Hokies",
+  "threeWay": false,
+  "model": {
+   "home": 0.5684991402960905,
+   "away": 0.4315008562193695
+  },
+  "market": {
+   "home": 0.4767709538481188,
+   "away": 0.5232290461518811
+  },
+  "fair": {
+   "home": 0.4883409666575348,
+   "away": 0.511396062935328
+  },
+  "confidence": "medium",
+  "value": [],
+  "snapAt": "2026-11-22T05:53:54.079Z"
+ },
+ "espn~ncaab~401929387": {
+  "id": "espn~ncaab~401929387",
+  "league": "ncaab",
+  "sport": "basketball",
+  "start": "2026-11-22T21:00Z",
+  "home": "Eastern Kentucky Colonels",
+  "away": "Alice Lloyd Eagles",
+  "threeWay": false,
+  "model": {
+   "home": 0.9513398948757525,
+   "away": 0.04866010164095104
+  },
+  "market": null,
+  "fair": {
+   "home": 0.9513398948757525,
+   "away": 0.04866010164095104
+  },
+  "confidence": "low",
+  "value": [],
+  "snapAt": "2026-11-22T05:53:54.079Z"
+ },
+ "espn~ncaab~401926795": {
+  "id": "espn~ncaab~401926795",
+  "league": "ncaab",
+  "sport": "basketball",
+  "start": "2026-11-22T21:30Z",
+  "home": "Liberty Flames",
+  "away": "Richmond Spiders",
+  "threeWay": false,
+  "model": {
+   "home": 0.4023405275208182,
+   "away": 0.5976594689799524
+  },
+  "market": {
+   "home": 0.5454027354444257,
+   "away": 0.45459726455557414
+  },
+  "fair": {
+   "home": 0.5274124953913022,
+   "away": 0.4725875045903606
+  },
+  "confidence": "medium",
+  "value": [],
+  "snapAt": "2026-11-22T05:53:54.081Z"
+ },
+ "espn~ncaab~401921176": {
+  "id": "espn~ncaab~401921176",
+  "league": "ncaab",
+  "sport": "basketball",
+  "start": "2026-11-22T21:30Z",
+  "home": "Maryland Eastern Shore Hawks",
+  "away": "IU Indianapolis Jaguars",
+  "threeWay": false,
+  "model": {
+   "home": 0.35604191491946174,
+   "away": 0.643958081597205
+  },
+  "market": {
+   "home": 0.17127463232533027,
+   "away": 0.8287253676746696
+  },
+  "fair": {
+   "home": 0.18937260319014135,
+   "away": 0.8106273968067091
+  },
+  "confidence": "medium",
+  "value": [],
+  "snapAt": "2026-11-22T05:53:54.083Z"
+ },
+ "espn~ncaab~401917540": {
+  "id": "espn~ncaab~401917540",
+  "league": "ncaab",
+  "sport": "basketball",
+  "start": "2026-11-22T21:30Z",
+  "home": "Loyola Marymount Lions",
+  "away": "UC Irvine Anteaters",
+  "threeWay": false,
+  "model": {
+   "home": 0.45242254978843754,
+   "away": 0.5475774467043101
+  },
+  "market": {
+   "home": 0.4116765219659686,
+   "away": 0.5883234780340314
+  },
+  "fair": {
+   "home": 0.4169116661273054,
+   "away": 0.5830883259216865
+  },
+  "confidence": "medium",
+  "value": [],
+  "snapAt": "2026-11-22T05:53:54.085Z"
+ },
+ "espn~nfl~401873070": {
+  "id": "espn~nfl~401873070",
+  "league": "nfl",
+  "sport": "football",
+  "start": "2026-11-22T18:00Z",
+  "home": "Buffalo Bills",
+  "away": "Miami Dolphins",
+  "threeWay": false,
+  "model": {
+   "home": 0.8574825314204094,
+   "away": 0.14251746857627026
+  },
+  "market": {
+   "home": 0.9311625162010615,
+   "away": 0.06883748379893859
+  },
+  "fair": {
+   "home": 0.9141935043307822,
+   "away": 0.0858064956655866
+  },
+  "confidence": "high",
+  "value": [],
+  "snapAt": "2026-11-22T05:53:54.087Z"
+ },
+ "espn~nfl~401873071": {
+  "id": "espn~nfl~401873071",
+  "league": "nfl",
+  "sport": "football",
+  "start": "2026-11-22T18:00Z",
+  "home": "Chicago Bears",
+  "away": "New Orleans Saints",
+  "threeWay": false,
+  "model": {
+   "home": 0.7445482665756672,
+   "away": 0.25545173342102256
+  },
+  "market": {
+   "home": 0.8525525533053072,
+   "away": 0.1474474466946929
+  },
+  "fair": {
+   "home": 0.8252246284657578,
+   "away": 0.1747753715309219
+  },
+  "confidence": "high",
+  "value": [],
+  "snapAt": "2026-11-22T05:53:54.089Z"
+ },
+ "espn~nfl~401873073": {
+  "id": "espn~nfl~401873073",
+  "league": "nfl",
+  "sport": "football",
+  "start": "2026-11-22T18:00Z",
+  "home": "Dallas Cowboys",
+  "away": "Tennessee Titans",
+  "threeWay": false,
+  "model": {
+   "home": 0.6756648762931691,
+   "away": 0.3243351237034738
+  },
+  "market": {
+   "home": 0.759414848665459,
+   "away": 0.24058515133454095
+  },
+  "fair": {
+   "home": 0.7363236108958178,
+   "away": 0.26367638910115754
+  },
+  "confidence": "high",
+  "value": [],
+  "snapAt": "2026-11-22T05:53:54.091Z"
+ },
+ "espn~nfl~401873072": {
+  "id": "espn~nfl~401873072",
+  "league": "nfl",
+  "sport": "football",
+  "start": "2026-11-22T18:00Z",
+  "home": "Detroit Lions",
+  "away": "Tampa Bay Buccaneers",
+  "threeWay": false,
+  "model": {
+   "home": 0.5878922353036905,
+   "away": 0.4121077646929486
+  },
+  "market": {
+   "home": 0.6490244566957108,
+   "away": 0.35097554330428926
+  },
+  "fair": {
+   "home": 0.6315106175177327,
+   "away": 0.3684893824790579
+  },
+  "confidence": "high",
+  "value": [],
+  "snapAt": "2026-11-22T05:53:54.093Z"
+ },
+ "espn~nfl~401873067": {
+  "id": "espn~nfl~401873067",
+  "league": "nfl",
+  "sport": "football",
+  "start": "2026-11-22T18:00Z",
+  "home": "Kansas City Chiefs",
+  "away": "Arizona Cardinals",
+  "threeWay": false,
+  "model": {
+   "home": 0.7643034297165551,
+   "away": 0.23569657028009694
+  },
+  "market": {
+   "home": 0.9270957720220484,
+   "away": 0.0729042279779517
+  },
+  "fair": {
+   "home": 0.8945046934001066,
+   "away": 0.10549530659679221
+  },
+  "confidence": "high",
+  "value": [],
+  "snapAt": "2026-11-22T05:53:54.095Z"
+ },
+ "espn~nfl~401873076": {
+  "id": "espn~nfl~401873076",
+  "league": "nfl",
+  "sport": "football",
+  "start": "2026-11-22T18:00Z",
+  "home": "Philadelphia Eagles",
+  "away": "Pittsburgh Steelers",
+  "threeWay": false,
+  "model": {
+   "home": 0.3987065347234411,
+   "away": 0.6012934652732295
+  },
+  "market": {
+   "home": 0.36140261071258406,
+   "away": 0.638597389287416
+  },
+  "fair": {
+   "home": 0.3721136594432679,
+   "away": 0.6278863405543351
+  },
+  "confidence": "high",
+  "value": [],
+  "snapAt": "2026-11-22T05:53:54.097Z"
+ },
+ "espn~nfl~401873068": {
+  "id": "espn~nfl~401873068",
+  "league": "nfl",
+  "sport": "football",
+  "start": "2026-11-22T18:00Z",
+  "home": "Carolina Panthers",
+  "away": "Baltimore Ravens",
+  "threeWay": false,
+  "model": {
+   "home": 0.4429102646285242,
+   "away": 0.5570897353681129
+  },
+  "market": {
+   "home": 0.5730970375001546,
+   "away": 0.42690296249984544
+  },
+  "fair": {
+   "home": 0.5342419181472394,
+   "away": 0.46575807856516005
+  },
+  "confidence": "high",
+  "value": [
+   {
+    "sel": "away",
+    "odds": 2.23,
+    "ev": 0.03864051520030687,
+    "book": "DraftKings"
+   }
+  ],
+  "snapAt": "2026-11-22T05:53:54.099Z"
+ },
+ "espn~nfl~401873074": {
+  "id": "espn~nfl~401873074",
+  "league": "nfl",
+  "sport": "football",
+  "start": "2026-11-22T21:05Z",
+  "home": "Los Angeles Chargers",
+  "away": "New York Jets",
+  "threeWay": false,
+  "model": {
+   "home": 0.6227949792882774,
+   "away": 0.377205020707375
+  },
+  "market": {
+   "home": 0.6127772893549572,
+   "away": 0.3872227106450427
+  },
+  "fair": {
+   "home": 0.6160379837715299,
+   "away": 0.38396201622516046
+  },
+  "confidence": "high",
+  "value": [],
+  "snapAt": "2026-11-22T05:53:54.101Z"
+ },
+ "espn~nfl~401873075": {
+  "id": "espn~nfl~401873075",
+  "league": "nfl",
+  "sport": "football",
+  "start": "2026-11-22T21:25Z",
+  "home": "Denver Broncos",
+  "away": "Las Vegas Raiders",
+  "threeWay": false,
+  "model": {
+   "home": 0.7794167476066365,
+   "away": 0.22058325239000062
+  },
+  "market": {
+   "home": 0.8543275377204458,
+   "away": 0.14567246227955422
+  },
+  "fair": {
+   "home": 0.8349823895471691,
+   "away": 0.1650176104496913
+  },
+  "confidence": "high",
+  "value": [],
+  "snapAt": "2026-11-22T05:53:54.103Z"
+ },
+ "espn~nfl~401873069": {
+  "id": "espn~nfl~401873069",
+  "league": "nfl",
+  "sport": "football",
+  "start": "2026-11-22T21:25Z",
+  "home": "New York Giants",
+  "away": "Jacksonville Jaguars",
+  "threeWay": false,
+  "model": {
+   "home": 0.2963358542695424,
+   "away": 0.7036641457270946
+  },
+  "market": {
+   "home": 0.2985796472664791,
+   "away": 0.701420352733521
+  },
+  "fair": {
+   "home": 0.2976279444539797,
+   "away": 0.7023720555429974
+  },
+  "confidence": "high",
+  "value": [],
+  "snapAt": "2026-11-22T05:53:54.105Z"
+ },
+ "espn~nhl~401892768": {
+  "id": "espn~nhl~401892768",
+  "league": "nhl",
+  "sport": "hockey",
+  "start": "2026-11-22T17:30Z",
+  "home": "New York Rangers",
+  "away": "Carolina Hurricanes",
+  "threeWay": false,
+  "model": {
+   "home": 0.3169553888661687,
+   "draw": 0.16093881861712167,
+   "away": 0.5221057925167104
+  },
+  "market": {
+   "home": 0.4116765219659686,
+   "away": 0.5883234780340314
+  },
+  "fair": {
+   "home": 0.40333423168105703,
+   "away": 0.5966657683189436
+  },
+  "confidence": "high",
+  "value": [],
+  "snapAt": "2026-11-22T05:53:54.108Z"
+ },
+ "espn~atp~187529": {
+  "id": "espn~atp~187529",
+  "league": "atp",
+  "sport": "tennis",
+  "start": "2026-11-22T17:00Z",
+  "home": "Carlos Alcaraz",
+  "away": "Alexander Zverev",
+  "threeWay": false,
+  "model": {
+   "home": 0.34696380968220186,
+   "away": 0.6530361903177981
+  },
+  "market": null,
+  "fair": {
+   "home": 0.34696380968220186,
+   "away": 0.6530361903177981
+  },
+  "confidence": "medium",
+  "value": [],
+  "snapAt": "2026-11-22T05:53:54.110Z"
+ },
+ "espn~wta~186812": {
+  "id": "espn~wta~186812",
+  "league": "wta",
+  "sport": "tennis",
+  "start": "2026-11-22T21:00Z",
+  "home": "Rebeka Masarova",
+  "away": "Leyre Romero Gormaz",
+  "threeWay": false,
+  "model": {
+   "home": 0.3852353912787875,
+   "away": 0.6147646087212125
+  },
+  "market": null,
+  "fair": {
+   "home": 0.3852353912787875,
+   "away": 0.6147646087212125
+  },
+  "confidence": "low",
+  "value": [],
+  "snapAt": "2026-11-22T05:53:54.112Z"
+ },
+ "espn~wta~187580": {
+  "id": "espn~wta~187580",
+  "league": "wta",
+  "sport": "tennis",
+  "start": "2026-11-22T15:00Z",
+  "home": "Camila Markus",
+  "away": "Josefina Estevez",
+  "threeWay": false,
+  "model": {
+   "home": 0.5,
+   "away": 0.5
+  },
+  "market": null,
+  "fair": {
+   "home": 0.5,
+   "away": 0.5
+  },
+  "confidence": "low",
+  "value": [],
+  "snapAt": "2026-11-22T05:53:54.113Z"
+ },
+ "espn~wta~187579": {
+  "id": "espn~wta~187579",
+  "league": "wta",
+  "sport": "tennis",
+  "start": "2026-11-22T15:00Z",
+  "home": "Alexandra Osborne",
+  "away": "Abigail Rencheli",
+  "threeWay": false,
+  "model": {
+   "home": 0.5,
+   "away": 0.5
+  },
+  "market": null,
+  "fair": {
+   "home": 0.5,
+   "away": 0.5
+  },
+  "confidence": "low",
+  "value": [],
+  "snapAt": "2026-11-22T05:53:54.115Z"
+ },
+ "espn~wta~187577": {
+  "id": "espn~wta~187577",
+  "league": "wta",
+  "sport": "tennis",
+  "start": "2026-11-22T16:30Z",
+  "home": "Marina Bulbarella",
+  "away": "Lourdes Ayala",
+  "threeWay": false,
+  "model": {
+   "home": 0.5,
+   "away": 0.5
+  },
+  "market": null,
+  "fair": {
+   "home": 0.5,
+   "away": 0.5
+  },
+  "confidence": "low",
+  "value": [],
+  "snapAt": "2026-11-22T05:53:54.116Z"
+ },
+ "espn~wta~187578": {
+  "id": "espn~wta~187578",
+  "league": "wta",
+  "sport": "tennis",
+  "start": "2026-11-22T17:00Z",
+  "home": "Guadalupe Rondinoni",
+  "away": "Zhibek Kulambayeva",
+  "threeWay": false,
+  "model": {
+   "home": 0.5,
+   "away": 0.5
+  },
+  "market": null,
+  "fair": {
+   "home": 0.5,
+   "away": 0.5
+  },
+  "confidence": "low",
+  "value": [],
+  "snapAt": "2026-11-22T05:53:54.117Z"
+ },
+ "espn~tur.1~401888370": {
+  "id": "espn~tur.1~401888370",
+  "league": "tur.1",
+  "sport": "soccer",
+  "start": "2026-11-23T17:00Z",
+  "home": "Istanbul Basaksehir",
+  "away": "Çorum FK",
+  "threeWay": true,
+  "model": {
+   "home": 0.5898049292872364,
+   "draw": 0.1992856866940309,
+   "away": 0.2109093840187325
+  },
+  "market": {
+   "home": 0.5220811930820236,
+   "draw": 0.23895940345898822,
+   "away": 0.23895940345898822
+  },
+  "fair": {
+   "home": 0.543395780787906,
+   "draw": 0.22332220333249614,
+   "away": 0.23328201587959813
+  },
+  "confidence": "high",
+  "value": [],
+  "snapAt": "2026-11-22T05:49:16.272Z"
+ },
+ "espn~gre.1~401896728": {
+  "id": "espn~gre.1~401896728",
+  "league": "gre.1",
+  "sport": "soccer",
+  "start": "2026-11-23T15:00Z",
+  "home": "Asteras Tripoli",
+  "away": "Aris",
+  "threeWay": true,
+  "model": {
+   "home": 0.30333351610212117,
+   "draw": 0.2710189545487694,
+   "away": 0.4256475293491086
+  },
+  "market": {
+   "home": 0.2688706360794984,
+   "draw": 0.3021220904749832,
+   "away": 0.4290072734455183
+  },
+  "fair": {
+   "home": 0.28722984058588225,
+   "draw": 0.27847493163791814,
+   "away": 0.4342952277761998
+  },
+  "confidence": "high",
+  "value": [],
+  "snapAt": "2026-11-22T05:49:16.275Z"
+ },
+ "espn~usa.1~401933730": {
+  "id": "espn~usa.1~401933730",
+  "league": "usa.1",
+  "sport": "soccer",
+  "start": "2026-11-22T23:30Z",
+  "home": "Chicago Fire FC",
+  "away": "Charlotte FC",
+  "threeWay": true,
+  "model": {
+   "home": 0.4112775833684277,
+   "draw": 0.22319572060070833,
+   "away": 0.3655266960308638
+  },
+  "market": {
+   "home": 0.6047924443747195,
+   "draw": 0.20484354487491624,
+   "away": 0.19036401075036438
+  },
+  "fair": {
+   "home": 0.5498665987553502,
+   "draw": 0.20979203895755524,
+   "away": 0.24034136228709563
+  },
+  "confidence": "high",
+  "value": [
+   {
+    "sel": "away",
+    "odds": 4.6,
+    "ev": 0.10557026652063972,
+    "book": "DraftKings"
+   }
+  ],
+  "snapAt": "2026-11-22T05:49:16.279Z"
+ },
+ "espn~usa.1~401933729": {
+  "id": "espn~usa.1~401933729",
+  "league": "usa.1",
+  "sport": "soccer",
+  "start": "2026-11-23T01:30Z",
+  "home": "Vancouver Whitecaps",
+  "away": "Real Salt Lake",
+  "threeWay": true,
+  "model": {
+   "home": 0.6326105788057143,
+   "draw": 0.2082588107639244,
+   "away": 0.15913061043036134
+  },
+  "market": {
+   "home": 0.6530637402675307,
+   "draw": 0.18395620309517038,
+   "away": 0.162980056637299
+  },
+  "fair": {
+   "home": 0.6464779543712392,
+   "draw": 0.1936710925976867,
+   "away": 0.15985095303107438
+  },
+  "confidence": "high",
+  "value": [],
+  "snapAt": "2026-11-22T05:49:16.282Z"
+ },
+ "espn~bra.1~401841321": {
+  "id": "espn~bra.1~401841321",
+  "league": "bra.1",
+  "sport": "soccer",
+  "start": "2026-11-22T22:30Z",
+  "home": "Red Bull Bragantino",
+  "away": "Vasco da Gama",
+  "threeWay": true,
+  "model": {
+   "home": 0.4489041613646508,
+   "draw": 0.2654172131902052,
+   "away": 0.2856786254451435
+  },
+  "market": {
+   "home": 0.3587346188765058,
+   "draw": 0.26771724331681374,
+   "away": 0.37354813780668045
+  },
+  "fair": {
+   "home": 0.39097988003020656,
+   "draw": 0.2606358450978106,
+   "away": 0.34838427487198287
+  },
+  "confidence": "high",
+  "value": [
+   {
+    "sel": "home",
+    "odds": 2.65,
+    "ev": 0.03609668208004746,
+    "book": "DraftKings"
+   }
+  ],
+  "snapAt": "2026-11-22T05:49:16.285Z"
+ },
+ "espn~arg.1~401933761": {
+  "id": "espn~arg.1~401933761",
+  "league": "arg.1",
+  "sport": "soccer",
+  "start": "2026-11-22T22:00Z",
+  "home": "River Plate",
+  "away": "Lanús",
+  "threeWay": true,
+  "model": {
+   "home": 0.4367203903976063,
+   "draw": 0.31650082267023183,
+   "away": 0.24677878693216185
+  },
+  "market": {
+   "home": 0.5899433768762644,
+   "draw": 0.2534819224365922,
+   "away": 0.15657470068714352
+  },
+  "fair": {
+   "home": 0.54272429672472,
+   "draw": 0.279032004473549,
+   "away": 0.17824369880173055
+  },
+  "confidence": "high",
+  "value": [],
+  "snapAt": "2026-11-22T05:49:16.289Z"
+ },
+ "espn~arg.1~401933762": {
+  "id": "espn~arg.1~401933762",
+  "league": "arg.1",
+  "sport": "soccer",
+  "start": "2026-11-23T01:00Z",
+  "home": "Instituto (Córdoba)",
+  "away": "Huracán",
+  "threeWay": true,
+  "model": {
+   "home": 0.4913072997275941,
+   "draw": 0.281824630772271,
+   "away": 0.22686806950013497
+  },
+  "market": {
+   "home": 0.4570637220232712,
+   "draw": 0.3082766170674334,
+   "away": 0.23465966090929538
+  },
+  "fair": {
+   "home": 0.4669158639650539,
+   "draw": 0.3009858298637858,
+   "away": 0.23209830617116023
+  },
+  "confidence": "high",
+  "value": [],
+  "snapAt": "2026-11-22T05:49:16.292Z"
+ },
+ "espn~mex.1~401877047": {
+  "id": "espn~mex.1~401877047",
+  "league": "mex.1",
+  "sport": "soccer",
+  "start": "2026-11-22T23:07Z",
+  "home": "Guadalajara",
+  "away": "Cruz Azul",
+  "threeWay": true,
+  "model": {
+   "home": 0.46051955376508735,
+   "draw": 0.24271475297736833,
+   "away": 0.2967656932575443
+  },
+  "market": {
+   "home": 0.43687818433485787,
+   "draw": 0.23626864612165013,
+   "away": 0.32685316954349203
+  },
+  "fair": {
+   "home": 0.4396724895941134,
+   "draw": 0.246530690105831,
+   "away": 0.31379682030005523
+  },
+  "confidence": "high",
+  "value": [],
+  "snapAt": "2026-11-22T05:49:16.299Z"
+ },
+ "espn~mex.1~401877046": {
+  "id": "espn~mex.1~401877046",
+  "league": "mex.1",
+  "sport": "soccer",
+  "start": "2026-11-23T01:10Z",
+  "home": "Querétaro",
+  "away": "Necaxa",
+  "threeWay": true,
+  "model": {
+   "home": 0.44346742302709724,
+   "draw": 0.28953347515668343,
+   "away": 0.2669991018162195
+  },
+  "market": {
+   "home": 0.46671132224097417,
+   "draw": 0.24238923650629887,
+   "away": 0.290899441252727
+  },
+  "fair": {
+   "home": 0.46049884673182806,
+   "draw": 0.2569700009489651,
+   "away": 0.28253115231920684
+  },
+  "confidence": "high",
+  "value": [],
+  "snapAt": "2026-11-22T05:49:16.303Z"
+ },
+ "espn~nba~401910030": {
+  "id": "espn~nba~401910030",
+  "league": "nba",
+  "sport": "basketball",
+  "start": "2026-11-22T23:00Z",
+  "home": "Miami Heat",
+  "away": "Oklahoma City Thunder",
+  "threeWay": false,
+  "model": {
+   "home": 0.4846943823804962,
+   "away": 0.5153056152740132
+  },
+  "market": {
+   "home": 0.5616204108426988,
+   "away": 0.43837958915730113
+  },
+  "fair": {
+   "home": 0.5414452963256501,
+   "away": 0.4585547013290124
+  },
+  "confidence": "high",
+  "value": [],
+  "snapAt": "2026-11-22T05:49:16.303Z"
+ },
+ "espn~nba~401910031": {
+  "id": "espn~nba~401910031",
+  "league": "nba",
+  "sport": "basketball",
+  "start": "2026-11-23T00:00Z",
+  "home": "Washington Wizards",
+  "away": "Orlando Magic",
+  "threeWay": false,
+  "model": {
+   "home": 0.38419723097694775,
+   "away": 0.6158027666784539
+  },
+  "market": {
+   "home": 0.344151557231941,
+   "away": 0.655848442768059
+  },
+  "fair": {
+   "home": 0.36593691085915697,
+   "away": 0.6340630867785026
+  },
+  "confidence": "high",
+  "value": [],
+  "snapAt": "2026-11-22T05:49:16.303Z"
+ },
+ "espn~nba~401910032": {
+  "id": "espn~nba~401910032",
+  "league": "nba",
+  "sport": "basketball",
+  "start": "2026-11-23T00:00Z",
+  "home": "Chicago Bulls",
+  "away": "Denver Nuggets",
+  "threeWay": false,
+  "model": {
+   "home": 0.3767857346017623,
+   "away": 0.6232142630421253
+  },
+  "market": {
+   "home": 0.22518796362040158,
+   "away": 0.7748120363795984
+  },
+  "fair": {
+   "home": 0.3130680532032539,
+   "away": 0.6869319444496215
+  },
+  "confidence": "high",
+  "value": [
+   {
+    "sel": "home",
+    "odds": 3.98,
+    "ev": 0.24601085174895054,
+    "book": "DraftKings"
+   }
+  ],
+  "snapAt": "2026-11-22T05:49:16.303Z"
+ },
+ "espn~nba~401910033": {
+  "id": "espn~nba~401910033",
+  "league": "nba",
+  "sport": "basketball",
+  "start": "2026-11-23T00:00Z",
+  "home": "Utah Jazz",
+  "away": "Dallas Mavericks",
+  "threeWay": false,
+  "model": {
+   "home": 0.5064631818576958,
+   "away": 0.49353681578602987
+  },
+  "market": {
+   "home": 0.4755311268861149,
+   "away": 0.5244688731138851
+  },
+  "fair": {
+   "home": 0.47428906185737935,
+   "away": 0.5257109357562958
+  },
+  "confidence": "high",
+  "value": [],
+  "snapAt": "2026-11-22T05:49:16.304Z"
+ },
+ "espn~nba~401910034": {
+  "id": "espn~nba~401910034",
+  "league": "nba",
+  "sport": "basketball",
+  "start": "2026-11-23T01:00Z",
+  "home": "New York Knicks",
+  "away": "Indiana Pacers",
+  "threeWay": false,
+  "model": {
+   "home": 0.7161453322928215,
+   "away": 0.2838546653586529
+  },
+  "market": {
+   "home": 0.7838200390082074,
+   "away": 0.2161799609917927
+  },
+  "fair": {
+   "home": 0.7443722065680236,
+   "away": 0.25562779105094696
+  },
+  "confidence": "high",
+  "value": [
+   {
+    "sel": "away",
+    "odds": 4.12,
+    "ev": 0.05318649912990159,
+    "book": "DraftKings"
+   }
+  ],
+  "snapAt": "2026-11-22T05:49:16.304Z"
+ },
+ "espn~nba~401910035": {
+  "id": "espn~nba~401910035",
+  "league": "nba",
+  "sport": "basketball",
+  "start": "2026-11-23T01:30Z",
+  "home": "Golden State Warriors",
+  "away": "Boston Celtics",
+  "threeWay": false,
+  "model": {
+   "home": 0.34780338445673104,
+   "away": 0.652196613165753
+  },
+  "market": {
+   "home": 0.21042485302052205,
+   "away": 0.7895751469794778
+  },
+  "fair": {
+   "home": 0.28889969656948616,
+   "away": 0.7111003010852536
+  },
+  "confidence": "high",
+  "value": [
+   {
+    "sel": "home",
+    "odds": 4.220000000000001,
+    "ev": 0.2191567195232318,
+    "book": "DraftKings"
+   }
+  ],
+  "snapAt": "2026-11-22T05:49:16.304Z"
+ },
+ "espn~ncaab~401925013": {
+  "id": "espn~ncaab~401925013",
+  "league": "ncaab",
+  "sport": "basketball",
+  "start": "2026-11-22T22:00Z",
+  "home": "Lamar Cardinals",
+  "away": "Rice Owls",
+  "threeWay": false,
+  "model": {
+   "home": 0.8442643356059445,
+   "away": 0.15573566091571533
+  },
+  "market": {
+   "home": 0.5454027354444257,
+   "away": 0.45459726455557414
+  },
+  "fair": {
+   "home": 0.6620475291635646,
+   "away": 0.3379524673552832
+  },
+  "confidence": "medium",
+  "value": [
+   {
+    "sel": "home",
+    "odds": 1.7692307692307692,
+    "ev": 0.1713148592893834,
+    "book": "DraftKings"
+   }
+  ],
+  "snapAt": "2026-11-22T05:49:16.305Z"
+ },
+ "espn~ncaab~401922293": {
+  "id": "espn~ncaab~401922293",
+  "league": "ncaab",
+  "sport": "basketball",
+  "start": "2026-11-22T22:00Z",
+  "home": "Samford Bulldogs",
+  "away": "UNC Asheville Bulldogs",
+  "threeWay": false,
+  "model": {
+   "home": 0.8940754302022865,
+   "away": 0.1059245662776456
+  },
+  "market": {
+   "home": 0.789181913440993,
+   "away": 0.21081808655900708
+  },
+  "fair": {
+   "home": 0.7908175499376411,
+   "away": 0.2091824465803261
+  },
+  "confidence": "medium",
+  "value": [],
+  "snapAt": "2026-11-22T05:49:16.305Z"
+ },
+ "espn~ncaab~401920708": {
+  "id": "espn~ncaab~401920708",
+  "league": "ncaab",
+  "sport": "basketball",
+  "start": "2026-11-22T22:00Z",
+  "home": "Lipscomb Bisons",
+  "away": "Milligan Buffaloes",
+  "threeWay": false,
+  "model": {
+   "home": 0.9645627636904449,
+   "away": 0.03543723282621126
+  },
+  "market": null,
+  "fair": {
+   "home": 0.9645627636904449,
+   "away": 0.03543723282621126
+  },
+  "confidence": "low",
+  "value": [],
+  "snapAt": "2026-11-22T05:49:16.305Z"
+ },
+ "espn~ncaab~401920159": {
+  "id": "espn~ncaab~401920159",
+  "league": "ncaab",
+  "sport": "basketball",
+  "start": "2026-11-22T22:00Z",
+  "home": "Portland State Vikings",
+  "away": "Cal State Fullerton Titans",
+  "threeWay": false,
+  "model": {
+   "home": 0.9462036910269264,
+   "away": 0.053796305490977095
+  },
+  "market": {
+   "home": 0.6458638608509292,
+   "away": 0.35413613914907094
+  },
+  "fair": {
+   "home": 0.754500089421148,
+   "away": 0.24549990710023037
+  },
+  "confidence": "medium",
+  "value": [
+   {
+    "sel": "home",
+    "odds": 1.5050505050505052,
+    "ev": 0.13556074064395007,
+    "book": "DraftKings"
+   }
+  ],
+  "snapAt": "2026-11-22T05:49:16.305Z"
+ },
+ "espn~ncaab~401909556": {
+  "id": "espn~ncaab~401909556",
+  "league": "ncaab",
+  "sport": "basketball",
+  "start": "2026-11-22T22:00Z",
+  "home": "Boston College Eagles",
+  "away": "NJIT Highlanders",
+  "threeWay": false,
+  "model": {
+   "home": 0.9812348541172726,
+   "away": 0.018765142376002436
+  },
+  "market": {
+   "home": 0.9856982792357952,
+   "away": 0.014301720764204669
+  },
+  "fair": {
+   "home": 0.9594958136099603,
+   "away": 0.04050418290139155
+  },
+  "confidence": "medium",
+  "value": [
+   {
+    "sel": "away",
+    "odds": 26,
+    "ev": 0.05310875543618043,
+    "book": "DraftKings"
+   }
+  ],
+  "snapAt": "2026-11-22T05:49:16.305Z"
+ },
+ "espn~ncaab~401921205": {
+  "id": "espn~ncaab~401921205",
+  "league": "ncaab",
+  "sport": "basketball",
+  "start": "2026-11-22T22:30Z",
+  "home": "Stephen F. Austin Lumberjacks",
+  "away": "Temple Owls",
+  "threeWay": false,
+  "model": {
+   "home": 0.7405390611000077,
+   "away": 0.25946093538621084
+  },
+  "market": {
+   "home": 0.45459726455557414,
+   "away": 0.5454027354444257
+  },
+  "fair": {
+   "home": 0.5496870605179058,
+   "away": 0.45031293595954236
+  },
+  "confidence": "medium",
+  "value": [
+   {
+    "sel": "home",
+    "odds": 2.1,
+    "ev": 0.15434282708760239,
+    "book": "DraftKings"
+   }
+  ],
+  "snapAt": "2026-11-22T05:49:16.306Z"
+ },
+ "espn~ncaab~401928999": {
+  "id": "espn~ncaab~401928999",
+  "league": "ncaab",
+  "sport": "basketball",
+  "start": "2026-11-22T23:00Z",
+  "home": "Valparaiso Beacons",
+  "away": "Southern Miss Golden Eagles",
+  "threeWay": false,
+  "model": {
+   "home": 0.6727094955772462,
+   "away": 0.32729050091329137
+  },
+  "market": {
+   "home": 0.7741279537725513,
+   "away": 0.22587204622744872
+  },
+  "fair": {
+   "home": 0.683463489668722,
+   "away": 0.3165365068428375
+  },
+  "confidence": "medium",
+  "value": [
+   {
+    "sel": "away",
+    "odds": 3.95,
+    "ev": 0.2503192020292082,
+    "book": "DraftKings"
+   }
+  ],
+  "snapAt": "2026-11-22T05:49:16.306Z"
+ },
+ "espn~ncaab~401921420": {
+  "id": "espn~ncaab~401921420",
+  "league": "ncaab",
+  "sport": "basketball",
+  "start": "2026-11-22T23:00Z",
+  "home": "Minnesota Golden Gophers",
+  "away": "Utah Utes",
+  "threeWay": false,
+  "model": {
+   "home": 0.8989230900984151,
+   "away": 0.1010769064232573
+  },
+  "market": {
+   "home": 0.8625306598157231,
+   "away": 0.13746934018427687
+  },
+  "fair": {
+   "home": 0.8059578229680452,
+   "away": 0.19404217353066572
+  },
+  "confidence": "medium",
+  "value": [
+   {
+    "sel": "away",
+    "odds": 6,
+    "ev": 0.16425304118399442,
+    "book": "DraftKings"
+   }
+  ],
+  "snapAt": "2026-11-22T05:49:16.306Z"
+ },
+ "espn~ncaab~401920905": {
+  "id": "espn~ncaab~401920905",
+  "league": "ncaab",
+  "sport": "basketball",
+  "start": "2026-11-23T00:00Z",
+  "home": "UCLA Bruins",
+  "away": "Delaware Blue Hens",
+  "threeWay": false,
+  "model": {
+   "home": 0.9096893371346036,
+   "away": 0.09031065938705177
+  },
+  "market": null,
+  "fair": {
+   "home": 0.9600418047115268,
+   "away": 0.03995819178728641
+  },
+  "confidence": "medium",
+  "value": [],
+  "snapAt": "2026-11-22T05:49:16.306Z"
+ },
+ "espn~ncaab~401919020": {
+  "id": "espn~ncaab~401919020",
+  "league": "ncaab",
+  "sport": "basketball",
+  "start": "2026-11-23T00:00Z",
+  "home": "UAB Blazers",
+  "away": "Rhode Island Rams",
+  "threeWay": false,
+  "model": {
+   "home": 0.49154811776695534,
+   "away": 0.5084518787466404
+  },
+  "market": {
+   "home": 0.44532952091072137,
+   "away": 0.5546704790892786
+  },
+  "fair": {
+   "home": 0.4519433524937032,
+   "away": 0.5480566439963149
+  },
+  "confidence": "medium",
+  "value": [],
+  "snapAt": "2026-11-22T05:49:16.306Z"
+ },
+ "espn~ncaab~401917541": {
+  "id": "espn~ncaab~401917541",
+  "league": "ncaab",
+  "sport": "basketball",
+  "start": "2026-11-23T00:00Z",
+  "home": "Portland Pilots",
+  "away": "California Baptist Lancers",
+  "threeWay": false,
+  "model": {
+   "home": 0.929304930002718,
+   "away": 0.07069506651900372
+  },
+  "market": {
+   "home": 0.8287253676746696,
+   "away": 0.17127463232533027
+  },
+  "fair": {
+   "home": 0.809463230961946,
+   "away": 0.1905367655571667
+  },
+  "confidence": "medium",
+  "value": [],
+  "snapAt": "2026-11-22T05:49:16.306Z"
+ },
+ "espn~ncaab~401926774": {
+  "id": "espn~ncaab~401926774",
+  "league": "ncaab",
+  "sport": "basketball",
+  "start": "2026-11-23T01:00Z",
+  "home": "USC Trojans",
+  "away": "Louisiana Ragin' Cajuns",
+  "threeWay": false,
+  "model": {
+   "home": 0.9952127472001235,
+   "away": 0.00478724931539074
+  },
+  "market": null,
+  "fair": {
+   "home": 0.989545297200924,
+   "away": 0.010454699314578484
+  },
+  "confidence": "medium",
+  "value": [],
+  "snapAt": "2026-11-22T05:49:16.307Z"
+ },
+ "espn~ncaab~401929595": {
+  "id": "espn~ncaab~401929595",
+  "league": "ncaab",
+  "sport": "basketball",
+  "start": "2026-11-23T01:00Z",
+  "home": "Saint Mary's Gaels",
+  "away": "Menlo Oaks",
+  "threeWay": false,
+  "model": {
+   "home": 0.9297602357293873,
+   "away": 0.07023976079160518
+  },
+  "market": null,
+  "fair": {
+   "home": 0.9297602357293873,
+   "away": 0.07023976079160518
+  },
+  "confidence": "low",
+  "value": [],
+  "snapAt": "2026-11-22T05:49:16.307Z"
+ },
+ "espn~ncaab~401921206": {
+  "id": "espn~ncaab~401921206",
+  "league": "ncaab",
+  "sport": "basketball",
+  "start": "2026-11-23T01:00Z",
+  "home": "Utah Valley Wolverines",
+  "away": "UT Martin Skyhawks",
+  "threeWay": false,
+  "model": {
+   "home": 0.3238697584441185,
+   "away": 0.6761302380144691
+  },
+  "market": {
+   "home": 0.7643619341631667,
+   "away": 0.2356380658368334
+  },
+  "fair": {
+   "home": 0.581649830876948,
+   "away": 0.41835016561313065
+  },
+  "confidence": "medium",
+  "value": [
+   {
+    "sel": "away",
+    "odds": 3.8,
+    "ev": 0.5897306293298965,
+    "book": "DraftKings"
+   }
+  ],
+  "snapAt": "2026-11-22T05:49:16.307Z"
+ },
+ "espn~ncaab~401917542": {
+  "id": "espn~ncaab~401917542",
+  "league": "ncaab",
+  "sport": "basketball",
+  "start": "2026-11-23T02:30Z",
+  "home": "UC San Diego Tritons",
+  "away": "Seattle U Redhawks",
+  "threeWay": false,
+  "model": {
+   "home": 0.3770121641947942,
+   "away": 0.6229878323043075
+  },
+  "market": {
+   "home": 0.5116044544982121,
+   "away": 0.488395545501788
+  },
+  "fair": {
+   "home": 0.48988231549016714,
+   "away": 0.5101176810282608
+  },
+  "confidence": "medium",
+  "value": [],
+  "snapAt": "2026-11-22T05:49:16.307Z"
+ },
+ "espn~ncaab~401911233": {
+  "id": "espn~ncaab~401911233",
+  "league": "ncaab",
+  "sport": "basketball",
+  "start": "2026-11-23T04:59Z",
+  "home": "Loyola Chicago Ramblers",
+  "away": "San José State Spartans",
+  "threeWay": false,
+  "model": {
+   "home": 0.6849781337434288,
+   "away": 0.3150218627737499
+  },
+  "market": {
+   "home": 0.6165932442896948,
+   "away": 0.3834067557103052
+  },
+  "fair": {
+   "home": 0.6196856922559625,
+   "away": 0.38031430425898965
+  },
+  "confidence": "medium",
+  "value": [],
+  "snapAt": "2026-11-22T05:49:16.307Z"
+ },
+ "espn~ncaab~401928389": {
+  "id": "espn~ncaab~401928389",
+  "league": "ncaab",
+  "sport": "basketball",
+  "start": "2026-11-23T16:00Z",
+  "home": "Grambling Tigers",
+  "away": "Ecclesia Royals",
+  "threeWay": false,
+  "model": {
+   "home": 0.9847482813344729,
+   "away": 0.015251715146879032
+  },
+  "market": null,
+  "fair": {
+   "home": 0.9847482813344729,
+   "away": 0.015251715146879032
+  },
+  "confidence": "low",
+  "value": [],
+  "snapAt": "2026-11-22T05:49:16.307Z"
+ },
+ "espn~ncaab~401927397": {
+  "id": "espn~ncaab~401927397",
+  "league": "ncaab",
+  "sport": "basketball",
+  "start": "2026-11-23T16:00Z",
+  "home": "App State Mountaineers",
+  "away": "St. Bonaventure Bonnies",
+  "threeWay": false,
+  "model": {
+   "home": 0.5291409727452414,
+   "away": 0.47085902373818356
+  },
+  "market": null,
+  "fair": {
+   "home": 0.5291409727452414,
+   "away": 0.47085902373818356
+  },
+  "confidence": "low",
+  "value": [],
+  "snapAt": "2026-11-22T05:49:16.308Z"
+ },
+ "espn~ncaab~401921700": {
+  "id": "espn~ncaab~401921700",
+  "league": "ncaab",
+  "sport": "basketball",
+  "start": "2026-11-23T16:00Z",
+  "home": "Davidson Wildcats",
+  "away": "Northern Iowa Panthers",
+  "threeWay": false,
+  "model": {
+   "home": 0.3959663144979465,
+   "away": 0.6040336819669981
+  },
+  "market": null,
+  "fair": {
+   "home": 0.3959663144979465,
+   "away": 0.6040336819669981
+  },
+  "confidence": "low",
+  "value": [],
+  "snapAt": "2026-11-22T05:49:16.308Z"
+ },
+ "espn~ncaab~401921209": {
+  "id": "espn~ncaab~401921209",
+  "league": "ncaab",
+  "sport": "basketball",
+  "start": "2026-11-23T17:30Z",
+  "home": "East Carolina Pirates",
+  "away": "Indiana State Sycamores",
+  "threeWay": false,
+  "model": {
+   "home": 0.39785296041740964,
+   "away": 0.6021470360484446
+  },
+  "market": null,
+  "fair": {
+   "home": 0.39785296041740964,
+   "away": 0.6021470360484446
+  },
+  "confidence": "low",
+  "value": [],
+  "snapAt": "2026-11-22T05:49:16.308Z"
+ },
+ "espn~nfl~401873077": {
+  "id": "espn~nfl~401873077",
+  "league": "nfl",
+  "sport": "football",
+  "start": "2026-11-23T01:20Z",
+  "home": "San Francisco 49ers",
+  "away": "Minnesota Vikings",
+  "threeWay": false,
+  "model": {
+   "home": 0.5836172579560456,
+   "away": 0.41638274204062836
+  },
+  "market": {
+   "home": 0.6127772893549572,
+   "away": 0.3872227106450427
+  },
+  "fair": {
+   "home": 0.5899461518434442,
+   "away": 0.41005384815220314
+  },
+  "confidence": "high",
+  "value": [],
+  "snapAt": "2026-11-22T05:49:16.309Z"
+ },
+ "espn~nhl~401892769": {
+  "id": "espn~nhl~401892769",
+  "league": "nhl",
+  "sport": "hockey",
+  "start": "2026-11-22T22:00Z",
+  "home": "Tampa Bay Lightning",
+  "away": "Buffalo Sabres",
+  "threeWay": false,
+  "model": {
+   "home": 0.5429046332893962,
+   "draw": 0.15140656152624696,
+   "away": 0.3056888051843573
+  },
+  "market": {
+   "home": 0.6540447510380855,
+   "away": 0.34595524896191454
+  },
+  "fair": {
+   "home": 0.6498222485312042,
+   "away": 0.35017775146879615
+  },
+  "confidence": "high",
+  "value": [],
+  "snapAt": "2026-11-22T05:49:16.313Z"
+ },
+ "espn~nhl~401892770": {
+  "id": "espn~nhl~401892770",
+  "league": "nhl",
+  "sport": "hockey",
+  "start": "2026-11-23T00:00Z",
+  "home": "St. Louis Blues",
+  "away": "Edmonton Oilers",
+  "threeWay": false,
+  "model": {
+   "home": 0.4237874061730361,
+   "draw": 0.1608215894529376,
+   "away": 0.41539100437402615
+  },
+  "market": {
+   "home": 0.4814245062798449,
+   "away": 0.5185754937201552
+  },
+  "fair": {
+   "home": 0.4875614842019659,
+   "away": 0.5124385157980343
+  },
+  "confidence": "high",
+  "value": [],
+  "snapAt": "2026-11-22T05:49:16.316Z"
+ },
+ "espn~nhl~401892771": {
+  "id": "espn~nhl~401892771",
+  "league": "nhl",
+  "sport": "hockey",
+  "start": "2026-11-23T00:00Z",
+  "home": "Dallas Stars",
+  "away": "Pittsburgh Penguins",
+  "threeWay": false,
+  "model": {
+   "home": 0.5560184589719208,
+   "draw": 0.1534603173274942,
+   "away": 0.2905212237005847
+  },
+  "market": {
+   "home": 0.6743827147551049,
+   "away": 0.3256172852448952
+  },
+  "fair": {
+   "home": 0.6686496368131541,
+   "away": 0.3313503631868458
+  },
+  "confidence": "high",
+  "value": [],
+  "snapAt": "2026-11-22T05:49:16.320Z"
+ },
+ "espn~nhl~401892772": {
+  "id": "espn~nhl~401892772",
+  "league": "nhl",
+  "sport": "hockey",
+  "start": "2026-11-23T01:00Z",
+  "home": "Vancouver Canucks",
+  "away": "Chicago Blackhawks",
+  "threeWay": false,
+  "model": {
+   "home": 0.41811341180622474,
+   "draw": 0.1580424460333363,
+   "away": 0.423844142160438
+  },
+  "market": {
+   "home": 0.5046406578884406,
+   "away": 0.4953593421115595
+  },
+  "fair": {
+   "home": 0.5022301780601182,
+   "away": 0.49776982193988106
+  },
+  "confidence": "high",
+  "value": [],
+  "snapAt": "2026-11-22T05:49:16.323Z"
  }
 }

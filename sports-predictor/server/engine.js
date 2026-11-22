@@ -6,14 +6,26 @@ import * as P from './models/points.js';
 import { tennisPrediction } from './models/tennis.js';
 import { removeVig, overround, expectedValue, kelly, round } from './models/odds.js';
 import { matchEvent, normalizeName } from './lib/names.js';
-import { mapLimit } from './lib/http.js';
+import { mapLimit, withTimeout } from './lib/http.js';
 import { ymdUTC, extractSummary, normalizeEvent, setDone } from './providers/espn.js';
 
 const MIN = 60000, HOUR = 60 * MIN, DAY = 24 * HOUR;
-const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const logit = (p) => Math.log(p / (1 - p));
 const sigmoid = (x) => 1 / (1 + Math.exp(-x));
+const clampP = (p) => Math.min(0.995, Math.max(0.005, p));
 const clampW = (w) => Math.min(1, Math.max(0, Number.isFinite(w) ? w : 0.35));
+const FULL_SAMPLE = 12;
+
+// Weight of the statistical model when blending with the market. It grows with
+// the number of games we have on BOTH teams and reaches the user's setting at
+// FULL_SAMPLE games, so thin-data teams (early-season college sports, newly
+// promoted clubs) lean on the market instead of producing fake "value".
+export function modelWeight(w, sample, hasModel, hasMarket) {
+  if (!hasMarket) return 1;
+  if (!hasModel) return 0;
+  const n = Math.min(sample?.home ?? 0, sample?.away ?? 0);
+  return clampW(w) * Math.min(1, n / FULL_SAMPLE);
+}
 
 export function createEngine({ cache, espn, tsdb, oddsApi, apiFootball, predLog, config }) {
   const eventIndex = new Map(); // id → last seen normalized event
@@ -27,9 +39,7 @@ export function createEngine({ cache, espn, tsdb, oddsApi, apiFootball, predLog,
     let incomplete = false;
     const parts = await mapLimit(leagues, 5, async (l) => {
       const p = l.provider === 'espn' ? espn.history(l) : tsdb.history(l);
-      const r = await Promise.race([p, sleep(25000).then(() => 'timeout')]);
-      if (r === 'timeout') { incomplete = true; return []; }
-      return r;
+      return withTimeout(p, 25000, () => { incomplete = true; return []; });
     });
     const matches = [];
     const perLeague = {};
@@ -58,9 +68,10 @@ export function createEngine({ cache, espn, tsdb, oddsApi, apiFootball, predLog,
 
   function getPool(key, { waitMs = 12000 } = {}) {
     if (!key || !POOLS[key]) return Promise.resolve(null);
-    const p = cache.wrap(`pool:${key}`, 20 * MIN, () => buildPool(key), { ttlFn: (v) => (v.incomplete ? 90000 : 20 * MIN) });
+    // swr: an expired pool keeps serving predictions while the refit runs in the background
+    const p = cache.wrap(`pool:${key}`, 20 * MIN, () => buildPool(key), { ttlFn: (v) => (v.incomplete ? 90000 : 20 * MIN), swr: true });
     p.catch(() => {});
-    return Promise.race([p, sleep(waitMs).then(() => null)]);
+    return withTimeout(p, waitMs, () => null);
   }
 
   // ------------------------------------------------------------- odds glue
@@ -176,10 +187,7 @@ export function createEngine({ cache, espn, tsdb, oddsApi, apiFootball, predLog,
         cache.wrap(key, DAY, async () => lmk);
       }
     }
-    const lowData = Math.min(sample.home, sample.away) < 4;
-    let wm = clampW(w);
-    if (!em || (lowData && lmk)) wm = em ? Math.min(wm, 0.1) : 0;
-    if (!lmk) wm = 1;
+    const wm = modelWeight(w, sample, !!em, !!lmk);
     if (!em && !lmk) return { kind: 'goals', unavailable: true, reason: pool ? 'אין נתונים לקבוצות' : 'המודל נטען…' };
     const blend = (a, b) => Math.exp(wm * Math.log(a) + (1 - wm) * Math.log(b));
     const lh = em && lmk ? blend(em.lh, lmk.lh) : (em?.lh ?? lmk.lh);
@@ -277,28 +285,38 @@ export function createEngine({ cache, espn, tsdb, oddsApi, apiFootball, predLog,
     const regSec = fmt.periods * fmt.periodMin * 60;
     const ep = model ? P.expectedPoints(model, ev.home.key, ev.away.key, { neutral: ev.neutral }) : null;
     const sample = ep?.sample || { home: 0, away: 0 };
-    const sigma = model?.n > 30 ? model.sigmaM : (ev.sport === 'football' ? 13.5 : 12);
+    const sigmaModel = model?.n > 30 ? model.sigmaM : (ev.sport === 'football' ? 13.5 : 12);
     const sigmaT = model?.n > 30 ? model.sigmaT : (ev.sport === 'football' ? 13 : 18);
     const mk = consensus(ev, false);
     const spread = mainSpread(ev);
     const tot = mainTotal(ev);
     let muMk = null;
     if (spread?.line != null) muMk = -spread.line;
-    else if (mk) muMk = P.marginFromWinProb(mk.home, sigma);
+    else if (mk) muMk = P.marginFromWinProb(mk.home, sigmaModel);
     const tauMk = tot?.line ?? null;
     if (!ep && muMk == null) return { kind: 'points', unavailable: true, reason: pool ? 'אין נתונים לקבוצות' : 'המודל נטען…' };
-    const lowData = Math.min(sample.home, sample.away) < 4;
-    let wm = clampW(w);
-    if (!ep || (lowData && muMk != null)) wm = ep ? Math.min(wm, 0.1) : 0;
-    if (muMk == null) wm = 1;
+    const wm = modelWeight(w, sample, !!ep, muMk != null);
+    // The market's own outcome spread, implied by point spread + moneyline together;
+    // using the model's sigma alone would misprice spreads against the market.
+    const sigmaImp = spread?.line != null && mk ? P.sigmaFromMarket(-spread.line, mk.home) : null;
+    const sigma = sigmaImp ? wm * sigmaModel + (1 - wm) * sigmaImp : sigmaModel;
     const muModel = ep ? ep.ph - ep.pa : null, tauModel = ep ? ep.ph + ep.pa : null;
-    const mu = muModel != null && muMk != null ? wm * muModel + (1 - wm) * muMk : (muModel ?? muMk);
     const tau = tauModel != null && tauMk != null ? wm * tauModel + (1 - wm) * tauMk : (tauModel ?? tauMk ?? (ev.sport === 'football' ? 44 : 160));
     const otScale = (fmt.otMin || 5) / (regSec / 60);
-    const otMu = mu * otScale, otSigma = Math.max(3, sigma * Math.sqrt(otScale) * 1.3);
+    const otSigma = Math.max(3, sigma * Math.sqrt(otScale) * 1.3);
+    const modelMk = ep ? P.pointsMarkets({ mu: muModel, sigma: sigmaModel, tau: tauModel, sigmaT, otMu: muModel * otScale, otSigma }) : null;
+    let mu;
+    if (modelMk && mk) {
+      // Blend win probabilities against the de-vigged moneyline, then derive the margin.
+      // Blending margins instead would let a misfit sigma create phantom underdog value.
+      const pFair = sigmoid(wm * logit(clampP(modelMk.moneyline.home)) + (1 - wm) * logit(clampP(mk.home)));
+      mu = P.marginFromWinProb(pFair, sigma);
+    } else {
+      mu = muModel != null && muMk != null ? wm * muModel + (1 - wm) * muMk : (muModel ?? muMk);
+    }
+    const otMu = mu * otScale;
 
     const pre = P.pointsMarkets({ mu, sigma, tau, sigmaT, spreadLine: spread?.line, totalLine: tot?.line, otMu, otSigma });
-    const modelMk = ep ? P.pointsMarkets({ mu: muModel, sigma, tau: tauModel, sigmaT, otMu: muModel * otScale, otSigma }) : null;
     let mkts = pre, liveInfo = null;
     const hs = ev.home.score ?? 0, as = ev.away.score ?? 0;
     if (ev.state === 'in' || ev.state === 'post') {
@@ -318,7 +336,7 @@ export function createEngine({ cache, espn, tsdb, oddsApi, apiFootball, predLog,
       probs: { home: mkts.moneyline.home, away: mkts.moneyline.away },
       regulation: mkts.regulation,
       model: modelMk ? modelMk.moneyline : null, market: mk, fair: pre.moneyline,
-      expected: mkts.expected, margin: { mu, sigma, model: muModel, market: muMk }, total: { tau, sigmaT, model: tauModel, market: tauMk },
+      expected: mkts.expected, margin: { mu, sigma, sigmaModel, sigmaMarket: sigmaImp, model: muModel, market: muMk }, total: { tau, sigmaT, model: tauModel, market: tauMk },
       weight: wm, sample, confidence: confidenceOf(sample, mk != null || muMk != null),
       live: liveInfo,
       spreadLine: spread?.line ?? null,
@@ -491,10 +509,11 @@ export function createEngine({ cache, espn, tsdb, oddsApi, apiFootball, predLog,
     date = date || localYmd(new Date().toISOString(), tz);
     const leagues = selectLeagues({ sport, league, featured });
     const slow = [];
-    const lists = await mapLimit(leagues, 8, (l) => Promise.race([
+    const lists = await mapLimit(leagues, 8, (l) => withTimeout(
       leagueEvents(l, date, tz).catch(() => []),
-      sleep(12000).then(() => { slow.push(l.key); return []; }),
-    ]));
+      12000,
+      () => { slow.push(l.key); return []; },
+    ));
     const events = lists.flatMap((x) => (Array.isArray(x) ? x : []));
     await attachExternalOdds(events, { bet365 });
     const pools = new Map();

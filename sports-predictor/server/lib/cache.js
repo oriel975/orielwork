@@ -9,7 +9,9 @@ export function createCache({ dir } = {}) {
   if (dir) fs.mkdirSync(dir, { recursive: true });
   const file = (key) => path.join(dir, key.replace(/[^a-z0-9._-]+/gi, '_') + '.json');
 
-  async function wrap(key, ttlMs, fn, { persist = false, ttlFn } = {}) {
+  // swr (stale-while-revalidate): an expired value is returned at once while a
+  // refresh runs in the background, so slow sources never block a response.
+  async function wrap(key, ttlMs, fn, { persist = false, ttlFn, swr = false } = {}) {
     const now = Date.now();
     let hit = store.get(key);
     if (!hit && persist && dir) {
@@ -20,7 +22,7 @@ export function createCache({ dir } = {}) {
       } catch { /* no disk copy */ }
     }
     if (hit && hit.exp > now) return hit.value;
-    if (inflight.has(key)) return inflight.get(key);
+    if (inflight.has(key)) return hit && swr ? hit.value : inflight.get(key);
     const p = (async () => {
       try {
         const value = await fn();
@@ -36,6 +38,7 @@ export function createCache({ dir } = {}) {
       }
     })();
     inflight.set(key, p);
+    if (hit && swr) { p.catch(() => {}); return hit.value; }
     return p;
   }
 

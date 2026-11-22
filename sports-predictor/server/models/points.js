@@ -187,6 +187,22 @@ function normCdfSafe(mean, sigma, thr) {
   return 1 - normCdf((thr - mean) / sigma);
 }
 
+// Market-implied spread of outcomes: the sigma at which a margin of `mu` (from the
+// point spread) reproduces the no-vig moneyline probability. Null when the two
+// markets point in opposite directions or the answer is implausible.
+export function sigmaFromMarket(mu, pHome, { lo = 4, hi = 30 } = {}) {
+  if (!Number.isFinite(mu) || !(pHome > 0 && pHome < 1) || Math.abs(mu) < 0.5) return null;
+  if ((mu > 0) !== (pHome > 0.5)) return null;
+  const ph = (s) => pmfMarkets(marginPmf({ mu, sigma: s, otMu: mu * 0.1 }).pmf).home;
+  // |P - 0.5| shrinks as sigma grows
+  if (Math.abs(ph(lo) - 0.5) < Math.abs(pHome - 0.5) || Math.abs(ph(hi) - 0.5) > Math.abs(pHome - 0.5)) return null;
+  for (let i = 0; i < 40; i++) {
+    const mid = (lo + hi) / 2;
+    if (Math.abs(ph(mid) - 0.5) > Math.abs(pHome - 0.5)) lo = mid; else hi = mid;
+  }
+  return (lo + hi) / 2;
+}
+
 // Inverse: margin that yields a given no-vig moneyline probability.
 export function marginFromWinProb(p, sigma) {
   let lo = -60, hi = 60;

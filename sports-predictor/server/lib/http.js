@@ -40,6 +40,14 @@ export async function fetchJson(url, { headers = {}, timeout = 15000, retries = 
   throw lastErr;
 }
 
+// Resolves with the promise's value, or with fallback() if it takes longer than ms.
+// The timer is cleared as soon as the promise settles, so fallback runs only on a real timeout.
+export function withTimeout(promise, ms, fallback) {
+  let timer;
+  const t = new Promise((resolve) => { timer = setTimeout(() => resolve(fallback()), ms); });
+  return Promise.race([promise.finally(() => clearTimeout(timer)), t]);
+}
+
 export async function mapLimit(items, limit, fn) {
   const out = new Array(items.length);
   let i = 0;
