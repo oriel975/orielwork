@@ -13,6 +13,7 @@ export function createTsdb(cache, key = '123') {
   const base = `https://www.thesportsdb.com/api/v1/json/${key}`;
   const pace = key === '123' ? 3000 : 700; // free tier is rate-limited (~20-30 req/min)
   const get = (path) => fetchJson(`${base}/${path}`, { minIntervalMs: pace, timeout: 20000, retries: 4 });
+  const resolvedSeason = new Map(); // tsdbId → season label that actually holds the games
 
   async function season(league) {
     return cache.wrap(`tsdb:season:${league.tsdbId}`, 12 * 3600000, async () => {
@@ -43,10 +44,14 @@ export function createTsdb(cache, key = '123') {
       const reported = await season(league);
       let failedAll = true;
       // TheSportsDB sometimes reports "2026" while the games are filed under "2026-2027" (EuroCup).
-      for (const s of seasonCandidates(reported)) {
+      // Try the label that worked last time first, so rate-limited refreshes don't waste requests.
+      const candidates = seasonCandidates(reported);
+      const known = resolvedSeason.get(league.tsdbId);
+      if (known && candidates.includes(known)) candidates.sort((a, b) => (b === known) - (a === known));
+      for (const s of candidates) {
         const { all, failed } = await walkRounds(league, s);
         if (!failed) failedAll = false;
-        if (all.length) return all;
+        if (all.length) { resolvedSeason.set(league.tsdbId, s); return all; }
       }
       if (failedAll) throw new Error(`TheSportsDB unavailable for ${league.key}`);
       return [];
@@ -140,7 +145,7 @@ function rawEvent(e) {
   };
 }
 
-function normalize(e, league, live) {
+export function normalize(e, league, live) {
   const status = (live?.strStatus ?? e.status) || '';
   const progress = live?.strProgress ?? e.progress ?? '';
   const hs = live ? toNum(live.intHomeScore) : e.hs;
@@ -150,6 +155,9 @@ function normalize(e, league, live) {
   else if (FINISHED.test(status)) state = 'post';
   else if (!NOT_STARTED.test(status)) state = 'in';
   else if (hs != null && Date.now() - Date.parse(e.start) > 3 * 3600000) state = 'post';
+  // Long past kick-off but the feed still says "not started": the result has not reached us yet.
+  const awaiting = state === 'pre' && Date.now() - Date.parse(e.start) > 2.5 * 3600000;
+  if (awaiting) state = 'off';
   const minute = parseInt(String(progress).replace(/[^\d]/g, ''), 10);
   let period = 0;
   if (/^1H$/i.test(status)) period = 1;
@@ -157,7 +165,8 @@ function normalize(e, league, live) {
   else if (/^Q(\d)$/i.test(status)) period = Number(status.slice(1));
   else if (/^OT/i.test(status)) period = 5;
   const he = STATUS_HE[status.toUpperCase()] || status;
-  const label = state === 'in' && league.sport === 'soccer' && Number.isFinite(minute) && !/HT/i.test(status) ? `${minute}'` : he;
+  const label = awaiting ? 'ממתין לתוצאה'
+    : state === 'in' && league.sport === 'soccer' && Number.isFinite(minute) && !/HT/i.test(status) ? `${minute}'` : he;
   return {
     id: `tsdb~${league.key}~${e.idEvent}`, provider: 'tsdb', nativeId: e.idEvent, league: league.key, sport: league.sport,
     name: e.name, start: e.start, state,

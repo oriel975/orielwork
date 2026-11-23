@@ -78,7 +78,7 @@ export const LEAGUE_BY_KEY = new Map(LEAGUES.map((l) => [l.key, l]));
 
 // Pool definitions: which model and which tuning each rating pool uses.
 export const POOLS = {
-  soccer: { model: 'goals', sport: 'soccer', halfLifeDays: 200, priorGames: 3 },
+  soccer: { model: 'goals', sport: 'soccer', halfLifeDays: 200, priorGames: 3, groupPrior: true }, // shrink teams toward their own league's level (better cross-league predictions)
   nhl: { model: 'goals', sport: 'hockey', halfLifeDays: 150, priorGames: 6 },
   mlb: { model: 'goals', sport: 'baseball', halfLifeDays: 120, priorGames: 10 },
   nba: { model: 'points', sport: 'basketball', halfLifeDays: 90, ridgeGames: 4 },

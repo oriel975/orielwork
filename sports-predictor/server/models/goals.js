@@ -106,7 +106,7 @@ export function matrixMarkets(m, { current = [0, 0] } = {}) {
 // Fitting
 // matches: [{ home, away, hs, as, t }]  (t = epoch ms of kick-off)
 // ---------------------------------------------------------------------------
-export function fitGoals(matches, { halfLifeDays = 180, priorGames = 3, now = Date.now(), iterations = 60 } = {}) {
+export function fitGoals(matches, { halfLifeDays = 180, priorGames = 3, now = Date.now(), iterations = 60, groups = null } = {}) {
   const xi = Math.log(2) / halfLifeDays;
   const rows = [];
   for (const m of matches) {
@@ -142,7 +142,11 @@ export function fitGoals(matches, { halfLifeDays = 180, priorGames = 3, now = Da
       add(S, r.h, r.w * r.hs); add(E, r.h, r.w * Math.exp(mu + hAdv - ta.def));
       add(S, r.a, r.w * r.as); add(E, r.a, r.w * Math.exp(mu - th.def));
     }
-    for (const [k, t] of teams) t.att = Math.log(((S.get(k) || 0) + a) / ((E.get(k) || 0) + a));
+    const gAtt = groupMeans(teams, groups, 'att');
+    for (const [k, t] of teams) {
+      const c = gAtt?.get(groups.get(k)) ?? 0; // prior centre: own league's level
+      t.att = Math.log(((S.get(k) || 0) + a * Math.exp(c)) / ((E.get(k) || 0) + a));
+    }
     center(teams, 'att');
 
     const C = new Map(), F = new Map();
@@ -152,7 +156,11 @@ export function fitGoals(matches, { halfLifeDays = 180, priorGames = 3, now = Da
       add(C, r.h, r.w * r.as); add(F, r.h, r.w * Math.exp(mu + ta.att));
       add(C, r.a, r.w * r.hs); add(F, r.a, r.w * Math.exp(mu + hAdv + th.att));
     }
-    for (const [k, t] of teams) t.def = -Math.log(((C.get(k) || 0) + a) / ((F.get(k) || 0) + a));
+    const gDef = groupMeans(teams, groups, 'def');
+    for (const [k, t] of teams) {
+      const c = gDef?.get(groups.get(k)) ?? 0;
+      t.def = -Math.log(((C.get(k) || 0) + a * Math.exp(-c)) / ((F.get(k) || 0) + a));
+    }
     center(teams, 'def');
 
     let expTot = 0, expHome = 0, homeGoalsNonNeutral = 0;
@@ -169,6 +177,40 @@ export function fitGoals(matches, { halfLifeDays = 180, priorGames = 3, now = Da
   const model = { teams, mu, home, rho: 0, n: rows.length, avg: avgSide };
   model.rho = fitRho(rows, model);
   return model;
+}
+
+// Weighted mean rating per group (league). Null when grouping is off.
+function groupMeans(teams, groups, key) {
+  if (!groups) return null;
+  const sum = new Map(), wsum = new Map();
+  for (const [k, t] of teams) {
+    const g = groups.get(k);
+    if (!g) continue;
+    sum.set(g, (sum.get(g) || 0) + t[key] * t.wn);
+    wsum.set(g, (wsum.get(g) || 0) + t.wn);
+  }
+  const out = new Map();
+  for (const [g, s] of sum) out.set(g, wsum.get(g) ? s / wsum.get(g) : 0);
+  return out;
+}
+
+// Each team's "home" league: its most frequent domestic competition. Cup-only
+// teams (e.g. clubs from leagues outside the catalogue) get no group.
+export function teamGroups(matches) {
+  const counts = new Map();
+  for (const m of matches) {
+    const cup = /^(uefa|fifa)\./.test(m.league) && m.league !== 'uefa.nations';
+    const g = /^(fifa\.|uefa\.nations)/.test(m.league) ? 'national' : cup ? null : m.league;
+    if (!g) continue;
+    for (const k of [m.home, m.away]) {
+      if (!counts.has(k)) counts.set(k, new Map());
+      const c = counts.get(k);
+      c.set(g, (c.get(g) || 0) + 1);
+    }
+  }
+  const out = new Map();
+  for (const [k, c] of counts) out.set(k, [...c.entries()].sort((x, y) => y[1] - x[1])[0][0]);
+  return out;
 }
 
 function center(teams, key) {

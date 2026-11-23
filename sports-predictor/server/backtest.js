@@ -40,7 +40,7 @@ function finalize(s) {
   };
 }
 
-export function runBacktest(pool, { days = 56, stepDays = 7, now = Date.now() } = {}) {
+export function runBacktest(pool, { days = 56, stepDays = 7, now = Date.now(), groupPrior = pool.def.groupPrior ?? false } = {}) {
   const goals = pool.def.model === 'goals';
   const threeWay = pool.def.sport === 'soccer';
   const matches = pool.matches;
@@ -53,7 +53,7 @@ export function runBacktest(pool, { days = 56, stepDays = 7, now = Date.now() } 
     if (train.length < 60 || !test.length) continue;
     weeks++;
     const model = goals
-      ? G.fitGoals(train, { halfLifeDays: pool.def.halfLifeDays, priorGames: pool.def.priorGames, now: ws, iterations: 40 })
+      ? G.fitGoals(train, { halfLifeDays: pool.def.halfLifeDays, priorGames: pool.def.priorGames, now: ws, iterations: 40, groups: groupPrior ? G.teamGroups(train) : null })
       : P.fitPoints(train, { halfLifeDays: pool.def.halfLifeDays, ridgeGames: pool.def.ridgeGames, now: ws, iterations: 50 });
     // base rates from the training window
     const recent = train.slice(-1500);

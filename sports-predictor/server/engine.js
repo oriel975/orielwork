@@ -51,7 +51,7 @@ export function createEngine({ cache, espn, tsdb, oddsApi, apiFootball, predLog,
     matches.sort((a, b) => a.t - b.t);
     const now = Date.now();
     const model = def.model === 'goals'
-      ? G.fitGoals(matches, { halfLifeDays: def.halfLifeDays, priorGames: def.priorGames, now })
+      ? G.fitGoals(matches, { halfLifeDays: def.halfLifeDays, priorGames: def.priorGames, now, groups: def.groupPrior ? G.teamGroups(matches) : null })
       : P.fitPoints(matches, { halfLifeDays: def.halfLifeDays, ridgeGames: def.ridgeGames, now });
     const byTeam = new Map();
     const names = new Map();
@@ -556,7 +556,9 @@ export function createEngine({ cache, espn, tsdb, oddsApi, apiFootball, predLog,
   function logPrediction(ev) {
     const data = predLog.get();
     const pr = ev.prediction;
-    if (ev.state === 'pre' && pr?.probs && !pr.unavailable && Date.parse(ev.start) - Date.now() < 36 * HOUR) {
+    const untilStart = Date.parse(ev.start) - Date.now();
+    // Only genuine pre-match snapshots: never after the scheduled start (stale feeds can still say "not started").
+    if (ev.state === 'pre' && pr?.probs && !pr.unavailable && untilStart > 0 && untilStart < 36 * HOUR) {
       data[ev.id] = {
         ...(data[ev.id] || {}), id: ev.id, league: ev.league, sport: ev.sport, start: ev.start,
         home: ev.home.name, away: ev.away.name, threeWay: pr.threeWay && ev.sport === 'soccer',

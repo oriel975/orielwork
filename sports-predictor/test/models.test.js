@@ -136,3 +136,30 @@ test('market-implied sigma reproduces spread + moneyline', async () => {
   close(ph, 0.72, 0.005);
   assert.equal(sigmaFromMarket(6.5, 0.4), null, 'contradictory markets');
 });
+
+test('team groups use the domestic league, not cups', async () => {
+  const { teamGroups } = await import('../server/models/goals.js');
+  const m = (league, home, away) => ({ league, home, away });
+  const g = teamGroups([m('esp.1', 'real', 'barca'), m('esp.1', 'real', 'sevilla'), m('uefa.champions', 'real', 'psv'), m('ned.1', 'psv', 'ajax'), m('uefa.champions', 'bodo', 'real'), m('fifa.friendly', 'israel', 'norway')]);
+  assert.equal(g.get('real'), 'esp.1');
+  assert.equal(g.get('psv'), 'ned.1');
+  assert.equal(g.get('bodo'), undefined, 'cup-only team has no league group');
+  assert.equal(g.get('israel'), 'national');
+});
+
+test('league-centred prior lifts a thin-data team from a strong league', async () => {
+  const { fitGoals, teamGroups, expectedGoals } = await import('../server/models/goals.js');
+  const now = Date.now();
+  const ms = [];
+  // strong league S (teams beat weak league W in cups); newcomer s9 has only 1 game
+  for (let r = 0; r < 20; r++) {
+    ms.push({ league: 'S', home: 's1', away: 's2', hs: 2, as: 1, t: now - r * 86400000 * 3 });
+    ms.push({ league: 'W', home: 'w1', away: 'w2', hs: 1, as: 1, t: now - r * 86400000 * 3 });
+    ms.push({ league: 'cup', home: r % 2 ? 's1' : 's2', away: r % 2 ? 'w1' : 'w2', hs: 3, as: 0, t: now - r * 86400000 * 3 });
+  }
+  ms.push({ league: 'S', home: 's9', away: 's1', hs: 1, as: 1, t: now - 86400000 });
+  const plain = fitGoals(ms, { now });
+  const grouped = fitGoals(ms, { now, groups: teamGroups(ms) });
+  const lift = (m) => expectedGoals(m, 's9', 'w1').lh / expectedGoals(m, 's9', 'w1').la;
+  assert.ok(lift(grouped) > lift(plain), 'newcomer in strong league should be rated higher with the league prior');
+});

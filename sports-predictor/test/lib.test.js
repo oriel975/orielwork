@@ -63,3 +63,18 @@ test('basic auth', async () => {
   assert.equal(checkBasicAuth(hdr('any', 'wrong'), 'secret'), false);
   assert.equal(checkBasicAuth(hdr('x', 'pa:ss'), 'pa:ss'), true, 'colon inside password');
 });
+
+test('TheSportsDB: stale "not started" after kick-off is shown as awaiting result', async () => {
+  const { normalize } = await import('../server/providers/tsdb.js');
+  const league = { key: 'isr.basket', sport: 'basketball' };
+  const ev = (minsFromNow, status, hs = null, as = null) => ({
+    idEvent: '1', name: 'A vs B', start: new Date(Date.now() + minsFromNow * 60000).toISOString(),
+    homeName: 'A', awayName: 'B', hs, as, status, progress: '', postponed: false,
+  });
+  assert.equal(normalize(ev(60, 'NS'), league).state, 'pre');
+  const stale = normalize(ev(-300, 'NS'), league);
+  assert.equal(stale.state, 'off');
+  assert.equal(stale.status.short, 'ממתין לתוצאה');
+  assert.equal(normalize(ev(-300, 'FT', 67, 73), league).state, 'post');
+  assert.equal(normalize(ev(-300, 'NS', 67, 73), league).state, 'post', 'scores present → finished');
+});
