@@ -1,0 +1,24 @@
+# Render Blueprint – deploys SportEdge as a web service with a public link.
+# Render dashboard → New → Blueprint → pick this repository.
+services:
+  - type: web
+    name: sportedge
+    runtime: node
+    plan: free
+    rootDir: sports-predictor
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /healthz
+    envVars:
+      - key: HOST
+        value: 0.0.0.0
+      - key: NODE_VERSION
+        value: "22"
+      # Password for the site – Render asks for it when creating the service.
+      - key: APP_PASSWORD
+        sync: false
+      # Optional odds providers (leave empty if you don't have keys)
+      - key: ODDS_API_KEY
+        sync: false
+      - key: APIFOOTBALL_KEY
+        sync: false
