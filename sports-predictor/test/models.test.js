@@ -163,3 +163,10 @@ test('league-centred prior lifts a thin-data team from a strong league', async (
   const lift = (m) => expectedGoals(m, 's9', 'w1').lh / expectedGoals(m, 's9', 'w1').la;
   assert.ok(lift(grouped) > lift(plain), 'newcomer in strong league should be rated higher with the league prior');
 });
+
+test('ESPN football leagues keep last year of history (cross-league links)', async () => {
+  const { LEAGUES } = await import('../server/leagues.js');
+  const espnSoccer = LEAGUES.filter((l) => l.sport === 'soccer' && l.provider === 'espn');
+  assert.ok(espnSoccer.length > 10);
+  for (const l of espnSoccer) assert.equal(l.history?.prevYear, true, l.key);
+});

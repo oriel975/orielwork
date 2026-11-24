@@ -13,7 +13,9 @@ export const SPORTS = {
 
 const soccer = (key, he, country, extra = {}) => ({
   key, sport: 'soccer', he, country, provider: 'espn', espn: `soccer/${key}`, pool: 'soccer',
-  history: { mode: 'year' }, format: { periods: 2, periodMin: 45 }, ...extra,
+  // prevYear: last season's games (esp. European cups) link the leagues' strength scales.
+  // Backtest 24.11: Brier skill +8.2% → +9.1%, UCL Brier 0.519 → 0.480.
+  history: { mode: 'year', prevYear: true }, format: { periods: 2, periodMin: 45 }, ...extra,
 });
 
 export const LEAGUES = [
