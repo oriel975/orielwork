@@ -36,7 +36,7 @@ export const TitleScene: React.FC<SceneProps> = ({ts, lead}) => {
   return (
     <AbsoluteFill>
       <KenBurns asset={s.asset} visual={s.visual} focus={s.focus} move={s.move} grade={s.grade} fit={s.fit} foreground={s.foreground} length={ts.span} />
-      <AbsoluteFill style={{background: 'radial-gradient(ellipse 75% 55% at 50% 50%, rgba(3,10,18,0.5), rgba(3,10,18,0) 75%)'}} />
+      <AbsoluteFill style={{background: 'radial-gradient(ellipse 80% 60% at 50% 50%, rgba(3,10,18,0.62), rgba(3,10,18,0) 78%)'}} />
       {s.text ? (
         <AbsoluteFill
           style={{

@@ -80,7 +80,7 @@ export const KineticTitle: React.FC<Props> = ({
           ...block,
           transform: `rotateX(${(1 - tiltP) * 14}deg) rotateY(${(1 - tiltP) * -7}deg) translateZ(0)`,
           transformOrigin: '50% 60%',
-          textShadow: `0 ${2 * u}px ${24 * u}px rgba(3,10,18,0.45)`,
+          textShadow: `0 ${2 * u}px ${24 * u}px rgba(3,10,18,0.6), 0 0 ${6 * u}px rgba(3,10,18,0.35)`,
         }}
       >
         {words.map((w, i) => {
