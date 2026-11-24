@@ -48,6 +48,7 @@ Node 18 or newer. The first render on a new machine downloads a headless Chrome 
 | `npm run render:all` | Everything |
 | `npm run render -- <id> --stills` | 8 review stills per format instead of video (`--frames=30,90` for chosen frames) |
 | `npm run render:style-test` | The 10-second look test |
+| `npm run deliver` | After rendering: a cover image per video in `out/<company>/covers/` and a Hebrew index `out/README.md` |
 | `npm run logo-colors` | Samples the logo's real colours into `src/brand/logo-palette.json` |
 | `npm run placeholders` | Regenerates the drawn placeholder images |
 
