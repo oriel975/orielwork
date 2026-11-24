@@ -1,7 +1,16 @@
 {
-  "source": null,
-  "note": "Written by `npm run logo-colors` from the logo in assets/logos/. Empty until a real logo is added; tokens.ts then uses the base colours.",
+  "source": "assets/logos/installations.png",
+  "note": "Written by `npm run logo-colors`. primary overrides brand navy, accent overrides brand blue.",
   "primary": null,
-  "accent": null,
-  "swatches": []
+  "accent": "#9FD18B",
+  "swatches": [
+    {
+      "hex": "#9FD18B",
+      "share": 0.563
+    },
+    {
+      "hex": "#A9DC94",
+      "share": 0.437
+    }
+  ]
 }

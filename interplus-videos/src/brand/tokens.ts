@@ -16,9 +16,18 @@ const base = {
 type Palette = {primary: string | null; accent: string | null};
 const sampled = logoPalette as unknown as Palette;
 
+/** '#RRGGBB' + alpha -> 'rgba(r,g,b,a)'. */
+export const alpha = (hex: string, a: number) => {
+  const n = parseInt(hex.replace('#', ''), 16);
+  return `rgba(${(n >> 16) & 255},${(n >> 8) & 255},${n & 255},${a})`;
+};
+
+const accent = sampled.accent ?? base.blue;
+
 export const colors = {
   navy: sampled.primary ?? base.navy,
-  blue: sampled.accent ?? base.blue,
+  /** Brand accent: the logo's green once sampled (named blue after the original brief). */
+  blue: accent,
   amber: base.amber,
   white: base.white,
   // Derived tones, kept in one place so every scene uses the same values.
@@ -26,7 +35,7 @@ export const colors = {
   ink: '#030A12',
   mist: 'rgba(255,255,255,0.72)',
   hairline: 'rgba(255,255,255,0.14)',
-  glowBlue: 'rgba(30,136,255,0.55)',
+  glowBlue: alpha(accent, 0.55),
   glowAmber: 'rgba(255,176,32,0.55)',
 } as const;
 

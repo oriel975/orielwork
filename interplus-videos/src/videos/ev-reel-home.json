@@ -1,0 +1,61 @@
+{
+  "id": "ev-reel-home",
+  "company": "ev",
+  "title": "Reel: from the first call to the first charge",
+  "brandName": "אינטר EV",
+  "chargeBar": true,
+  "music": "music/ev-reel-home.m4a",
+  "musicStyle": "ev",
+  "scenes": [
+    {
+      "type": "title",
+      "duration": 4,
+      "musicEnergy": 2,
+      "asset": "ev/wallbox-closeup.jpg",
+      "text": "מהשיחה ועד הטעינה הראשונה",
+      "vo": "מהשיחה הראשונה, ועד הטעינה הראשונה.",
+      "voDelay": 0.3,
+      "captions": false
+    },
+    {
+      "type": "montage",
+      "duration": 11,
+      "musicEnergy": 3,
+      "shots": [
+        {
+          "asset": "ev/wallbox-garage.jpeg",
+          "caption": "שיחה"
+        },
+        {
+          "asset": "ev/garage-chargers-panorama.jpg",
+          "caption": "סקר באתר"
+        },
+        {
+          "asset": "ev/hotel-parking-chargers-2.jpeg",
+          "caption": "התקנה"
+        },
+        {
+          "asset": "ev/garage-chargers.jpeg",
+          "caption": "הפעלה"
+        },
+        {
+          "asset": "ev/car-charging.png",
+          "caption": "טעינה ראשונה"
+        }
+      ]
+    },
+    {
+      "type": "outro",
+      "duration": 6,
+      "asset": "ev/car-charging-2.png",
+      "tagline": "שירות אישי, מהצפון ועד אילת",
+      "url": "interplus.co.il",
+      "vo": "אינטר EV. שירות אישי, מהצפון ועד אילת.",
+      "voDelay": 1.2,
+      "captions": false
+    }
+  ],
+  "formats": [
+    "9x16"
+  ]
+}

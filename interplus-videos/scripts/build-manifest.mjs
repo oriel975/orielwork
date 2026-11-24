@@ -13,6 +13,16 @@ const AUDIO = new Set(['.mp3', '.wav', '.m4a', '.aac', '.ogg']);
 const IMAGE = new Set(['.jpg', '.jpeg', '.png', '.webp', '.svg', '.avif']);
 const VIDEO = new Set(['.mp4', '.mov', '.webm', '.m4v']);
 
+async function imageSize(file) {
+  try {
+    const sharp = (await import('sharp')).default;
+    const m = await sharp(file).metadata();
+    return m.width && m.height ? {width: m.width, height: m.height} : null;
+  } catch {
+    return null;
+  }
+}
+
 async function walk(dir) {
   let entries = [];
   try {
@@ -23,6 +33,8 @@ async function walk(dir) {
   const files = [];
   for (const e of entries) {
     if (e.name.startsWith('.')) continue;
+    // assets/site holds the raw website download; videos use the curated copies.
+    if (dir === assetsDir && e.name === 'site') continue;
     const full = join(dir, e.name);
     if (e.isDirectory()) files.push(...(await walk(full)));
     else files.push(full);
@@ -62,6 +74,7 @@ for (const f of files.sort()) {
   if (kind === 'other') continue;
   const entry = {kind, bytes: (await stat(f)).size};
   if (kind === 'audio') entry.duration = await audioDuration(f);
+  if (kind === 'image') Object.assign(entry, (await imageSize(f)) ?? {});
   manifest.files[rel] = entry;
 }
 

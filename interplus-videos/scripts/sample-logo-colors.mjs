@@ -3,6 +3,7 @@
 // (saturated brand colour).
 //
 //   npm run logo-colors                      uses assets/logos/interplus.svg|png|webp
+//   npm run logo-colors -- assets/logos/installations.png
 //   npm run logo-colors -- assets/logos/ev.png
 import sharp from 'sharp';
 import {existsSync} from 'node:fs';
@@ -79,9 +80,11 @@ if (!swatches.length) {
   process.exit(0);
 }
 
-const dark = swatches.filter((s) => s.l < 0.38);
-const vivid = swatches.filter((s) => s.l >= 0.3 && s.l <= 0.72 && s.s > 0.45);
-const primary = (dark[0] ?? swatches[0]).hex;
+// A logo colour replaces the navy background only if it is itself a deep,
+// saturated colour; greys and olives stay as they are and navy is kept.
+const dark = swatches.filter((s) => s.l < 0.25 && s.s > 0.3);
+const vivid = swatches.filter((s) => s.l >= 0.3 && s.l <= 0.8 && s.s > 0.35);
+const primary = dark[0]?.hex ?? null;
 const accent = (vivid.find((s) => s.hex !== primary) ?? null)?.hex ?? null;
 
 const palette = {
@@ -92,5 +95,5 @@ const palette = {
   swatches: swatches.slice(0, 6).map((s) => ({hex: s.hex, share: Math.round(s.share * 1000) / 1000})),
 };
 await writeFile(outFile, JSON.stringify(palette, null, 2) + '\n');
-console.log(`Logo palette from ${palette.source}: primary ${primary}, accent ${accent ?? '(none, keeping #1E88FF)'}`);
+console.log(`Logo palette from ${palette.source}: primary ${primary ?? '(none, keeping navy)'}, accent ${accent ?? '(none, keeping #1E88FF)'}`);
 console.log('Swatches:', palette.swatches.map((s) => `${s.hex} ${(s.share * 100).toFixed(0)}%`).join(', '));

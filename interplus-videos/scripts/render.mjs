@@ -110,7 +110,7 @@ for (const v of selected) {
       serveUrl,
       codec: 'h264',
       outputLocation: output,
-      crf: 16,
+      crf: 18,
       pixelFormat: 'yuv420p',
       imageFormat: 'jpeg',
       jpegQuality: 92,

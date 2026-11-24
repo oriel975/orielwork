@@ -1,0 +1,63 @@
+{
+  "id": "installations-reel-day",
+  "company": "installations",
+  "title": "Reel: a work day on a high-voltage site",
+  "brandName": "אינטר אלקטריק התקנות",
+  "music": "music/installations-reel-day.m4a",
+  "musicStyle": "installations",
+  "scenes": [
+    {
+      "type": "title",
+      "duration": 4,
+      "asset": "installations/worker-safety-vertical.jpg",
+      "focus": [
+        50,
+        40
+      ],
+      "text": "יום עבודה בשטח מתח עליון",
+      "vo": "איך נראה יום עבודה באתר מתח עליון?",
+      "voDelay": 0.3,
+      "captions": false
+    },
+    {
+      "type": "image",
+      "duration": 6,
+      "musicEnergy": 2,
+      "asset": "installations/crew-on-site.jpg",
+      "vo": "הבוקר מתחיל בתדריך בטיחות, וציוד מגן מלא."
+    },
+    {
+      "type": "image",
+      "duration": 6,
+      "musicEnergy": 2,
+      "asset": "installations/tzafit-electrician-vertical.jpeg",
+      "focus": [
+        50,
+        35
+      ],
+      "vo": "ואז עבודה מדויקת בשטח: הרכבה, חיווט ובדיקות."
+    },
+    {
+      "type": "image",
+      "duration": 5,
+      "musicEnergy": 2,
+      "asset": "installations/hadera-gis-engineer.jpg",
+      "vo": "כי מערכת במתח עליון חייבת לעבוד בכל רגע."
+    },
+    {
+      "type": "outro",
+      "duration": 6,
+      "asset": "installations/night-works.jpg",
+      "grade": "night",
+      "tagline": "אנרגיה בביצוע מדויק",
+      "url": "interplus.co.il",
+      "vo": "אינטר אלקטריק התקנות. אנרגיה בביצוע מדויק.",
+      "voFile": "installations/vo/installations-brand-07.wav",
+      "voDelay": 1.3,
+      "captions": false
+    }
+  ],
+  "formats": [
+    "9x16"
+  ]
+}

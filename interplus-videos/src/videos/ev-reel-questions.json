@@ -1,0 +1,63 @@
+{
+  "id": "ev-reel-questions",
+  "company": "ev",
+  "title": "Reel: 3 questions every fleet manager asks",
+  "brandName": "אינטר EV",
+  "chargeBar": true,
+  "music": "music/ev-reel-questions.m4a",
+  "musicStyle": "ev",
+  "scenes": [
+    {
+      "type": "title",
+      "duration": 4,
+      "musicEnergy": 2,
+      "asset": "ev/public-fast-charger-vertical.jpg",
+      "focus": [
+        50,
+        40
+      ],
+      "text": "3 שאלות שכל מנהל צי שואל",
+      "vo": "שלוש שאלות שכל מנהל צי שואל.",
+      "voDelay": 0.3,
+      "captions": false
+    },
+    {
+      "type": "image",
+      "duration": 8,
+      "musicEnergy": 2,
+      "asset": "ev/hotel-parking-chargers-1.jpeg",
+      "text": "כמה עמדות צריך?",
+      "vo": "כמה עמדות צריך? זה תלוי בגודל הצי ובשעות הפעילות, ולכן מתחילים בסקר באתר."
+    },
+    {
+      "type": "image",
+      "duration": 8,
+      "musicEnergy": 2,
+      "asset": "ev/hotel-parking-chargers-3.jpeg",
+      "text": "כמה זמן לוקחת התקנה?",
+      "vo": "כמה זמן לוקחת ההתקנה? זה תלוי בהיקף, ואנחנו מלווים אתכם מהתכנון ועד המסירה."
+    },
+    {
+      "type": "image",
+      "duration": 8,
+      "musicEnergy": 3,
+      "asset": "ev/wallbox-closeup.jpg",
+      "text": "ומה קורה כשיש תקלה?",
+      "vo": "ומה קורה כשיש תקלה? אנחנו מתחזקים את המערך, עם צוות מקצועי מהצפון ועד אילת."
+    },
+    {
+      "type": "outro",
+      "duration": 6,
+      "asset": "ev/car-charging-2.png",
+      "tagline": "טעינה מהירה. שירות אישי.",
+      "url": "interplus.co.il",
+      "vo": "אינטר EV. טעינה מהירה. שירות אישי.",
+      "voFile": "ev/vo/ev-brand-06.wav",
+      "voDelay": 1.3,
+      "captions": false
+    }
+  ],
+  "formats": [
+    "9x16"
+  ]
+}

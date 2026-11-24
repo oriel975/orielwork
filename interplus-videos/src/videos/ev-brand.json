@@ -1,0 +1,68 @@
+{
+  "id": "ev-brand",
+  "company": "ev",
+  "title": "Inter EV brand film (60s)",
+  "brandName": "אינטר EV",
+  "music": "music/ev-brand.m4a",
+  "musicStyle": "ev",
+  "chargeBar": true,
+  "scenes": [
+    {
+      "type": "title",
+      "duration": 5,
+      "asset": "ev/car-charging.png",
+      "visual": "electric car plugged in to a wall charger",
+      "focus": [40, 55],
+      "text": "העתיד נטען עכשיו.",
+      "vo": "העתיד נטען עכשיו.",
+      "voDelay": 0.8,
+      "captions": false
+    },
+    {
+      "type": "logo",
+      "duration": 10,
+      "asset": "ev/garage-chargers.jpeg",
+      "visual": "row of wall chargers in a parking garage",
+      "vo": "אינטר EV, מקבוצת אינטר פלוס. פתרונות טעינה לרכבים חשמליים, מתכנון ועד שירות."
+    },
+    {
+      "type": "montage",
+      "duration": 13,
+      "vo": "לארגון, לבית, ולצי תחבורה ציבורית שלם. כל פתרון מותאם לצורך.",
+      "shots": [
+        {"asset": "ev/hotel-parking-chargers-1.jpeg", "caption": "לארגונים", "visual": "chargers in a hotel parking structure"},
+        {"asset": "ev/wallbox-closeup.jpg", "caption": "לבית", "visual": "wallbox close-up"},
+        {"asset": "ev/public-fast-charger-vertical.jpg", "caption": "לטעינה ציבורית", "visual": "public fast-charging station", "focus": [50, 40]}
+      ]
+    },
+    {
+      "type": "stat",
+      "duration": 7,
+      "asset": "ev/cars-charging-illustration.jpg",
+      "vo": "מטעינה ביתית, ועד טעינה סופר מהירה של עד שלוש מאות קילוואט.",
+      "stats": [{"value": 300, "unit": "kW", "label": "טעינה סופר מהירה DC"}]
+    },
+    {
+      "type": "montage",
+      "duration": 15,
+      "musicEnergy": 3,
+      "vo": "מגיעים מהר, מתקינים ביעילות, ונשארים איתך גם אחרי. שירות אישי, עם אנשים אמיתיים.",
+      "shots": [
+        {"asset": "ev/garage-chargers-panorama.jpg", "caption": "סקר ותכנון"},
+        {"asset": "ev/hotel-parking-chargers-2.jpeg", "caption": "התקנה"},
+        {"asset": "ev/hotel-parking-chargers-3.jpeg", "caption": "הפעלה"},
+        {"asset": "ev/wallbox-garage.jpeg", "caption": "שירות ותחזוקה"}
+      ]
+    },
+    {
+      "type": "outro",
+      "duration": 10,
+      "asset": "ev/car-charging-2.png",
+      "tagline": "טעינה מהירה. שירות אישי.",
+      "url": "interplus.co.il",
+      "vo": "אינטר EV. טעינה מהירה. שירות אישי.",
+      "voDelay": 1.3,
+      "captions": false
+    }
+  ]
+}

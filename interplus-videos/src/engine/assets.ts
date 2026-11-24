@@ -2,7 +2,7 @@ import {staticFile} from 'remotion';
 import manifest from '../generated/assets.json';
 import type {Scene, VideoSpec} from './schema';
 
-type Entry = {kind: 'image' | 'video' | 'audio'; bytes: number; duration?: number | null};
+type Entry = {kind: 'image' | 'video' | 'audio'; bytes: number; duration?: number | null; width?: number; height?: number};
 const files = (manifest as unknown as {files: Record<string, Entry>}).files;
 
 export const hasAsset = (path: string | undefined): path is string => Boolean(path && files[path]);
@@ -10,6 +10,12 @@ export const hasAsset = (path: string | undefined): path is string => Boolean(pa
 export const assetSrc = (path: string) => staticFile(path);
 
 export const assetKind = (path: string) => files[path]?.kind;
+
+/** Width / height of an image, if known. */
+export const assetAspect = (path: string): number | null => {
+  const e = files[path];
+  return e?.width && e?.height ? e.width / e.height : null;
+};
 
 export const audioDuration = (path: string): number | null => files[path]?.duration ?? null;
 

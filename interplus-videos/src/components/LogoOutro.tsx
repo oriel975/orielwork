@@ -1,6 +1,6 @@
 import React, {useId} from 'react';
 import {AbsoluteFill, Img, interpolate, useCurrentFrame} from 'remotion';
-import {colors, ease, fontFamily, useFormat, weights} from '../brand';
+import {alpha, colors, ease, fontFamily, useFormat, weights} from '../brand';
 import {assetSrc} from '../engine/assets';
 import {EnergyAmbient} from './EnergyLines';
 import {KineticTitle} from './KineticTitle';
@@ -28,7 +28,7 @@ export const LogoMark: React.FC<{logo?: string; brandName?: string; height: numb
         letterSpacing: '-0.02em',
         color: colors.white,
         whiteSpace: 'nowrap',
-        textShadow: `0 0 ${30 * u}px rgba(30,136,255,0.35)`,
+        textShadow: `0 0 ${30 * u}px ${alpha(colors.blue, 0.35)}`,
       }}
     >
       {brandName ?? 'אינטר פלוס'}
@@ -86,7 +86,7 @@ export const LogoOutro: React.FC<Props> = ({logo, brandName, tagline, url, delay
         style={{
           background: [
             `radial-gradient(ellipse ${40 + flash * 30}% ${18 + flash * 22}% at 50% ${(cy / height) * 100}%, rgba(255,255,255,${0.38 * flash}), rgba(255,255,255,0) 60%)`,
-            `radial-gradient(ellipse 60% 40% at 50% ${(cy / height) * 100}%, rgba(30,136,255,${0.16 + 0.18 * flash}), rgba(30,136,255,0) 70%)`,
+            `radial-gradient(ellipse 60% 40% at 50% ${(cy / height) * 100}%, ${alpha(colors.blue, 0.16 + 0.18 * flash)}, ${alpha(colors.blue, 0)} 70%)`,
           ].join(', '),
         }}
       />

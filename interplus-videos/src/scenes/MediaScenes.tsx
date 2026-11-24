@@ -35,7 +35,7 @@ export const TitleScene: React.FC<SceneProps> = ({ts, lead}) => {
   const {safe, orientation} = useFormat();
   return (
     <AbsoluteFill>
-      <KenBurns asset={s.asset} visual={s.visual} focus={s.focus} move={s.move} grade={s.grade} foreground={s.foreground} length={ts.span} />
+      <KenBurns asset={s.asset} visual={s.visual} focus={s.focus} move={s.move} grade={s.grade} fit={s.fit} foreground={s.foreground} length={ts.span} />
       <AbsoluteFill style={{background: 'radial-gradient(ellipse 75% 55% at 50% 50%, rgba(3,10,18,0.5), rgba(3,10,18,0) 75%)'}} />
       {s.text ? (
         <AbsoluteFill
@@ -63,7 +63,7 @@ export const ImageScene: React.FC<SceneProps> = ({ts, lead}) => {
   const {safe} = useFormat();
   return (
     <AbsoluteFill>
-      <KenBurns asset={s.asset} visual={s.visual} focus={s.focus} move={s.move} grade={s.grade} foreground={s.foreground} length={ts.span} />
+      <KenBurns asset={s.asset} visual={s.visual} focus={s.focus} move={s.move} grade={s.grade} fit={s.fit} foreground={s.foreground} length={ts.span} />
       <AbsoluteFill style={{background: 'linear-gradient(180deg, rgba(3,10,18,0.5) 0%, rgba(3,10,18,0) 30%, rgba(3,10,18,0) 60%, rgba(3,10,18,0.6) 100%)'}} />
       {s.text ? (
         <div style={{position: 'absolute', top: safe.top, right: safe.right, left: safe.left}}>
@@ -133,6 +133,7 @@ export const MontageScene: React.FC<SceneProps> = ({ts, lead}) => {
                 focus={sh.focus}
                 move={sh.move ?? moves[k % moves.length]}
                 grade={sh.grade ?? s.grade}
+                fit={sh.fit ?? s.fit}
                 intensity={1.3}
                 length={to - from}
               />
@@ -163,7 +164,7 @@ export const LogoScene: React.FC<SceneProps> = ({ts, lead, logo, video}) => {
   const logoH = (orientation === 'landscape' ? 120 : 110) * u;
   return (
     <AbsoluteFill>
-      <KenBurns asset={s.asset} visual={s.visual} focus={s.focus} move={s.move ?? 'left'} grade={s.grade} length={ts.span} />
+      <KenBurns asset={s.asset} visual={s.visual} focus={s.focus} move={s.move ?? 'left'} grade={s.grade} fit={s.fit} length={ts.span} />
       <AbsoluteFill style={{background: 'linear-gradient(180deg, rgba(3,10,18,0.62) 0%, rgba(3,10,18,0.18) 45%, rgba(3,10,18,0.5) 100%)'}} />
       <div
         style={{
@@ -207,7 +208,7 @@ export const VideoScene: React.FC<SceneProps> = ({ts, lead}) => {
           style={{width: '100%', height: '100%', objectFit: 'cover', objectPosition: `${s.focus?.[0] ?? 50}% ${s.focus?.[1] ?? 50}%`}}
         />
       ) : hasAsset(s.asset) ? (
-        <KenBurns asset={s.asset} visual={s.visual} focus={s.focus} move={s.move} grade={s.grade} length={ts.span} />
+        <KenBurns asset={s.asset} visual={s.visual} focus={s.focus} move={s.move} grade={s.grade} fit={s.fit} length={ts.span} />
       ) : (
         <Placeholder visual={s.visual} path={s.asset} />
       )}
@@ -254,10 +255,10 @@ export const BeforeAfterScene: React.FC<SceneProps> = ({ts, lead}) => {
   const after = s.after ?? {};
   return (
     <AbsoluteFill>
-      <KenBurns asset={before.asset} visual={before.visual ?? 'before'} focus={before.focus} move="in" grade={before.grade ?? s.grade} length={ts.span} />
+      <KenBurns asset={before.asset} visual={before.visual ?? 'before'} focus={before.focus} move="in" grade={before.grade ?? s.grade} fit={before.fit ?? s.fit} length={ts.span} />
       {wp > 0 ? (
         <AbsoluteFill style={revealMask(wp, width, u)}>
-          <KenBurns asset={after.asset} visual={after.visual ?? 'after'} focus={after.focus} move="in" grade={after.grade ?? s.grade} length={ts.span} />
+          <KenBurns asset={after.asset} visual={after.visual ?? 'after'} focus={after.focus} move="in" grade={after.grade ?? s.grade} fit={after.fit ?? s.fit} length={ts.span} />
         </AbsoluteFill>
       ) : null}
       <Sequence from={wipeStart} durationInFrames={wipeLen} layout="none">

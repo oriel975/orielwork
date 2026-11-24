@@ -26,6 +26,9 @@ export type Grade = 'neutral' | 'warm' | 'cool' | 'night' | 'thermal';
 /** Camera move for a still. */
 export type Move = 'in' | 'out' | 'left' | 'right' | 'up' | 'down';
 
+/** How a photo fills the frame (see KenBurns). */
+export type Fit = 'auto' | 'cover' | 'contain';
+
 export type Shot = {
   asset?: string;
   /** What the picture should show. Used on placeholders and in the missing-assets list. */
@@ -36,6 +39,7 @@ export type Shot = {
   focus?: [number, number];
   move?: Move;
   grade?: Grade;
+  fit?: Fit;
 };
 
 export type Card = {
@@ -65,6 +69,7 @@ export type Scene = {
   focus?: [number, number];
   move?: Move;
   grade?: Grade;
+  fit?: Fit;
   /** Optional transparent PNG cut-out laid over `asset` for real foreground depth. */
   foreground?: string;
   /** Voiceover line. Also burned in as captions unless captions are off. */
@@ -84,6 +89,10 @@ export type Scene = {
   url?: string;
   /** How this scene enters. Default "energy"; the first scene always fades in. */
   transition?: Transition;
+  /** Score intensity for this scene, 0 (pad only) to 3 (full drums). Default by scene type. */
+  musicEnergy?: number;
+  /** From this scene on, the score resolves into its released (major) harmony. */
+  musicRelease?: boolean;
 };
 
 export type VideoSpec = {
@@ -102,5 +111,13 @@ export type VideoSpec = {
   duckedVolume?: number;
   captions?: boolean;
   formats?: FormatId[];
+  /** Score palette for scripts/music/compose.py: installations | ev | enerlec. */
+  musicStyle?: string;
+  /** Whooshes on transitions and cuts. Default true. */
+  sfx?: boolean;
+  /** EV motif: a charge bar that fills across the video, full when the outro starts. */
+  chargeBar?: boolean;
+  /** Enerlec motif: a running clock in the corner over scenes fromScene..toScene (1-based). */
+  clock?: {fromScene: number; toScene: number; start?: string};
   scenes: Scene[];
 };

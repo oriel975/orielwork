@@ -1,0 +1,72 @@
+{
+  "id": "enerlec-brand",
+  "company": "enerlec",
+  "title": "Inter Enerlec brand film (60s)",
+  "brandName": "אינטר אנרלק",
+  "music": "music/enerlec-brand.m4a",
+  "musicStyle": "enerlec",
+  "clock": {"fromScene": 1, "toScene": 3, "start": "02:00"},
+  "scenes": [
+    {
+      "type": "title",
+      "duration": 5,
+      "asset": "group/night-city-lights.jpg",
+      "visual": "industrial area at night",
+      "grade": "night",
+      "text": "כשהחשמל נעצר, הזמן מתחיל לרוץ.",
+      "vo": "כשהחשמל נעצר, הזמן מתחיל לרוץ.",
+      "voDelay": 0.6,
+      "captions": false
+    },
+    {
+      "type": "logo",
+      "duration": 10,
+      "asset": "enerlec/dorad-power-station.jpg",
+      "visual": "Dorad power station",
+      "grade": "night",
+      "vo": "אינטר אנרלק, מקבוצת אינטר פלוס. המומחים במתח גבוה."
+    },
+    {
+      "type": "montage",
+      "duration": 13,
+      "grade": "thermal",
+      "vo": "אנחנו מאבחנים, מאתרים ומתקנים תקלות במערכות אנרגיה גדולות, מהר ובמדויק.",
+      "shots": [
+        {"asset": "enerlec/transformer-maintenance.jpg", "caption": "אבחון"},
+        {"asset": "enerlec/enerlec-substation.jpg", "caption": "איתור"},
+        {"asset": "enerlec/halutziot-transformers.jpg", "caption": "תיקון"}
+      ]
+    },
+    {
+      "type": "stat",
+      "duration": 7,
+      "asset": "group/clock.jpg",
+      "vo": "זמינים עשרים וארבע שעות ביממה, שבעה ימים בשבוע, בכל הארץ.",
+      "stats": [{"value": 24, "unit": "/7", "label": "זמינות בכל הארץ"}]
+    },
+    {
+      "type": "montage",
+      "duration": 15,
+      "musicEnergy": 3,
+      "musicRelease": true,
+      "grade": "warm",
+      "vo": "ואחרי התיקון, אחזקה שוטפת ושירותי הפעלה ואחזקה לתחנות משנה ולתחנות כוח, כדי שהתקלה הבאה לא תגיע.",
+      "shots": [
+        {"asset": "enerlec/ashalim-substation.jpg", "caption": "O&M – תחמ\"ש אשלים"},
+        {"asset": "enerlec/neot-hovav-substation.jpg", "caption": "O&M – תחמ\"ש נאות חובב"},
+        {"asset": "enerlec/ketura-substation.jpg", "caption": "O&M – תחמ\"ש קטורה"}
+      ]
+    },
+    {
+      "type": "outro",
+      "duration": 10,
+      "asset": "enerlec/enerlec-panorama.jpg",
+      "grade": "neutral",
+      "tagline": "מתח גבוה. ביטחון מלא.",
+      "url": "interplus.co.il",
+      "vo": "אינטר אנרלק. מתח גבוה. ביטחון מלא.",
+      "voDelay": 1.3,
+      "captions": false
+    }
+  ]
+}

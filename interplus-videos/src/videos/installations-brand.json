@@ -1,0 +1,154 @@
+{
+  "id": "installations-brand",
+  "company": "installations",
+  "title": "Inter Electric Installations brand film (75s)",
+  "brandName": "אינטר אלקטריק התקנות",
+  "music": "music/installations-brand.m4a",
+  "musicStyle": "installations",
+  "scenes": [
+    {
+      "type": "title",
+      "duration": 5,
+      "asset": "installations/substation-hero.jpg",
+      "visual": "extra-high-voltage substation",
+      "focus": [
+        50,
+        55
+      ],
+      "grade": "warm",
+      "text": "החשמל שמניע את ישראל עובר דרכנו.",
+      "vo": "החשמל שמניע את ישראל עובר דרכנו.",
+      "voDelay": 0.6,
+      "captions": false
+    },
+    {
+      "type": "logo",
+      "duration": 10,
+      "asset": "installations/crew-on-site.jpg",
+      "visual": "Inter Electric crew on site",
+      "focus": [
+        50,
+        45
+      ],
+      "vo": "אינטר אלקטריק התקנות, מקבוצת אינטר פלוס. מתכננים, מקימים ומתחזקים תחנות משנה במתח עליון בכל רחבי הארץ."
+    },
+    {
+      "type": "montage",
+      "duration": 13,
+      "vo": "מהתכנון ההנדסי, דרך ההקמה, ועד בדיקות והכנסה לניצול. במסדר פתוח, היברידי או סגור, תחת קורת גג אחת.",
+      "shots": [
+        {
+          "asset": "installations/zeelim-161kv-aerial.jpg",
+          "caption": "תכנון והקמה",
+          "visual": "161 kV Zeelim substation under construction, aerial"
+        },
+        {
+          "asset": "installations/halutziot-transformer-assembly.jpg",
+          "caption": "הרכבת שנאים",
+          "visual": "161 kV transformer assembly, Halutziot"
+        },
+        {
+          "asset": "installations/hadera-gis-engineer.jpg",
+          "caption": "מערכות מיתוג והגנה",
+          "visual": "engineer at GIS switchgear, Hadera"
+        },
+        {
+          "asset": "installations/gis-hall.jpg",
+          "caption": "בדיקות והכנסה לניצול",
+          "visual": "GIS hall"
+        }
+      ]
+    },
+    {
+      "type": "stat",
+      "duration": 7,
+      "asset": "installations/hadera-gis-equipment.jpg",
+      "vo": "ומעבדת בדיקה משלנו, למערכות מתח עליון עד שש מאות ותשעים קילו וולט.",
+      "stats": [
+        {
+          "value": 690,
+          "unit": "kV",
+          "label": "מעבדת בדיקה למערכות מתח עליון"
+        }
+      ]
+    },
+    {
+      "type": "projects",
+      "duration": 9,
+      "musicEnergy": 3,
+      "text": "מבחר פרויקטים",
+      "vo": "פרויקטים לאומיים, שמתחילים אצלנו ונשארים פועלים שנים.",
+      "cards": [
+        {
+          "title": "תחמ\"ש GIS 400 ק\"ו",
+          "line": "באר טוביה",
+          "asset": "installations/beer-tuvia-400kv-gis-hall.jpg"
+        },
+        {
+          "title": "תחמ\"ש 161 ק\"ו",
+          "line": "נבטים",
+          "asset": "installations/nevatim-161kv-aerial.jpg"
+        },
+        {
+          "title": "תחנת כח 70 MW",
+          "line": "אלנה קירי, גבון",
+          "asset": "installations/gabon-70mw-power-plant.png"
+        }
+      ]
+    },
+    {
+      "type": "montage",
+      "duration": 11,
+      "musicEnergy": 3,
+      "shots": [
+        {
+          "asset": "installations/kfar-uria-hybrid-161kv.jpg",
+          "caption": "תחמ\"ש היברידי 161 ק\"ו – כפר אוריה"
+        },
+        {
+          "asset": "installations/hadera-120mw-power-plant.jpg",
+          "caption": "תחנת כח 120 MW – נייר חדרה",
+          "move": "up"
+        },
+        {
+          "asset": "installations/halutziot-161kv-panorama.jpg",
+          "caption": "תחמ\"ש 161 ק\"ו – חלוציות"
+        }
+      ]
+    },
+    {
+      "type": "montage",
+      "duration": 13,
+      "musicEnergy": 1,
+      "vo": "מאחורי כל תחנה עומד צוות של מהנדסים ואנשי מקצוע, עם סטנדרט הבטיחות הגבוה בענף.",
+      "shots": [
+        {
+          "asset": "installations/technicians-at-panels.jpg",
+          "visual": "technicians testing control panels",
+          "move": "left"
+        },
+        {
+          "asset": "installations/tzafit-electrician-vertical.jpeg",
+          "visual": "electrician in safety gear",
+          "focus": [
+            50,
+            35
+          ]
+        }
+      ],
+      "voFile": "installations/vo/installations-brand-06.wav"
+    },
+    {
+      "type": "outro",
+      "duration": 7,
+      "asset": "installations/substation-insulators.jpg",
+      "grade": "night",
+      "tagline": "אנרגיה בביצוע מדויק",
+      "url": "interplus.co.il",
+      "vo": "אינטר אלקטריק התקנות. אנרגיה בביצוע מדויק.",
+      "voDelay": 1.3,
+      "captions": false,
+      "voFile": "installations/vo/installations-brand-07.wav"
+    }
+  ]
+}

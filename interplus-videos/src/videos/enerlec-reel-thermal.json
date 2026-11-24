@@ -1,0 +1,58 @@
+{
+  "id": "enerlec-reel-thermal",
+  "company": "enerlec",
+  "title": "Reel: what does a thermal camera see?",
+  "brandName": "אינטר אנרלק",
+  "music": "music/enerlec-reel-thermal.m4a",
+  "musicStyle": "enerlec",
+  "scenes": [
+    {
+      "type": "title",
+      "duration": 4,
+      "asset": "enerlec/transformer-maintenance.jpg",
+      "grade": "thermal",
+      "text": "מה רואה מצלמה תרמית?",
+      "vo": "מה רואה מצלמה תרמית, שהעין לא רואה?",
+      "voDelay": 0.3,
+      "captions": false
+    },
+    {
+      "type": "image",
+      "duration": 7,
+      "musicEnergy": 2,
+      "asset": "enerlec/enerlec-substation.jpg",
+      "grade": "thermal",
+      "vo": "נקודה חמה בלוח חשמל היא סימן לחיבור רופף, או לעומס יתר."
+    },
+    {
+      "type": "image",
+      "duration": 6,
+      "musicEnergy": 2,
+      "asset": "enerlec/ketura-substation.jpg",
+      "grade": "thermal",
+      "vo": "אם לא מטפלים בה, היא עלולה להפוך לתקלה, ואפילו לשריפה."
+    },
+    {
+      "type": "image",
+      "duration": 6,
+      "musicEnergy": 3,
+      "musicRelease": true,
+      "asset": "enerlec/halutziot-transformers.jpg",
+      "grade": "neutral",
+      "vo": "אנחנו מאתרים אותה בלי להשבית את המערכת, ומטפלים בה בזמן."
+    },
+    {
+      "type": "outro",
+      "duration": 6,
+      "asset": "enerlec/enerlec-panorama.jpg",
+      "tagline": "המומחים במתח גבוה",
+      "url": "interplus.co.il",
+      "vo": "אינטר אנרלק. המומחים במתח גבוה.",
+      "voDelay": 1.3,
+      "captions": false
+    }
+  ],
+  "formats": [
+    "9x16"
+  ]
+}

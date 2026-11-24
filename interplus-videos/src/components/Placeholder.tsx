@@ -1,6 +1,6 @@
 import React from 'react';
 import {AbsoluteFill, interpolate, useCurrentFrame} from 'remotion';
-import {colors, fontFamily, useFormat, type} from '../brand';
+import {alpha, colors, fontFamily, useFormat, type} from '../brand';
 
 /**
  * Stand-in for a photo or clip that is not in assets/ yet. Quiet, on-brand,
@@ -24,7 +24,7 @@ export const Placeholder: React.FC<{visual?: string; path?: string; showLabel?: 
     <AbsoluteFill style={{background: colors.navyDeep, overflow: 'hidden'}}>
       <AbsoluteFill
         style={{
-          background: `radial-gradient(ellipse 70% 60% at ${gx}% ${gy}%, rgba(30,136,255,0.30), transparent 70%),
+          background: `radial-gradient(ellipse 70% 60% at ${gx}% ${gy}%, ${alpha(colors.blue, 0.30)}, transparent 70%),
             radial-gradient(ellipse 50% 40% at ${100 - gx}% ${85 - gy / 3}%, rgba(255,176,32,0.12), transparent 70%),
             linear-gradient(180deg, ${colors.navy} 0%, ${colors.navyDeep} 100%)`,
         }}

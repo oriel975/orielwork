@@ -39,6 +39,13 @@ export const KineticTitle: React.FC<Props> = ({
   const frame = useCurrentFrame();
   const {u, width, safe} = useFormat();
   const words = text.trim().split(/\s+/);
+  // Balance line lengths: estimate the set width (~0.5em per character) and, when
+  // the title wraps, narrow the block so lines come out even instead of leaving
+  // one word alone on the last line.
+  const available = maxWidth ?? width - safe.left - safe.right;
+  const estimate = text.length * size * u * 0.5;
+  const lines = Math.ceil(estimate / available);
+  const balancedWidth = lines > 1 ? Math.min(available, (estimate / lines) * 1.15) : available;
   const wordIn = 18;
   const settle = delay + words.length * stagger + wordIn;
   const tiltP = ease.out(interpolate(frame, [delay, settle + 6], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'}));
@@ -63,7 +70,7 @@ export const KineticTitle: React.FC<Props> = ({
     letterSpacing: '-0.012em',
     color,
     textAlign: align === 'center' ? 'center' : 'right',
-    maxWidth: maxWidth ?? width - safe.left - safe.right,
+    maxWidth: balancedWidth,
   };
 
   return (

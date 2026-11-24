@@ -1,0 +1,65 @@
+{
+  "id": "enerlec-reel-night",
+  "company": "enerlec",
+  "title": "Reel: a call at 2 a.m.",
+  "brandName": "אינטר אנרלק",
+  "clock": {
+    "fromScene": 1,
+    "toScene": 3,
+    "start": "02:00"
+  },
+  "music": "music/enerlec-reel-night.m4a",
+  "musicStyle": "enerlec",
+  "scenes": [
+    {
+      "type": "title",
+      "duration": 4,
+      "asset": "group/night-city-lights.jpg",
+      "grade": "night",
+      "text": "שתיים בלילה.",
+      "vo": "שתיים בלילה. המפעל בחושך.",
+      "voDelay": 0.3,
+      "captions": false
+    },
+    {
+      "type": "image",
+      "duration": 5,
+      "musicEnergy": 2,
+      "asset": "enerlec/dorad-power-station.jpg",
+      "grade": "night",
+      "vo": "הטלפון מצלצל, והצוות כבר בדרך."
+    },
+    {
+      "type": "montage",
+      "duration": 7,
+      "musicEnergy": 2,
+      "grade": "thermal",
+      "vo": "אבחון, איתור התקלה, ותיקון. מהר ובמדויק.",
+      "shots": [
+        {
+          "asset": "enerlec/transformer-maintenance.jpg",
+          "caption": "אבחון"
+        },
+        {
+          "asset": "enerlec/enerlec-substation.jpg",
+          "caption": "תיקון"
+        }
+      ]
+    },
+    {
+      "type": "outro",
+      "duration": 7,
+      "musicRelease": true,
+      "asset": "enerlec/enerlec-panorama.jpg",
+      "grade": "neutral",
+      "tagline": "מתח גבוה. ביטחון מלא.",
+      "url": "interplus.co.il",
+      "vo": "והאור חוזר. אינטר אנרלק. מתח גבוה, ביטחון מלא.",
+      "voDelay": 0.4,
+      "captions": false
+    }
+  ],
+  "formats": [
+    "9x16"
+  ]
+}

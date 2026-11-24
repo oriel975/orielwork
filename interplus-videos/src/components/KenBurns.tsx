@@ -1,8 +1,8 @@
 import React from 'react';
 import {AbsoluteFill, Img, OffthreadVideo, interpolate, useCurrentFrame, useVideoConfig} from 'remotion';
-import {ease} from '../brand';
-import {assetKind, assetSrc, hasAsset} from '../engine/assets';
-import type {Grade, Move} from '../engine/schema';
+import {ease, useFormat} from '../brand';
+import {assetAspect, assetKind, assetSrc, hasAsset} from '../engine/assets';
+import type {Fit, Grade, Move} from '../engine/schema';
 import {GradeOverlay, ThermalFilterDefs, gradeFilter, useThermalId} from './Grade';
 import {Placeholder} from './Placeholder';
 
@@ -22,6 +22,19 @@ type Props = {
   vignette?: number;
   /** Frames over which the move runs. Defaults to the enclosing sequence. */
   length?: number;
+  /**
+   * cover: fill the frame. contain: whole photo over a blurred copy of itself.
+   * auto (default): contain when cropping would throw away most of the photo
+   * (a landscape photo in 9:16, a panorama in 16:9), otherwise cover.
+   */
+  fit?: Fit;
+};
+
+/** Whether a photo of this aspect should be shown whole inside a frame of frameAspect. */
+export const shouldContain = (imageAspect: number | null, frameAspect: number) => {
+  if (!imageAspect) return false;
+  const limit = frameAspect < 1 ? 1.5 : 1.6;
+  return imageAspect > frameAspect * limit;
 };
 
 const camera = (move: Move, p: number, k: number) => {
@@ -59,9 +72,11 @@ export const KenBurns: React.FC<Props> = ({
   depth = true,
   vignette,
   length,
+  fit = 'auto',
 }) => {
   const frame = useCurrentFrame();
   const {durationInFrames} = useVideoConfig();
+  const {width, height, u, orientation} = useFormat();
   const thermalId = useThermalId();
   const total = length ?? durationInFrames;
   const p = ease.drift(Math.min(1, Math.max(0, frame / Math.max(1, total))));
@@ -94,6 +109,44 @@ export const KenBurns: React.FC<Props> = ({
       <AbsoluteFill style={{overflow: 'hidden', background: '#000', opacity: fade}}>
         {grade === 'thermal' ? <ThermalFilterDefs id={thermalId} /> : null}
         <OffthreadVideo muted src={assetSrc(asset)} style={layer(1 + (cam.scale - 1) * 0.5, {filter})} />
+        <GradeOverlay grade={grade} vignette={vignette} />
+      </AbsoluteFill>
+    );
+  }
+
+  const contain = kind === 'image' && (fit === 'contain' || (fit === 'auto' && shouldContain(assetAspect(asset), width / height)));
+  if (contain) {
+    const aspect = assetAspect(asset) ?? 16 / 9;
+    // At least 45% of the frame height (portrait) so the photo carries the frame;
+    // the sides of very wide photos are trimmed rather than shrinking the band.
+    const minH = orientation === 'portrait' ? height * 0.45 : 0;
+    const boxH = Math.max(width / aspect, minH);
+    const boxW = boxH * aspect;
+    // Portrait: sit a little above centre, leaving the lower third for captions.
+    const top = (orientation === 'portrait' ? height * 0.43 : height / 2) - boxH / 2;
+    const s = 1.0 + 0.07 * p * intensity;
+    const feather = `linear-gradient(180deg, transparent 0%, black 7%, black 93%, transparent 100%)`;
+    return (
+      <AbsoluteFill style={{overflow: 'hidden', background: '#000', opacity: fade}}>
+        {grade === 'thermal' ? <ThermalFilterDefs id={thermalId} /> : null}
+        <Img src={assetSrc(asset)} style={layer(1.3 + 0.05 * p, {filter: `${filter} blur(${30 * u}px) brightness(0.72) saturate(1.2)`})} />
+        <AbsoluteFill style={{background: 'rgba(6,18,31,0.22)'}} />
+        <div
+          style={{
+            position: 'absolute',
+            left: (width - boxW) / 2,
+            top,
+            width: boxW,
+            height: boxH,
+            transform: `translate(${cam.x * 0.4}%, ${cam.y * 0.4}%) scale(${s})`,
+            transformOrigin: origin,
+            boxShadow: `0 ${30 * u}px ${90 * u}px rgba(0,0,0,0.5)`,
+            maskImage: feather,
+            WebkitMaskImage: feather,
+          }}
+        >
+          <Img src={assetSrc(asset)} style={{width: '100%', height: '100%', objectFit: 'cover', filter, display: 'block'}} />
+        </div>
         <GradeOverlay grade={grade} vignette={vignette} />
       </AbsoluteFill>
     );

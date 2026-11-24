@@ -12,7 +12,7 @@ const Backdrop: React.FC<SceneProps & {dim?: number}> = ({ts, dim = 0.72}) => {
     <AbsoluteFill style={{background: `radial-gradient(ellipse 90% 80% at 50% 35%, ${colors.navy} 0%, ${colors.navyDeep} 60%, ${colors.ink} 100%)`}}>
       {hasAsset(s.asset) ? (
         <>
-          <KenBurns asset={s.asset} focus={s.focus} move={s.move} grade={s.grade ?? 'night'} depth={false} length={ts.span} />
+          <KenBurns asset={s.asset} focus={s.focus} move={s.move} grade={s.grade ?? 'night'} fit={s.fit} depth={false} length={ts.span} />
           <AbsoluteFill style={{background: `rgba(6,18,31,${dim})`}} />
         </>
       ) : null}

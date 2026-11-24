@@ -2,6 +2,7 @@ import React, {useMemo} from 'react';
 import {AbsoluteFill, Sequence, interpolate, useCurrentFrame, useVideoConfig} from 'remotion';
 import {colors, fontFamily, useFormat, type FormatId} from '../brand';
 import {Captions, EnergySweep, revealMask} from '../components';
+import {ChargeBar, RunningClock} from '../components/Motifs';
 import {SCENES} from '../scenes';
 import {resolveLogo} from './assets';
 import type {VideoSpec} from './schema';
@@ -70,6 +71,23 @@ export const VideoFromJson: React.FC<VideoProps> = ({video}) => {
             <SweepOverlay frames={ts.transitionFrames} seed={`${video.id}-${ts.index}`} />
           </Sequence>
         ))}
+      {video.clock
+        ? (() => {
+            const a = timeline[video.clock.fromScene - 1];
+            const b = timeline[video.clock.toScene - 1];
+            if (!a || !b) return null;
+            const from = a.start;
+            const to = b.start + b.length;
+            return (
+              <Sequence from={from} durationInFrames={to - from} name="clock" layout="none">
+                <RunningClock start={video.clock.start} total={to - from} />
+              </Sequence>
+            );
+          })()
+        : null}
+      {video.chargeBar ? (
+        <ChargeBar fullAt={(timeline.find((t) => t.scene.type === 'outro') ?? timeline[timeline.length - 1]).start} />
+      ) : null}
       <Captions cues={cues} />
       <FadeOut />
       <Soundtrack video={video} timeline={timeline} />
