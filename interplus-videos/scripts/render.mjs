@@ -10,8 +10,9 @@
 // Also writes out/<company>/<id>-missing.md listing assets still to supply.
 import {bundle} from '@remotion/bundler';
 import {renderMedia, renderStill, selectComposition} from '@remotion/renderer';
+import {spawnSync} from 'node:child_process';
 import {existsSync} from 'node:fs';
-import {mkdir, readFile, readdir, writeFile} from 'node:fs/promises';
+import {mkdir, readFile, readdir, rename, writeFile} from 'node:fs/promises';
 import {dirname, join} from 'node:path';
 import {fileURLToPath} from 'node:url';
 
@@ -123,6 +124,13 @@ for (const v of selected) {
         }
       },
     });
+    // Social platforms play at about -14 LUFS; normalise the mix there (picture untouched).
+    const hasFfmpeg = spawnSync('ffmpeg', ['-version']).status === 0;
+    if (hasFfmpeg) {
+      const tmp = output.replace(/\.mp4$/, '.loud.mp4');
+      const r = spawnSync('ffmpeg', ['-y', '-loglevel', 'error', '-i', output, '-c:v', 'copy', '-af', 'loudnorm=I=-14:TP=-1:LRA=11', '-ar', '48000', '-c:a', 'aac', '-b:a', '192k', '-movflags', '+faststart', tmp]);
+      if (r.status === 0) await rename(tmp, output);
+    }
     console.log(`\r${id} → out/${v.company}/${id}.mp4`);
   }
 

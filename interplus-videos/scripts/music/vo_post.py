@@ -8,10 +8,14 @@ compression and loudness normalisation to -16 LUFS / -1.5 dBTP, 48 kHz mono.
 Prints a table; flagged lines are listed for regeneration and not copied.
 """
 import json
+import os
 import re
 import subprocess
 import sys
 from pathlib import Path
+
+# Keys checked by hand (e.g. a deliberate pause, or digits in the transcript) that pass anyway.
+ACCEPT = set(filter(None, os.environ.get("ACCEPT", "").split(",")))
 
 raw_dir, assets_dir = Path(sys.argv[1]), Path(sys.argv[2])
 reports = [json.load(open(p, encoding="utf-8")) for p in sys.argv[3:]]
@@ -52,7 +56,12 @@ for out, e in entries.items():
         problem.append(f"gap {max(gaps):.1f}s")
     if e.get("cer", 0) > 0.3:
         problem.append(f"cer {e['cer']}")
-    status = "FLAG " + ", ".join(problem) if problem else "ok"
+    if problem and str(key) in ACCEPT:
+        problem = []
+        accepted = True
+    else:
+        accepted = False
+    status = "FLAG " + ", ".join(problem) if problem else ("ok (accepted)" if accepted else "ok")
     print(f"{key}  {d:5.2f}s  {per_char:.3f}s/ch  cer={e.get('cer')}  {status}")
     if problem:
         flagged.append(str(key))

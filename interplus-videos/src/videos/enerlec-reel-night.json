@@ -13,7 +13,7 @@
   "scenes": [
     {
       "type": "title",
-      "duration": 4,
+      "duration": 5.5,
       "asset": "group/night-city-lights.jpg",
       "grade": "night",
       "text": "שתיים בלילה.",
