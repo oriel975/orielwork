@@ -1,0 +1,7 @@
+{
+  "source": null,
+  "note": "Written by `npm run logo-colors` from the logo in assets/logos/. Empty until a real logo is added; tokens.ts then uses the base colours.",
+  "primary": null,
+  "accent": null,
+  "swatches": []
+}

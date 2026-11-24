@@ -1,0 +1,43 @@
+{
+  "id": "style-test",
+  "company": "installations",
+  "title": "Style test (10s, placeholder images)",
+  "brandName": "אינטר אלקטריק התקנות",
+  "music": "music/style-test.mp3",
+  "scenes": [
+    {
+      "type": "title",
+      "duration": 3,
+      "asset": "placeholders/substation-sunset.jpg",
+      "visual": "drone over a substation at sunset",
+      "focus": [62, 58],
+      "move": "in",
+      "grade": "warm",
+      "text": "החשמל שמניע את ישראל עובר דרכנו."
+    },
+    {
+      "type": "projects",
+      "duration": 2.8,
+      "vo": "פרויקטים לאומיים, שמתחילים אצלנו ונשארים פועלים שנים.",
+      "voDelay": 0.2,
+      "cards": [
+        {"title": "תחנת משנה אורים", "asset": "placeholders/substation-sunset.jpg", "focus": [80, 55]},
+        {"title": "נת\"א – הרכבת הקלה", "asset": "placeholders/engineering-plan.jpg", "focus": [40, 45]},
+        {"title": "M3", "asset": "placeholders/substation-night.jpg", "focus": [20, 55]}
+      ]
+    },
+    {
+      "type": "stat",
+      "duration": 2,
+      "asset": "placeholders/substation-night.jpg",
+      "stats": [{"value": 161, "unit": "kV", "label": "תחנות משנה במתח עליון"}]
+    },
+    {
+      "type": "outro",
+      "duration": 2.2,
+      "asset": "placeholders/substation-night.jpg",
+      "tagline": "אנרגיה בביצוע מדויק",
+      "url": "interplus.co.il"
+    }
+  ]
+}
