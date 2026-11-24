@@ -25,17 +25,22 @@
       "type": "image",
       "duration": 8,
       "musicEnergy": 2,
-      "asset": "ev/hotel-parking-chargers-1.jpeg",
+      "asset": "ev/cars-charging-illustration.jpg",
       "text": "כמה עמדות צריך?",
-      "vo": "כמה עמדות צריך? זה תלוי בגודל הצי ובשעות הפעילות, ולכן מתחילים בסקר באתר."
+      "vo": "כמה עמדות צריך? זה תלוי בגודל הצי ובשעות הפעילות, ולכן מתחילים בסקר באתר.",
+      "visual": "several cars sharing a row of chargers"
     },
     {
       "type": "image",
       "duration": 8,
       "musicEnergy": 2,
-      "asset": "ev/hotel-parking-chargers-3.jpeg",
+      "asset": "ev/garage-chargers.jpeg",
       "text": "כמה זמן לוקחת התקנה?",
-      "vo": "כמה זמן לוקחת ההתקנה? זה תלוי בהיקף, ואנחנו מלווים אתכם מהתכנון ועד המסירה."
+      "vo": "כמה זמן לוקחת ההתקנה? זה תלוי בהיקף, ואנחנו מלווים אתכם מהתכנון ועד המסירה.",
+      "focus": [
+        25,
+        55
+      ]
     },
     {
       "type": "image",

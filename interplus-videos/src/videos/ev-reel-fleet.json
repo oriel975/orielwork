@@ -21,20 +21,26 @@
       "type": "image",
       "duration": 7,
       "musicEnergy": 2,
-      "asset": "ev/hotel-parking-chargers-1.jpeg",
-      "vo": "כל רכב מתחבר לעמדה שלו בסוף היום, ומערכת ניהול חכמה מחלקת את ההספק."
+      "asset": "ev/car-charging-2.png",
+      "vo": "כל רכב מתחבר לעמדה שלו בסוף היום, ומערכת ניהול חכמה מחלקת את ההספק.",
+      "focus": [
+        60,
+        55
+      ],
+      "visual": "car plugged in to its own charger"
     },
     {
       "type": "image",
       "duration": 5,
       "musicEnergy": 3,
-      "asset": "ev/garage-chargers.jpeg",
-      "vo": "ובבוקר, כל הצי מוכן לצאת לדרך."
+      "asset": "ev/cars-charging-illustration.jpg",
+      "vo": "ובבוקר, כל הצי מוכן לצאת לדרך.",
+      "visual": "row of electric cars on charge"
     },
     {
       "type": "outro",
       "duration": 6,
-      "asset": "ev/car-charging-2.png",
+      "asset": "ev/garage-chargers-panorama.jpg",
       "tagline": "טעינה מהירה. שירות אישי.",
       "url": "interplus.co.il",
       "vo": "אינטר EV. טעינה מהירה. שירות אישי.",

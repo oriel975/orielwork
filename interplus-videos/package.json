@@ -17,7 +17,8 @@
     "stills": "node scripts/render.mjs --stills",
     "logo-colors": "node scripts/sample-logo-colors.mjs",
     "placeholders": "node scripts/make-placeholders.mjs",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "deliver": "node scripts/deliver.mjs"
   },
   "dependencies": {
     "@fontsource/heebo": "5.2.8",

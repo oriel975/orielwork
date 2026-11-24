@@ -23,31 +23,39 @@
       "musicEnergy": 3,
       "shots": [
         {
-          "asset": "ev/wallbox-garage.jpeg",
-          "caption": "שיחה"
-        },
-        {
           "asset": "ev/garage-chargers-panorama.jpg",
           "caption": "סקר באתר"
         },
         {
-          "asset": "ev/hotel-parking-chargers-2.jpeg",
-          "caption": "התקנה"
+          "asset": "ev/garage-chargers.jpeg",
+          "caption": "התקנה",
+          "focus": [
+            22,
+            60
+          ]
         },
         {
-          "asset": "ev/garage-chargers.jpeg",
-          "caption": "הפעלה"
+          "asset": "ev/car-charging-2.png",
+          "caption": "הפעלה",
+          "focus": [
+            70,
+            50
+          ]
         },
         {
           "asset": "ev/car-charging.png",
-          "caption": "טעינה ראשונה"
+          "caption": "טעינה ראשונה",
+          "focus": [
+            40,
+            55
+          ]
         }
       ]
     },
     {
       "type": "outro",
       "duration": 6,
-      "asset": "ev/car-charging-2.png",
+      "asset": "ev/cars-charging-illustration.jpg",
       "tagline": "שירות אישי, מהצפון ועד אילת",
       "url": "interplus.co.il",
       "vo": "אינטר EV. שירות אישי, מהצפון ועד אילת.",

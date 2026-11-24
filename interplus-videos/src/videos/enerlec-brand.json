@@ -5,7 +5,11 @@
   "brandName": "אינטר אנרלק",
   "music": "music/enerlec-brand.m4a",
   "musicStyle": "enerlec",
-  "clock": {"fromScene": 1, "toScene": 3, "start": "02:00"},
+  "clock": {
+    "fromScene": 1,
+    "toScene": 3,
+    "start": "02:00"
+  },
   "scenes": [
     {
       "type": "title",
@@ -32,9 +36,18 @@
       "grade": "thermal",
       "vo": "אנחנו מאבחנים, מאתרים ומתקנים תקלות במערכות אנרגיה גדולות, מהר ובמדויק.",
       "shots": [
-        {"asset": "enerlec/transformer-maintenance.jpg", "caption": "אבחון"},
-        {"asset": "enerlec/enerlec-substation.jpg", "caption": "איתור"},
-        {"asset": "enerlec/halutziot-transformers.jpg", "caption": "תיקון"}
+        {
+          "asset": "enerlec/transformer-maintenance.jpg",
+          "caption": "אבחון"
+        },
+        {
+          "asset": "enerlec/ashalim-substation-panorama.jpg",
+          "caption": "איתור"
+        },
+        {
+          "asset": "enerlec/halutziot-transformers.jpg",
+          "caption": "תיקון"
+        }
       ]
     },
     {
@@ -42,7 +55,13 @@
       "duration": 7,
       "asset": "group/clock.jpg",
       "vo": "זמינים עשרים וארבע שעות ביממה, שבעה ימים בשבוע, בכל הארץ.",
-      "stats": [{"value": 24, "unit": "/7", "label": "זמינות בכל הארץ"}]
+      "stats": [
+        {
+          "value": 24,
+          "unit": "/7",
+          "label": "זמינות בכל הארץ"
+        }
+      ]
     },
     {
       "type": "montage",
@@ -52,15 +71,24 @@
       "grade": "warm",
       "vo": "ואחרי התיקון, אחזקה שוטפת ושירותי הפעלה ואחזקה לתחנות משנה ולתחנות כוח, כדי שהתקלה הבאה לא תגיע.",
       "shots": [
-        {"asset": "enerlec/ashalim-substation.jpg", "caption": "O&M – תחמ\"ש אשלים"},
-        {"asset": "enerlec/neot-hovav-substation.jpg", "caption": "O&M – תחמ\"ש נאות חובב"},
-        {"asset": "enerlec/ketura-substation.jpg", "caption": "O&M – תחמ\"ש קטורה"}
+        {
+          "asset": "enerlec/ashalim-substation.jpg",
+          "caption": "O&M – תחמ\"ש אשלים"
+        },
+        {
+          "asset": "enerlec/neot-hovav-substation.jpg",
+          "caption": "O&M – תחמ\"ש נאות חובב"
+        },
+        {
+          "asset": "enerlec/ketura-substation.jpg",
+          "caption": "O&M – תחמ\"ש קטורה"
+        }
       ]
     },
     {
       "type": "outro",
       "duration": 10,
-      "asset": "enerlec/enerlec-panorama.jpg",
+      "asset": "group/power-plant-dusk.jpg",
       "grade": "neutral",
       "tagline": "מתח גבוה. ביטחון מלא.",
       "url": "interplus.co.il",

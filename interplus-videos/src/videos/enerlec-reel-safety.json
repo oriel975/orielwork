@@ -40,7 +40,7 @@
       "type": "image",
       "duration": 4,
       "musicEnergy": 2,
-      "asset": "enerlec/enerlec-substation.jpg",
+      "asset": "enerlec/transformer-maintenance.jpg",
       "grade": "cool",
       "text": "3  בדיקה שאין מתח",
       "vo": "שלוש: בדיקה שאין מתח.",
@@ -59,7 +59,7 @@
     {
       "type": "outro",
       "duration": 6,
-      "asset": "enerlec/enerlec-panorama.jpg",
+      "asset": "enerlec/dorad-power-station.jpg",
       "tagline": "בטיחות לפני הכול",
       "url": "interplus.co.il",
       "vo": "אינטר אנרלק. בטיחות לפני הכול.",
