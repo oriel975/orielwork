@@ -1,0 +1,77 @@
+{
+  "id": "installations-reel-focus",
+  "company": "installations",
+  "title": "Reel: project in focus, Hadera Paper",
+  "brandName": "אינטר אלקטריק התקנות",
+  "music": "music/installations-reel-focus.m4a",
+  "musicStyle": "installations",
+  "scenes": [
+    {
+      "type": "title",
+      "duration": 4,
+      "musicEnergy": 2,
+      "asset": "installations/hadera-120mw-power-plant.jpg",
+      "text": "פרויקט בפוקוס: נייר חדרה",
+      "vo": "פרויקט בפוקוס: נייר חדרה.",
+      "voDelay": 0.3,
+      "captions": false
+    },
+    {
+      "type": "stat",
+      "duration": 6,
+      "asset": "installations/hadera-gis-equipment.jpg",
+      "vo": "תחנת משנה במסדר סגור, במתח של מאה שישים ואחת קילו וולט.",
+      "stats": [
+        {
+          "value": 161,
+          "unit": "kV",
+          "label": "תחמ\"ש GIS"
+        }
+      ]
+    },
+    {
+      "type": "montage",
+      "duration": 6,
+      "musicEnergy": 3,
+      "shots": [
+        {
+          "asset": "installations/hadera-gis-corridor.jpg",
+          "caption": "מסדר סגור"
+        },
+        {
+          "asset": "installations/hadera-gis-engineer.jpg",
+          "caption": "הפעלה ובדיקות"
+        }
+      ]
+    },
+    {
+      "type": "stat",
+      "duration": 6,
+      "musicEnergy": 3,
+      "asset": "installations/hadera-120mw-power-plant.jpg",
+      "vo": "ולצידה, תחנת כוח של מאה ועשרים מגה וואט.",
+      "stats": [
+        {
+          "value": 120,
+          "unit": "MW",
+          "label": "תחנת כוח"
+        }
+      ]
+    },
+    {
+      "type": "outro",
+      "duration": 6,
+      "asset": "installations/substation-insulators.jpg",
+      "grade": "night",
+      "tagline": "אנרגיה בביצוע מדויק",
+      "url": "interplus.co.il",
+      "vo": "אינטר אלקטריק התקנות. אנרגיה בביצוע מדויק.",
+      "voFile": "installations/vo/installations-brand-07.wav",
+      "voDelay": 1.3,
+      "captions": false
+    }
+  ],
+  "formats": [
+    "9x16"
+  ]
+}

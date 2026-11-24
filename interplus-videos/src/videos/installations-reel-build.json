@@ -1,0 +1,65 @@
+{
+  "id": "installations-reel-build",
+  "company": "installations",
+  "title": "Reel: substation in 20 seconds",
+  "brandName": "אינטר אלקטריק התקנות",
+  "music": "music/installations-reel-build.m4a",
+  "musicStyle": "installations",
+  "scenes": [
+    {
+      "type": "title",
+      "duration": 3.5,
+      "musicEnergy": 2,
+      "asset": "installations/zeelim-161kv-aerial.jpg",
+      "text": "תחמ\"ש ב־20 שניות",
+      "vo": "ככה בונים תחנת משנה במתח עליון.",
+      "voDelay": 0.2,
+      "captions": false
+    },
+    {
+      "type": "montage",
+      "duration": 15,
+      "musicEnergy": 3,
+      "shots": [
+        {
+          "asset": "installations/nevatim-161kv-aerial.jpg",
+          "caption": "תכנון ותשתית"
+        },
+        {
+          "asset": "installations/halutziot-transformer-assembly.jpg",
+          "caption": "הרכבת שנאים"
+        },
+        {
+          "asset": "installations/hadera-gis-equipment.jpg",
+          "caption": "מערכות GIS"
+        },
+        {
+          "asset": "installations/crew-indoor-vertical.jpg",
+          "caption": "חיווט ומערכות הגנה"
+        },
+        {
+          "asset": "installations/gis-hall.jpg",
+          "caption": "בדיקות"
+        },
+        {
+          "asset": "installations/substation-hero.jpg",
+          "caption": "הכנסה לניצול"
+        }
+      ]
+    },
+    {
+      "type": "outro",
+      "duration": 5,
+      "asset": "installations/substation-insulators.jpg",
+      "grade": "night",
+      "tagline": "מהתכנון ועד ההפעלה",
+      "url": "interplus.co.il",
+      "vo": "אינטר אלקטריק התקנות. מהתכנון ועד ההפעלה.",
+      "voDelay": 1.2,
+      "captions": false
+    }
+  ],
+  "formats": [
+    "9x16"
+  ]
+}

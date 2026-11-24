@@ -1,0 +1,73 @@
+{
+  "id": "enerlec-reel-safety",
+  "company": "enerlec",
+  "title": "Reel: safety first",
+  "brandName": "אינטר אנרלק",
+  "music": "music/enerlec-reel-safety.m4a",
+  "musicStyle": "enerlec",
+  "scenes": [
+    {
+      "type": "title",
+      "duration": 4,
+      "asset": "enerlec/ashalim-substation.jpg",
+      "grade": "night",
+      "text": "בטיחות לפני הכול",
+      "vo": "לפני שנוגעים במתח גבוה, יש סדר.",
+      "voDelay": 0.3,
+      "captions": false
+    },
+    {
+      "type": "image",
+      "duration": 4,
+      "musicEnergy": 2,
+      "asset": "enerlec/neot-hovav-substation.jpg",
+      "grade": "cool",
+      "text": "1  ציוד מגן מלא",
+      "vo": "אחת: ציוד מגן מלא.",
+      "captions": false
+    },
+    {
+      "type": "image",
+      "duration": 4,
+      "musicEnergy": 2,
+      "asset": "enerlec/ketura-substation.jpg",
+      "grade": "cool",
+      "text": "2  ניתוק המערכת",
+      "vo": "שתיים: ניתוק המערכת.",
+      "captions": false
+    },
+    {
+      "type": "image",
+      "duration": 4,
+      "musicEnergy": 2,
+      "asset": "enerlec/transformer-maintenance.jpg",
+      "grade": "cool",
+      "text": "3  בדיקה שאין מתח",
+      "vo": "שלוש: בדיקה שאין מתח.",
+      "captions": false
+    },
+    {
+      "type": "image",
+      "duration": 5,
+      "musicEnergy": 3,
+      "musicRelease": true,
+      "asset": "enerlec/ashalim-substation-panorama.jpg",
+      "text": "4  אישור עבודה",
+      "vo": "ארבע: אישור עבודה. רק אז מתחילים.",
+      "captions": false
+    },
+    {
+      "type": "outro",
+      "duration": 6,
+      "asset": "enerlec/dorad-power-station.jpg",
+      "tagline": "בטיחות לפני הכול",
+      "url": "interplus.co.il",
+      "vo": "אינטר אנרלק. בטיחות לפני הכול.",
+      "voDelay": 1.3,
+      "captions": false
+    }
+  ],
+  "formats": [
+    "9x16"
+  ]
+}
