@@ -170,3 +170,15 @@ test('ESPN football leagues keep last year of history (cross-league links)', asy
   assert.ok(espnSoccer.length > 10);
   for (const l of espnSoccer) assert.equal(l.history?.prevYear, true, l.key);
 });
+
+test('per-league prior strength pulls thin-data leagues harder', async () => {
+  const { fitGoals, teamGroups } = await import('../server/models/goals.js');
+  const now = Date.now();
+  const ms = [];
+  for (let r = 0; r < 6; r++) ms.push({ league: 'L', home: 'hot', away: 'cold', hs: 4, as: 0, t: now - r * 86400000 * 4 });
+  for (let r = 0; r < 6; r++) ms.push({ league: 'M', home: 'x', away: 'y', hs: 1, as: 1, t: now - r * 86400000 * 4 });
+  const groups = teamGroups(ms);
+  const weak = fitGoals(ms, { now, priorGames: 1, groups });
+  const strong = fitGoals(ms, { now, priorGames: 1, groups, groupPriorGames: { L: 10 } });
+  assert.ok(strong.teams.get('hot').att < weak.teams.get('hot').att, 'stronger league prior shrinks the outlier');
+});

@@ -80,7 +80,10 @@ export const LEAGUE_BY_KEY = new Map(LEAGUES.map((l) => [l.key, l]));
 
 // Pool definitions: which model and which tuning each rating pool uses.
 export const POOLS = {
-  soccer: { model: 'goals', sport: 'soccer', halfLifeDays: 200, priorGames: 3, groupPrior: true }, // shrink teams toward their own league's level (better cross-league predictions)
+  // groupPrior: shrink teams toward their own league's level (better cross-league predictions).
+  // priorGames 1, but 3 for the Israeli leagues (current-season-only feed). Backtest 25.11 (112d):
+  // log loss 0.9863 -> 0.9834, European cups 0.904 -> 0.893.
+  soccer: { model: 'goals', sport: 'soccer', halfLifeDays: 200, priorGames: 1, groupPrior: true, groupPriorGames: { 'isr.1': 3, 'isr.2': 3 } },
   nhl: { model: 'goals', sport: 'hockey', halfLifeDays: 150, priorGames: 6 },
   mlb: { model: 'goals', sport: 'baseball', halfLifeDays: 120, priorGames: 10 },
   nba: { model: 'points', sport: 'basketball', halfLifeDays: 90, ridgeGames: 4 },

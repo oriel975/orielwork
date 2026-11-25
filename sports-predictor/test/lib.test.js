@@ -78,3 +78,13 @@ test('TheSportsDB: stale "not started" after kick-off is shown as awaiting resul
   assert.equal(normalize(ev(-300, 'FT', 67, 73), league).state, 'post');
   assert.equal(normalize(ev(-300, 'NS', 67, 73), league).state, 'post', 'scores present → finished');
 });
+
+test('TheSportsDB round cache lifetime', async () => {
+  const { roundTtl } = await import('../server/providers/tsdb.js');
+  const DAY = 86400000, now = Date.now();
+  const ev = (daysAgo, status) => ({ start: new Date(now - daysAgo * DAY).toISOString(), status });
+  assert.equal(roundTtl([ev(20, 'FT'), ev(19, 'FT')], now), 30 * DAY, 'old finished round');
+  assert.equal(roundTtl([ev(3, 'FT'), ev(4, 'FT')], now), 5 * DAY, 'recent finished round');
+  assert.equal(roundTtl([ev(1, 'FT'), ev(1, 'NS')], now), 90000, 'round in progress');
+  assert.equal(roundTtl([ev(-3, 'NS')], now), 30 * 60000, 'future round');
+});

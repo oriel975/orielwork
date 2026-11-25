@@ -106,7 +106,7 @@ export function matrixMarkets(m, { current = [0, 0] } = {}) {
 // Fitting
 // matches: [{ home, away, hs, as, t }]  (t = epoch ms of kick-off)
 // ---------------------------------------------------------------------------
-export function fitGoals(matches, { halfLifeDays = 180, priorGames = 3, now = Date.now(), iterations = 60, groups = null } = {}) {
+export function fitGoals(matches, { halfLifeDays = 180, priorGames = 3, now = Date.now(), iterations = 60, groups = null, groupPriorGames = null } = {}) {
   const xi = Math.log(2) / halfLifeDays;
   const rows = [];
   for (const m of matches) {
@@ -131,7 +131,9 @@ export function fitGoals(matches, { halfLifeDays = 180, priorGames = 3, now = Da
   const avgSide = G / (2 * W);
   let mu = Math.log(avgSide);
   let home = Math.log(Math.max(0.6, Math.min(1.8, (HG + 1) / (AG + 1))));
-  const a = priorGames * avgSide; // pseudo-goals pulling every team towards average
+  // pseudo-goals pulling each team towards its prior centre; leagues with little
+  // history (e.g. current-season-only feeds) can ask for a stronger pull
+  const priorOf = (k) => (groupPriorGames?.[groups?.get(k)] ?? priorGames) * avgSide;
 
   for (let it = 0; it < iterations; it++) {
     const S = new Map(), E = new Map();
@@ -145,6 +147,7 @@ export function fitGoals(matches, { halfLifeDays = 180, priorGames = 3, now = Da
     const gAtt = groupMeans(teams, groups, 'att');
     for (const [k, t] of teams) {
       const c = gAtt?.get(groups.get(k)) ?? 0; // prior centre: own league's level
+      const a = priorOf(k);
       t.att = Math.log(((S.get(k) || 0) + a * Math.exp(c)) / ((E.get(k) || 0) + a));
     }
     center(teams, 'att');
@@ -159,6 +162,7 @@ export function fitGoals(matches, { halfLifeDays = 180, priorGames = 3, now = Da
     const gDef = groupMeans(teams, groups, 'def');
     for (const [k, t] of teams) {
       const c = gDef?.get(groups.get(k)) ?? 0;
+      const a = priorOf(k);
       t.def = -Math.log(((C.get(k) || 0) + a * Math.exp(-c)) / ((F.get(k) || 0) + a));
     }
     center(teams, 'def');

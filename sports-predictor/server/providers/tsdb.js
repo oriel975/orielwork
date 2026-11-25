@@ -29,12 +29,7 @@ export function createTsdb(cache, key = '123') {
     }, {
       persist: true,
       // finished rounds rarely change; the live round refreshes every 90s
-      ttlFn: (evs) => {
-        const done = (e) => FINISHED.test(e.status || '') || OFF.test(e.status || '');
-        if (evs.length && evs.every(done) && evs.every((e) => Date.now() - Date.parse(e.start) > 2 * DAY)) return 5 * DAY;
-        if (evs.length && evs.every((e) => Date.parse(e.start) - Date.now() > 6 * 3600000)) return 30 * 60000;
-        return 90000;
-      },
+      ttlFn: (evs) => roundTtl(evs),
     });
   }
 
@@ -116,6 +111,18 @@ const STATUS_HE = {
   Q1: 'רבע 1', Q2: 'רבע 2', Q3: 'רבע 3', Q4: 'רבע 4', OT: 'הארכה', FT: 'הסתיים', AET: 'הסתיים (הארכה)', AOT: 'הסתיים (הארכה)',
   NS: '', PST: 'נדחה', POSTPONED: 'נדחה', CANC: 'בוטל', LIVE: 'לייב', INT: 'הופסק', SUSP: 'הופסק',
 };
+
+// Cache lifetime of one fetched round of TheSportsDB events.
+export function roundTtl(evs, now = Date.now()) {
+  const done = (e) => FINISHED.test(e.status || '') || OFF.test(e.status || '');
+  const age = (e) => now - Date.parse(e.start);
+  // results of rounds finished over a week ago don't change: keep them a month,
+  // so a rate-limited refresh doesn't re-download the whole season every few days
+  if (evs.length && evs.every(done) && evs.every((e) => age(e) > 7 * DAY)) return 30 * DAY;
+  if (evs.length && evs.every(done) && evs.every((e) => age(e) > 2 * DAY)) return 5 * DAY;
+  if (evs.length && evs.every((e) => -age(e) > 6 * 3600000)) return 30 * 60000; // all far in the future
+  return 90000; // current round: refresh often
+}
 
 // "2026" → ["2026", "2026-2027"]; "2026-2027" → ["2026-2027", "2026"].
 export function seasonCandidates(s) {
