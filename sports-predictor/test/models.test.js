@@ -182,3 +182,16 @@ test('per-league prior strength pulls thin-data leagues harder', async () => {
   const strong = fitGoals(ms, { now, priorGames: 1, groups, groupPriorGames: { L: 10 } });
   assert.ok(strong.teams.get('hot').att < weak.teams.get('hot').att, 'stronger league prior shrinks the outlier');
 });
+
+test('recent scoring level follows a rise in goals', async () => {
+  const { fitGoals, expectedGoals } = await import('../server/models/goals.js');
+  const now = Date.now(), DAY = 86400000;
+  const ms = [];
+  // last season: low scoring; last month: high scoring
+  for (let r = 0; r < 40; r++) ms.push({ home: r % 2 ? 'a' : 'b', away: r % 2 ? 'b' : 'a', hs: 1, as: 0, t: now - (200 + r) * DAY });
+  for (let r = 0; r < 10; r++) ms.push({ home: r % 2 ? 'a' : 'b', away: r % 2 ? 'b' : 'a', hs: 2, as: 2, t: now - r * 2 * DAY });
+  const tot = (m) => { const e = expectedGoals(m, 'a', 'b'); return e.lh + e.la; };
+  const slow = fitGoals(ms, { now, halfLifeDays: 200 });
+  const fast = fitGoals(ms, { now, halfLifeDays: 200, levelHalfLifeDays: 30 });
+  assert.ok(tot(fast) > tot(slow) + 0.5, `${tot(fast)} vs ${tot(slow)}`);
+});

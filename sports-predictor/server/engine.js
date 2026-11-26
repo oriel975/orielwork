@@ -51,7 +51,7 @@ export function createEngine({ cache, espn, tsdb, oddsApi, apiFootball, predLog,
     matches.sort((a, b) => a.t - b.t);
     const now = Date.now();
     const model = def.model === 'goals'
-      ? G.fitGoals(matches, { halfLifeDays: def.halfLifeDays, priorGames: def.priorGames, groupPriorGames: def.groupPriorGames, now, groups: def.groupPrior ? G.teamGroups(matches) : null })
+      ? G.fitGoals(matches, { halfLifeDays: def.halfLifeDays, priorGames: def.priorGames, groupPriorGames: def.groupPriorGames, levelHalfLifeDays: def.levelHalfLifeDays, now, groups: def.groupPrior ? G.teamGroups(matches) : null })
       : P.fitPoints(matches, { halfLifeDays: def.halfLifeDays, ridgeGames: def.ridgeGames, now });
     const byTeam = new Map();
     const names = new Map();

@@ -106,7 +106,7 @@ export function matrixMarkets(m, { current = [0, 0] } = {}) {
 // Fitting
 // matches: [{ home, away, hs, as, t }]  (t = epoch ms of kick-off)
 // ---------------------------------------------------------------------------
-export function fitGoals(matches, { halfLifeDays = 180, priorGames = 3, now = Date.now(), iterations = 60, groups = null, groupPriorGames = null } = {}) {
+export function fitGoals(matches, { halfLifeDays = 180, priorGames = 3, now = Date.now(), iterations = 60, groups = null, groupPriorGames = null, levelHalfLifeDays = null } = {}) {
   const xi = Math.log(2) / halfLifeDays;
   const rows = [];
   for (const m of matches) {
@@ -114,7 +114,7 @@ export function fitGoals(matches, { halfLifeDays = 180, priorGames = 3, now = Da
     const age = Math.max(0, (now - m.t) / DAY);
     const w = Math.exp(-xi * age) * (m.weight ?? 1);
     if (w < 0.02) continue;
-    rows.push({ h: m.home, a: m.away, hs: m.hs, as: m.as, w, neutral: !!m.neutral });
+    rows.push({ h: m.home, a: m.away, hs: m.hs, as: m.as, w, t: m.t, neutral: !!m.neutral });
   }
   const teams = new Map();
   const team = (k) => {
@@ -176,6 +176,21 @@ export function fitGoals(matches, { halfLifeDays = 180, priorGames = 3, now = Da
     }
     mu = Math.log(G / expTot);
     if (expHome > 0) home = Math.log(Math.max(0.5, Math.min(2, (homeGoalsNonNeutral + 2) / (expHome + 2))));
+  }
+
+  // Scoring level drifts between seasons faster than team strength: re-estimate
+  // the overall goal level from recent games only, keeping the team ratings.
+  if (levelHalfLifeDays) {
+    const xl = Math.log(2) / levelHalfLifeDays;
+    let g2 = 0, e2 = 0;
+    for (const r of rows) {
+      const w = Math.exp(-xl * Math.max(0, (now - r.t) / DAY));
+      const th = teams.get(r.h), ta = teams.get(r.a);
+      const hAdv = r.neutral ? 0 : home;
+      g2 += w * (r.hs + r.as);
+      e2 += w * (Math.exp(mu + hAdv + th.att - ta.def) + Math.exp(mu + ta.att - th.def));
+    }
+    if (g2 > 0 && e2 > 0) mu += Math.log(g2 / e2);
   }
 
   const model = { teams, mu, home, rho: 0, n: rows.length, avg: avgSide };

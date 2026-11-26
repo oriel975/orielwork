@@ -53,7 +53,7 @@ export function runBacktest(pool, { days = 56, stepDays = 7, now = Date.now(), g
     if (train.length < 60 || !test.length) continue;
     weeks++;
     const model = goals
-      ? G.fitGoals(train, { halfLifeDays: pool.def.halfLifeDays, priorGames: pool.def.priorGames, groupPriorGames: pool.def.groupPriorGames, now: ws, iterations: 40, groups: groupPrior ? G.teamGroups(train) : null })
+      ? G.fitGoals(train, { halfLifeDays: pool.def.halfLifeDays, priorGames: pool.def.priorGames, groupPriorGames: pool.def.groupPriorGames, levelHalfLifeDays: pool.def.levelHalfLifeDays, now: ws, iterations: 40, groups: groupPrior ? G.teamGroups(train) : null })
       : P.fitPoints(train, { halfLifeDays: pool.def.halfLifeDays, ridgeGames: pool.def.ridgeGames, now: ws, iterations: 50 });
     // base rates from the training window
     const recent = train.slice(-1500);
