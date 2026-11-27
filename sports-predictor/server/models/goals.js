@@ -270,7 +270,7 @@ export function teamRatings(model) {
   return [...model.teams.entries()].map(([name, t]) => ({
     name,
     attack: Math.exp(t.att),
-    defense: Math.exp(-t.def),
+    defense: Math.exp(t.def), // >1 = concedes less than average
     games: t.n,
     strength: t.att + t.def,
   }));

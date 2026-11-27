@@ -83,15 +83,19 @@ route('GET', '/api/live', async (q) => {
 route('GET', '/api/value', async (q) => {
   const o = opts(q);
   const minEdge = Number(q.get('minEdge') ?? 0.02);
+  const includeSuspicious = q.get('includeSuspicious') === '1';
   const r = await engine.listEvents(o);
   const rows = [];
+  let hiddenSuspicious = 0;
   for (const e of r.events) {
     for (const v of e.prediction?.value || []) {
-      if (v.ev >= minEdge) rows.push({ ...v, eventId: e.id, match: `${e.home.name} – ${e.away.name}`, home: e.home.name, away: e.away.name, start: e.start, league: e.league, leagueName: e.leagueName, sport: e.sport, confidence: e.prediction.confidence });
+      if (v.ev < minEdge) continue;
+      if (v.suspicious && !includeSuspicious) { hiddenSuspicious++; continue; }
+      rows.push({ ...v, eventId: e.id, match: `${e.home.name} – ${e.away.name}`, home: e.home.name, away: e.away.name, start: e.start, league: e.league, leagueName: e.leagueName, sport: e.sport, confidence: e.prediction.confidence });
     }
   }
   rows.sort((a, b) => b.ev - a.ev);
-  return { date: r.date, minEdge, rows, scanned: r.events.length };
+  return { date: r.date, minEdge, rows, scanned: r.events.length, hiddenSuspicious };
 });
 
 route('GET', '/api/event/(?<id>[^/]+)', async (q, p) => {

@@ -7,6 +7,7 @@ import { tennisPrediction } from './models/tennis.js';
 import { removeVig, overround, expectedValue, kelly, round } from './models/odds.js';
 import { matchEvent, normalizeName } from './lib/names.js';
 import { mapLimit, withTimeout } from './lib/http.js';
+import { markSuspicious } from './value.js';
 import { ymdUTC, extractSummary, normalizeEvent, setDone } from './providers/espn.js';
 
 const MIN = 60000, HOUR = 60 * MIN, DAY = 24 * HOUR;
@@ -153,10 +154,10 @@ export function createEngine({ cache, espn, tsdb, oddsApi, apiFootball, predLog,
   function predict(ev, pool, { w = config.modelWeight, full = false } = {}) {
     const league = LEAGUE_BY_KEY.get(ev.league);
     try {
-      if (ev.sport === 'tennis') return predictTennis(ev, league, { w, full });
+      if (ev.sport === 'tennis') return markSuspicious(predictTennis(ev, league, { w, full }));
       const def = POOLS[league.pool];
       if (!def) return null;
-      return def.model === 'goals' ? predictGoals(ev, league, pool, { w, full }) : predictPoints(ev, league, pool, { w, full });
+      return markSuspicious(def.model === 'goals' ? predictGoals(ev, league, pool, { w, full }) : predictPoints(ev, league, pool, { w, full }));
     } catch (e) {
       return { error: e.message };
     }
@@ -637,7 +638,7 @@ export function createEngine({ cache, espn, tsdb, oddsApi, apiFootball, predLog,
       return { date: new Date(m.t).toISOString(), opponent: home ? m.awayName : m.homeName, home, gf, ga, result: gf > ga ? 'W' : gf < ga ? 'L' : 'D', league: m.league };
     });
     const ratings = pool.def.model === 'goals'
-      ? (t ? { attack: Math.exp(t.att), defense: Math.exp(-t.def) } : null)
+      ? (t ? { attack: Math.exp(t.att), defense: Math.exp(t.def) } : null)
       : (t ? { offense: pool.model.base + t.off, defense: pool.model.base - t.def, net: t.off + t.def } : null);
     const rank = rankInPool(pool, key);
     return { name: pool.names.get(key) || key, games: t?.n || 0, ratings, form: games, rank };

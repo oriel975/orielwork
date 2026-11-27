@@ -81,14 +81,14 @@ const betLabel = (v) => {
 };
 const value = [];
 for (const [day, date] of [['היום', TODAY], ['מחר', TOMORROW]]) {
-  const r = await get(`/api/value?date=${date}&tz=${encodeURIComponent(TZ)}&w=0.3&minEdge=0.03`);
+  const r = await get(`/api/value?date=${date}&tz=${encodeURIComponent(TZ)}&w=0.3&minEdge=0.03&includeSuspicious=1`);
   for (const v of r.rows) {
     if (/^(ncaab|ncaaf)$/.test(v.league)) continue; // too little data per team for value signals
     const g = gap.get(v.eventId) ?? 0;
     value.push({
       id: `${v.eventId}|${v.market}|${v.sel}|${v.line ?? ''}|${v.book}`, day, time: hhmm(v.start), league: v.leagueName, match: v.match,
       bet: betLabel(v), book: v.book, odds: Math.round(v.odds * 100) / 100, prob: pct(v.p), fair: Math.round(v.fairOdds * 100) / 100,
-      ev: Math.round(v.ev * 1000) / 10, flag: v.ev > 0.15 || g > 0.15 ? 'חשוד' : '',
+      ev: Math.round(v.ev * 1000) / 10, flag: v.suspicious ? 'חשוד' : '',
     });
   }
 }

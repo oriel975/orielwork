@@ -104,7 +104,7 @@ function outcomeButtons(e) {
   const p = e.prediction;
   if (!p?.probs) return '';
   const keys = p.threeWay ? ['home', 'draw', 'away'] : ['home', 'away'];
-  const value = new Map((p.value || []).filter((v) => v.market === '1x2' && v.ev >= S.settings.minEdge).map((v) => [v.sel, v]));
+  const value = new Map((p.value || []).filter((v) => v.market === '1x2' && v.ev >= S.settings.minEdge && !v.suspicious).map((v) => [v.sel, v]));
   const label = (k) => (k === 'draw' ? 'X' : p.threeWay ? (k === 'home' ? '1' : '2') : (k === 'home' ? e.home.short || e.home.name : e.away.short || e.away.name));
   return `<div class="outcomes c${keys.length}">${keys.map((k) => {
     const pr = p.probs[k];
@@ -121,7 +121,7 @@ function card(e) {
   const p = e.prediction || {};
   const live = e.state === 'in';
   const showScore = e.state !== 'pre';
-  const val = (p.value || []).filter((v) => v.ev >= S.settings.minEdge);
+  const val = (p.value || []).filter((v) => v.ev >= S.settings.minEdge && !v.suspicious);
   const disagree = p.model && p.market && Math.abs((p.model.home ?? 0) - (p.market.home ?? 0)) > 0.15;
   const hist = (e.history || []).map((h) => h.home);
   const metaBits = [];
@@ -259,10 +259,10 @@ async function renderMatches() {
 }
 
 // ------------------------------------------------------------------ value
-let valueFilter = { market: 'all', minEdge: null, bet365: false };
+let valueFilter = { market: 'all', minEdge: null, bet365: false, suspicious: false };
 async function renderValue() {
   const minEdge = valueFilter.minEdge ?? S.settings.minEdge;
-  const path = `/api/value?${eventsQuery({ date: S.date })}&minEdge=${Math.max(0, minEdge - 0.0001)}${valueFilter.bet365 ? '&bet365=1' : ''}`;
+  const path = `/api/value?${eventsQuery({ date: S.date })}&minEdge=${Math.max(0, minEdge - 0.0001)}${valueFilter.bet365 ? '&bet365=1' : ''}${valueFilter.suspicious ? '&includeSuspicious=1' : ''}`;
   if (!S.cache.has(path)) view.innerHTML = loadingHtml('סורק את כל המשחקים ומשווה יחסים להסתברויות…');
   await loadInto(path, (data) => {
     if (currentRoute !== 'value') return;
@@ -276,6 +276,7 @@ async function renderValue() {
       <div class="toolbar" style="padding:0;margin:8px 0">
         <div class="seg-tabs">${[['all', 'הכל'], ['1x2', '1X2'], ['total', 'מעל/מתחת'], ['spread', 'הנדיקאפ'], ['btts', 'שתיהן יבקיעו']].map(([k, l]) => `<button class="${valueFilter.market === k ? 'active' : ''}" data-act="vf-market" data-m="${k}">${l}</button>`).join('')}</div>
         <label class="range-row small muted" style="min-width:240px">יתרון מינימלי <input type="range" min="0" max="0.15" step="0.005" value="${minEdge}" id="edgeRange"><b class="num" id="edgeVal">${pct(minEdge, 1)}</b></label>
+        <label class="small"><input type="checkbox" id="vfSus" ${valueFilter.suspicious ? 'checked' : ''}> הצג גם חשודים${data.hiddenSuspicious ? ` (${data.hiddenSuspicious} מוסתרים)` : ''}</label>
         ${hasApiFootball ? `<label class="small"><input type="checkbox" id="b365" ${valueFilter.bet365 ? 'checked' : ''}> טען יחסי Bet365 (API-Football)</label>` : ''}
       </div>
       ${rows.length ? `<div class="panel table-wrap"><table class="t">
@@ -283,9 +284,9 @@ async function renderValue() {
         <tbody>${rows.map((r) => {
           const st = stakeFor(r.p, r.odds);
           const ev = { sport: r.sport, home: { short: r.home, name: r.home }, away: { short: r.away, name: r.away } };
-          return `<tr class="click ${r.ev > 0.15 ? '' : 'hl'}" data-act="open" data-id="${esc(r.eventId)}">
+          return `<tr class="click ${r.suspicious ? '' : 'hl'}" data-act="open" data-id="${esc(r.eventId)}">
             <td><div style="font-weight:600">${esc(r.match)}</div><div class="small muted">${esc(r.leagueName)} · ${timeOf(r.start, S.settings.tz)}</div></td>
-            <td>${esc(selName(r, ev))}${r.ev > 0.15 ? ' <span class="tag warn">חשוד</span>' : ''}</td>
+            <td>${esc(selName(r, ev))}${r.suspicious ? ' <span class="tag warn" title="המודל חולק על השוק ביותר מ-15 נקודות, או יתרון מעל 15%">חשוד</span>' : ''}</td>
             <td>${esc(r.book)}</td>
             <td class="c num"><b>${odds(r.odds)}</b></td>
             <td class="c num">${pct(r.p, 1)}</td>
@@ -300,6 +301,7 @@ async function renderValue() {
     $('#edgeRange')?.addEventListener('input', (e) => { $('#edgeVal').textContent = pct(Number(e.target.value), 1); });
     $('#edgeRange')?.addEventListener('change', (e) => { valueFilter.minEdge = Number(e.target.value); renderValue(); });
     $('#b365')?.addEventListener('change', (e) => { valueFilter.bet365 = e.target.checked; renderValue(); });
+    $('#vfSus')?.addEventListener('change', (e) => { valueFilter.suspicious = e.target.checked; renderValue(); });
   });
 }
 

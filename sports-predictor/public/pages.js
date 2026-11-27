@@ -124,7 +124,9 @@ function backtestHtml(r) {
 function trackHtml(r) {
   if (!r.settled) return `<div class="empty">עדיין אין משחקים שהסתיימו בתיעוד החי (${r.pending} ממתינים). המערכת שומרת את החיזוי של כל משחק שמוצג לפני שהוא מתחיל – חזרו בעוד יום-יומיים.</div>`;
   return `<div class="kpis">${metricsKpis(r.model, 'מודל סטטיסטי')}${metricsKpis(r.market, 'שוק (ללא עמלה)')}${metricsKpis(r.fair, 'משולב – מה שמוצג באפליקציה')}
-    <div class="kpi"><div class="k">הימורי ערך שסומנו (1 יח' כל אחד)</div><div class="v num ${r.valueBets.profit >= 0 ? 'pos' : 'neg'}">${r.valueBets.bets ? signedPct(r.valueBets.roi) : '–'}</div><div class="small muted">${r.valueBets.bets} הימורים · רווח ${num(r.valueBets.profit, 1)} יח'</div></div></div>
+    <div class="kpi"><div class="k">הימורי ערך שסומנו (1 יח' כל אחד)</div><div class="v num ${r.valueBets.profit >= 0 ? 'pos' : 'neg'}">${r.valueBets.bets ? signedPct(r.valueBets.roi) : '–'}</div><div class="small muted">${r.valueBets.bets} הימורים · רווח ${num(r.valueBets.profit, 1)} יח'</div></div>
+    ${r.valueClean ? `<div class="kpi"><div class="k">מתוכם: ערך "נקי" (מוצג ברשימה)</div><div class="v num ${r.valueClean.profit >= 0 ? 'pos' : 'neg'}">${r.valueClean.bets ? signedPct(r.valueClean.roi) : '–'}</div><div class="small muted">${r.valueClean.bets} הימורים · רווח ${num(r.valueClean.profit, 1)} יח'</div></div>
+    <div class="kpi"><div class="k">מתוכם: חשודים (מוסתרים כברירת מחדל)</div><div class="v num ${r.valueSuspicious.profit >= 0 ? 'pos' : 'neg'}">${r.valueSuspicious.bets ? signedPct(r.valueSuspicious.roi) : '–'}</div><div class="small muted">${r.valueSuspicious.bets} הימורים · רווח ${num(r.valueSuspicious.profit, 1)} יח'</div></div>` : ''}</div>
     <div class="small muted" style="margin-top:8px">${r.settled} משחקים הסתיימו · ${r.pending} ממתינים. מדגם של פחות מכמה מאות משחקים עדיין רועש מאוד.</div>`;
 }
 

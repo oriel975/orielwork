@@ -3,6 +3,7 @@
 import * as G from './models/goals.js';
 import * as P from './models/points.js';
 import { LEAGUE_BY_KEY } from './leagues.js';
+import { modelMarketGap, isSuspicious } from './value.js';
 
 const DAY = 86400000;
 
@@ -95,6 +96,7 @@ export function trackRecord(log) {
   const groups = { model: emptyStats(), market: emptyStats(), fair: emptyStats() };
   const byLeague = new Map();
   const valueSim = { bets: 0, staked: 0, profit: 0 };
+  const sim = { clean: { bets: 0, profit: 0 }, suspicious: { bets: 0, profit: 0 } };
   for (const e of entries) {
     const { hs, as } = e.result;
     const three = e.threeWay;
@@ -111,10 +113,14 @@ export function trackRecord(log) {
     if (!byLeague.has(e.league)) byLeague.set(e.league, emptyStats());
     const fv = vec(e.fair);
     if (fv) score(byLeague.get(e.league), fv, outcome, base);
+    const gap = modelMarketGap(e);
     for (const v of e.value || []) {
       const idx = three ? { home: 0, draw: 1, away: 2 }[v.sel] : { home: 0, away: 1 }[v.sel];
+      const pnl = idx === outcome ? v.odds - 1 : -1;
       valueSim.bets++; valueSim.staked += 1;
-      valueSim.profit += idx === outcome ? v.odds - 1 : -1;
+      valueSim.profit += pnl;
+      const g = sim[isSuspicious(v.ev, gap) ? 'suspicious' : 'clean'];
+      g.bets++; g.profit += pnl;
     }
   }
   return {
@@ -123,5 +129,8 @@ export function trackRecord(log) {
     model: finalize(groups.model), market: finalize(groups.market), fair: finalize(groups.fair),
     leagues: [...byLeague.entries()].map(([k, s]) => ({ league: k, name: LEAGUE_BY_KEY.get(k)?.he || k, ...finalize(s) })).sort((a, b) => b.n - a.n),
     valueBets: { ...valueSim, roi: valueSim.staked ? valueSim.profit / valueSim.staked : null },
+    // split by the rule the value list now uses (server/value.js)
+    valueClean: { ...sim.clean, roi: sim.clean.bets ? sim.clean.profit / sim.clean.bets : null },
+    valueSuspicious: { ...sim.suspicious, roi: sim.suspicious.bets ? sim.suspicious.profit / sim.suspicious.bets : null },
   };
 }

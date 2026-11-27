@@ -195,3 +195,15 @@ test('recent scoring level follows a rise in goals', async () => {
   const fast = fitGoals(ms, { now, halfLifeDays: 200, levelHalfLifeDays: 30 });
   assert.ok(tot(fast) > tot(slow) + 0.5, `${tot(fast)} vs ${tot(slow)}`);
 });
+
+test('team ratings: defense above 1 means conceding less', async () => {
+  const { fitGoals, teamRatings } = await import('../server/models/goals.js');
+  const now = Date.now();
+  const ms = [];
+  for (let r = 0; r < 12; r++) {
+    ms.push({ home: 'wall', away: 'sieve', hs: 2, as: 0, t: now - r * 86400000 * 3 });
+    ms.push({ home: 'sieve', away: 'wall', hs: 0, as: 2, t: now - r * 86400000 * 3 - 1 });
+  }
+  const r = Object.fromEntries(teamRatings(fitGoals(ms, { now })).map((t) => [t.name, t]));
+  assert.ok(r.wall.defense > 1 && r.sieve.defense < 1, `${r.wall.defense} / ${r.sieve.defense}`);
+});
