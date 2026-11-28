@@ -174,7 +174,7 @@ export function createEngine({ cache, espn, tsdb, oddsApi, apiFootball, predLog,
     const sport = ev.sport;
     const threeWayMarket = sport === 'soccer';
     const model = pool?.model;
-    const rho = sport === 'soccer' ? (model?.rho ?? -0.05) : 0;
+    const rho = sport === 'soccer' && POOLS[league.pool]?.dixonColes !== false ? (model?.rho ?? -0.05) : 0;
     const em = model ? G.expectedGoals(model, ev.home.key, ev.away.key, { neutral: ev.neutral }) : null;
     const sample = em?.sample || { home: 0, away: 0 };
     const mk = consensus(ev, threeWayMarket);

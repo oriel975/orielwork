@@ -207,3 +207,21 @@ test('team ratings: defense above 1 means conceding less', async () => {
   const r = Object.fromEntries(teamRatings(fitGoals(ms, { now })).map((t) => [t.name, t]));
   assert.ok(r.wall.defense > 1 && r.sieve.defense < 1, `${r.wall.defense} / ${r.sieve.defense}`);
 });
+
+test('football pool uses plain Poisson (no Dixon-Coles draw boost)', async () => {
+  const { POOLS } = await import('../server/leagues.js');
+  const { scoreMatrix, matrix1x2 } = await import('../server/models/goals.js');
+  assert.equal(POOLS.soccer.dixonColes, false);
+  const dc = matrix1x2(scoreMatrix(1.4, 1.1, { rho: -0.05 }));
+  const plain = matrix1x2(scoreMatrix(1.4, 1.1, { rho: 0 }));
+  assert.ok(dc.draw > plain.draw, 'negative rho raises draws');
+});
+
+test('league catalogue: unique keys, second divisions feed the football pool', async () => {
+  const { LEAGUES, leaguesInPool } = await import('../server/leagues.js');
+  const keys = LEAGUES.map((l) => l.key);
+  assert.equal(new Set(keys).size, keys.length, 'duplicate league key');
+  const pool = new Set(leaguesInPool('soccer').map((l) => l.key));
+  for (const k of ['ger.2', 'esp.2', 'ita.2', 'fra.2', 'eng.2']) assert.ok(pool.has(k), k);
+  for (const l of leaguesInPool('soccer')) assert.ok(l.espn || l.tsdbId, `${l.key} has no data source`);
+});

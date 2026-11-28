@@ -67,7 +67,7 @@ export function runBacktest(pool, { days = 56, stepDays = 7, now = Date.now(), g
       let probs;
       if (goals) {
         const e = G.expectedGoals(model, m.home, m.away, { neutral: m.neutral });
-        const r = G.matrix1x2(G.scoreMatrix(e.lh, e.la, { rho: threeWay ? model.rho : 0 }));
+        const r = G.matrix1x2(G.scoreMatrix(e.lh, e.la, { rho: threeWay && pool.def.dixonColes !== false ? model.rho : 0 }));
         probs = threeWay ? [r.home, r.draw, r.away] : [r.home + r.draw / 2, r.away + r.draw / 2];
       } else {
         const e = P.expectedPoints(model, m.home, m.away, { neutral: m.neutral });

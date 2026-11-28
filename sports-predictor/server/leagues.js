@@ -33,6 +33,13 @@ export const LEAGUES = [
   soccer('ger.1', 'בונדסליגה', 'גרמניה', { featured: true, odds: 'soccer_germany_bundesliga', apiFootball: 78 }),
   soccer('fra.1', 'ליג 1', 'צרפת', { featured: true, odds: 'soccer_france_ligue_one', apiFootball: 61 }),
   soccer('eng.2', "צ'מפיונשיפ", 'אנגליה', { odds: 'soccer_efl_champ', apiFootball: 40 }),
+  // Second divisions: they give promoted clubs a history in the pool. Backtest 28.11 (112d,
+  // walk-forward): top-5 leagues 1X2 log loss 0.9691 -> 0.9629 (Bundesliga 0.978 -> 0.959),
+  // whole pool 0.9847 -> 0.9843 on the same games, plus 26 more games with enough history.
+  soccer('ger.2', 'בונדסליגה 2', 'גרמניה', { odds: 'soccer_germany_bundesliga2', apiFootball: 79 }),
+  soccer('esp.2', 'לה ליגה 2', 'ספרד', { odds: 'soccer_spain_segunda_division', apiFootball: 141 }),
+  soccer('ita.2', 'סרייה B', 'איטליה', { odds: 'soccer_italy_serie_b', apiFootball: 136 }),
+  soccer('fra.2', 'ליג 2', 'צרפת', { odds: 'soccer_france_ligue_two', apiFootball: 62 }),
   soccer('ned.1', 'ארדיביזי', 'הולנד', { odds: 'soccer_netherlands_eredivisie', apiFootball: 88 }),
   soccer('por.1', 'ליגה פורטוגל', 'פורטוגל', { odds: 'soccer_portugal_primeira_liga', apiFootball: 94 }),
   soccer('tur.1', 'סופר ליג', 'טורקיה', { odds: 'soccer_turkey_super_league', apiFootball: 203 }),
@@ -85,7 +92,9 @@ export const POOLS = {
   // log loss 0.9863 -> 0.9834, European cups 0.904 -> 0.893.
   // levelHalfLifeDays: the overall scoring level follows the last ~month (26.11: the model had
   // under-predicted goals, 2.85 vs 3.00 per game; with 30 days 2.94, 1X2 log loss 0.9829 -> 0.9823).
-  soccer: { model: 'goals', sport: 'soccer', halfLifeDays: 200, priorGames: 1, groupPrior: true, groupPriorGames: { 'isr.1': 3, 'isr.2': 3 }, levelHalfLifeDays: 30 },
+  // dixonColes: false — 28.11 backtest (2,853 games): the fitted low-score correction over-predicted
+  // draws (24.0% vs 23.1% actual) and 0-0 (6.9% vs 5.4%); plain Poisson: 22.9%, 1X2 log loss 0.9847 -> 0.9845.
+  soccer: { model: 'goals', sport: 'soccer', halfLifeDays: 200, priorGames: 1, groupPrior: true, groupPriorGames: { 'isr.1': 3, 'isr.2': 3 }, levelHalfLifeDays: 30, dixonColes: false },
   nhl: { model: 'goals', sport: 'hockey', halfLifeDays: 150, priorGames: 6 },
   mlb: { model: 'goals', sport: 'baseball', halfLifeDays: 120, priorGames: 10 },
   nba: { model: 'points', sport: 'basketball', halfLifeDays: 90, ridgeGames: 4 },
